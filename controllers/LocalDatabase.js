@@ -46,6 +46,7 @@ class LocalDatabase {
     generateDataExample(cantUser, cantProducts) {
 
         //Generating Users
+
         var full_names = ['Skyler Sullivan', 'Zachary Horn', 'Arianna Conrad', 'Amanda Mcgrath',
             'Paris Soto', 'Allan Wilkinson', 'Dillan Montoya', 'Parker Sherman',
             'Brent Shields', 'Dominique Paul', 'Max Buckley', 'Frida Coleman']
@@ -78,19 +79,6 @@ class LocalDatabase {
         this.addData('/users', list_users)
 
         //Generating Products
-        /*
-        *  this._nombre = ""
-        this._precio = 0.00
-        this._cant_stock = 0
-        this._categoria = ""
-        this._tags = ""
-        this._descripcion = ""
-        this._info_add = ""
-        this._valoracion = ""
-        this._sku = ""
-        this._imagenes_asociadas = []
-        *
-        * */
 
         var lista_nombre_productos = ['Cuna', 'Monitor para bebes', 'Asiento de seguridad para autos', 'Cambiador o mudador',
             'Bolso cambiador', 'Portabebes', 'Cochecito', 'Biberon', 'Silla brincadora', 'Hamaca para bebes',

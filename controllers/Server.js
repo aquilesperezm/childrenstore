@@ -15,6 +15,10 @@ class Server {
 
         app.listen(PORT, console.log("Server don start for port: " + PORT))
 
+        app.post('/register',function(req,res){
+            console.log('Escuchando a POST')
+        })
+
     }
 
 
