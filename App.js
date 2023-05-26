@@ -15,7 +15,7 @@ db.generateDataExample(Number(process.env.COUNT_USER_GENERATED),Number(process.e
 //parsin all incomming request into json
 app.use(express.json())
 
-HTTPServer = new HTTPServer()
+HTTPServer = new HTTPServer(app,process.env.PORT)
 HTTPServer.startServer()
 
 

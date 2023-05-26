@@ -1,21 +1,21 @@
-const express = require("express");
 require('dotenv').config();
 
 
 
 class Server {
 
-    constructor() {
-
+    _app
+    _port
+    constructor(app,port) {
+    this._app = app
+    this._port = port
     }
 
     startServer() {
-        const app = express();
-        const PORT = process.env.PORT || 4111;
 
-        app.listen(PORT, console.log("Server don start for port: " + PORT))
+        this._app.listen(this._port, console.log("Server don start for port: " + this._port))
 
-        app.post('/register',function(req,res){
+        this._app.post('/register',function(req,res){
             console.log('Escuchando a POST')
         })
 
