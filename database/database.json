@@ -13,8 +13,8 @@
         {
             "type": "MUser",
             "json": {
-                "_nombre_completo": "Brent Shields",
-                "_nombre_usuario": "brent",
+                "_nombre_completo": "Parker Sherman",
+                "_nombre_usuario": "parker",
                 "_rol": "Editor",
                 "_password": "P@ssw0rd1**"
             },
@@ -23,8 +23,8 @@
         {
             "type": "MUser",
             "json": {
-                "_nombre_completo": "Max Buckley",
-                "_nombre_usuario": "max",
+                "_nombre_completo": "Arianna Conrad",
+                "_nombre_usuario": "arianna",
                 "_rol": "Owner",
                 "_password": "P@ssw0rd1**"
             },
@@ -33,9 +33,9 @@
         {
             "type": "MUser",
             "json": {
-                "_nombre_completo": "Zachary Horn",
-                "_nombre_usuario": "zachary",
-                "_rol": "Operator",
+                "_nombre_completo": "Max Buckley",
+                "_nombre_usuario": "max",
+                "_rol": "User",
                 "_password": "P@ssw0rd1**"
             },
             "index": 3
@@ -43,8 +43,8 @@
         {
             "type": "MUser",
             "json": {
-                "_nombre_completo": "Amanda Mcgrath",
-                "_nombre_usuario": "amanda",
+                "_nombre_completo": "Zachary Horn",
+                "_nombre_usuario": "zachary",
                 "_rol": "User",
                 "_password": "P@ssw0rd1**"
             },
@@ -53,8 +53,8 @@
         {
             "type": "MUser",
             "json": {
-                "_nombre_completo": "Dominique Paul",
-                "_nombre_usuario": "dominique",
+                "_nombre_completo": "Skyler Sullivan",
+                "_nombre_usuario": "skyler",
                 "_rol": "Administrator",
                 "_password": "P@ssw0rd1**"
             },
@@ -63,8 +63,8 @@
         {
             "type": "MUser",
             "json": {
-                "_nombre_completo": "Arianna Conrad",
-                "_nombre_usuario": "arianna",
+                "_nombre_completo": "Brent Shields",
+                "_nombre_usuario": "brent",
                 "_rol": "Editor",
                 "_password": "P@ssw0rd1**"
             },
@@ -86,7 +86,7 @@
                 "_descripcion": "Cuna para bebes",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "WgxohDko3",
+                "_sku": "_NRUcwuBk",
                 "_imagenes_asociadas": []
             },
             "index": 1
@@ -107,7 +107,7 @@
                 "_descripcion": "Monitor para bebes",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "SnprsKL0-h",
+                "_sku": "6wwX602CxB",
                 "_imagenes_asociadas": []
             },
             "index": 2
@@ -128,7 +128,7 @@
                 "_descripcion": "Asiento de seguridad para autos",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "PVrTqgnZrq",
+                "_sku": "BO5gnJcO9f",
                 "_imagenes_asociadas": []
             },
             "index": 3
@@ -148,7 +148,7 @@
                 "_descripcion": "Cambiador o mudador para bebes",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "yKkndRc33k",
+                "_sku": "aGWXo4Ut2c",
                 "_imagenes_asociadas": []
             },
             "index": 4
@@ -169,7 +169,7 @@
                 "_descripcion": "Bolso cambiador para bebes",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "yOLN-NozXu",
+                "_sku": "aBXmO8j6Uq",
                 "_imagenes_asociadas": []
             },
             "index": 5
@@ -190,7 +190,7 @@
                 "_descripcion": "Portabebes para el transporte",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "WxL6OaTxkf",
+                "_sku": "DHfB-HzHj2",
                 "_imagenes_asociadas": []
             },
             "index": 6
@@ -210,7 +210,7 @@
                 "_descripcion": "Coche para bebes",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "rv5LEn6ju1",
+                "_sku": "qrCACOEj_j",
                 "_imagenes_asociadas": []
             },
             "index": 7
@@ -231,7 +231,7 @@
                 "_descripcion": "Biberon para bebes",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "MntjN16WMU",
+                "_sku": "O6kKTwnnpP",
                 "_imagenes_asociadas": []
             },
             "index": 8
@@ -252,7 +252,7 @@
                 "_descripcion": "Silla brincadora para entretenimiento",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "vRGLr5JX0E",
+                "_sku": "NMc8cvdz6G",
                 "_imagenes_asociadas": []
             },
             "index": 9
@@ -273,7 +273,7 @@
                 "_descripcion": "Silla brincadora para entretenimiento",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "ntbe3fs1HQ",
+                "_sku": "6CJFpYgkv0",
                 "_imagenes_asociadas": []
             },
             "index": 10

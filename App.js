@@ -1,11 +1,11 @@
+//importacion de librerias
 var express = require('express')
-var app = express()
-
 var HTTPServer = require('./controllers/Server')
 var DB = require('./controllers/LocalDatabase')
 
+//declaracion de variables
 var db = new DB('./database/database.json')
-
+var app = express()
 /*
 *  Generate Products and Users
 * */
