@@ -3,10 +3,27 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "develop": "node App.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Aquiles Perez Miranda",
   "license": "ISC",
-  "description": ""
+  "description": "Aplicación Backend para una tienda de niñ@s (API REST)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquilesperezm/childrenstore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aquilesperezm/childrenstore/issues"
+  },
+  "homepage": "https://github.com/aquilesperezm/childrenstore#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "node-json-db": "^2.2.0",
+    "shortid": "^2.2.16"
+  }
 }

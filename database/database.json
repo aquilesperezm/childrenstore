@@ -1,0 +1,282 @@
+{
+    "users": [
+        {
+            "type": "MUser",
+            "json": {
+                "_nombre_completo": "Allan Wilkinson",
+                "_nombre_usuario": "allan",
+                "_rol": "Administrator",
+                "_password": "P@ssw0rd1**"
+            },
+            "index": 0
+        },
+        {
+            "type": "MUser",
+            "json": {
+                "_nombre_completo": "Arianna Conrad",
+                "_nombre_usuario": "arianna",
+                "_rol": "Editor",
+                "_password": "P@ssw0rd1**"
+            },
+            "index": 1
+        },
+        {
+            "type": "MUser",
+            "json": {
+                "_nombre_completo": "Frida Coleman",
+                "_nombre_usuario": "frida",
+                "_rol": "Operator",
+                "_password": "P@ssw0rd1**"
+            },
+            "index": 2
+        },
+        {
+            "type": "MUser",
+            "json": {
+                "_nombre_completo": "Zachary Horn",
+                "_nombre_usuario": "zachary",
+                "_rol": "User",
+                "_password": "P@ssw0rd1**"
+            },
+            "index": 3
+        },
+        {
+            "type": "MUser",
+            "json": {
+                "_nombre_completo": "Amanda Mcgrath",
+                "_nombre_usuario": "amanda",
+                "_rol": "Administrator",
+                "_password": "P@ssw0rd1**"
+            },
+            "index": 4
+        },
+        {
+            "type": "MUser",
+            "json": {
+                "_nombre_completo": "Dominique Paul",
+                "_nombre_usuario": "dominique",
+                "_rol": "Editor",
+                "_password": "P@ssw0rd1**"
+            },
+            "index": 5
+        },
+        {
+            "type": "MUser",
+            "json": {
+                "_nombre_completo": "Brent Shields",
+                "_nombre_usuario": "brent",
+                "_rol": "Operator",
+                "_password": "P@ssw0rd1**"
+            },
+            "index": 6
+        }
+    ],
+    "products": [
+        {
+            "type": "MProduct",
+            "json": {
+                "_nombre": "Cuna",
+                "_precio": 45.65,
+                "_cant_stock": 23,
+                "_categoria": "Cuna",
+                "_tags": [
+                    "dormir",
+                    "bebe"
+                ],
+                "_descripcion": "Cuna para bebes",
+                "_info_add": "",
+                "_valoracion": "",
+                "_sku": "gd2EL1Vo5",
+                "_imagenes_asociadas": []
+            },
+            "index": 1
+        },
+        {
+            "type": "MProduct",
+            "json": {
+                "_nombre": "Monitor para bebes",
+                "_precio": 121.15,
+                "_cant_stock": 17,
+                "_categoria": "Monitor",
+                "_tags": [
+                    "dormir",
+                    "bebe",
+                    "vigilante",
+                    "alarma"
+                ],
+                "_descripcion": "Monitor para bebes",
+                "_info_add": "",
+                "_valoracion": "",
+                "_sku": "MHZPWti7QR",
+                "_imagenes_asociadas": []
+            },
+            "index": 2
+        },
+        {
+            "type": "MProduct",
+            "json": {
+                "_nombre": "Asiento de seguridad",
+                "_precio": 53.78,
+                "_cant_stock": 31,
+                "_categoria": "Asiento",
+                "_tags": [
+                    "dormir",
+                    "bebe",
+                    "vigilante",
+                    "alarma"
+                ],
+                "_descripcion": "Asiento de seguridad para autos",
+                "_info_add": "",
+                "_valoracion": "",
+                "_sku": "h7yfDayffB",
+                "_imagenes_asociadas": []
+            },
+            "index": 3
+        },
+        {
+            "type": "MProduct",
+            "json": {
+                "_nombre": "Cambiador",
+                "_precio": 67.91,
+                "_cant_stock": 13,
+                "_categoria": "Asiento",
+                "_tags": [
+                    "dormir",
+                    "bebe",
+                    "higiene"
+                ],
+                "_descripcion": "Cambiador o mudador para bebes",
+                "_info_add": "",
+                "_valoracion": "",
+                "_sku": "Yqc8xXGQa-",
+                "_imagenes_asociadas": []
+            },
+            "index": 4
+        },
+        {
+            "type": "MProduct",
+            "json": {
+                "_nombre": "Bolso",
+                "_precio": 22.62,
+                "_cant_stock": 98,
+                "_categoria": "Bolso",
+                "_tags": [
+                    "dormir",
+                    "bebe",
+                    "higiene",
+                    "almacen"
+                ],
+                "_descripcion": "Bolso cambiador para bebes",
+                "_info_add": "",
+                "_valoracion": "",
+                "_sku": "VzDJKldJom",
+                "_imagenes_asociadas": []
+            },
+            "index": 5
+        },
+        {
+            "type": "MProduct",
+            "json": {
+                "_nombre": "Portabebes",
+                "_precio": 78.62,
+                "_cant_stock": 44,
+                "_categoria": "Bolso",
+                "_tags": [
+                    "dormir",
+                    "bebe",
+                    "higiene",
+                    "almacen"
+                ],
+                "_descripcion": "Portabebes para el transporte",
+                "_info_add": "",
+                "_valoracion": "",
+                "_sku": "DLuVjI8l4e",
+                "_imagenes_asociadas": []
+            },
+            "index": 6
+        },
+        {
+            "type": "MProduct",
+            "json": {
+                "_nombre": "Cochecito",
+                "_precio": 137.16,
+                "_cant_stock": 54,
+                "_categoria": "Vehiculo",
+                "_tags": [
+                    "dormir",
+                    "bebe",
+                    "Transporte"
+                ],
+                "_descripcion": "Coche para bebes",
+                "_info_add": "",
+                "_valoracion": "",
+                "_sku": "9GzSQPfFAv",
+                "_imagenes_asociadas": []
+            },
+            "index": 7
+        },
+        {
+            "type": "MProduct",
+            "json": {
+                "_nombre": "Biberon",
+                "_precio": 5.31,
+                "_cant_stock": 184,
+                "_categoria": "Alimento",
+                "_tags": [
+                    "dormir",
+                    "bebe",
+                    "Transporte",
+                    "Alimento"
+                ],
+                "_descripcion": "Biberon para bebes",
+                "_info_add": "",
+                "_valoracion": "",
+                "_sku": "6hbDwluXds",
+                "_imagenes_asociadas": []
+            },
+            "index": 8
+        },
+        {
+            "type": "MProduct",
+            "json": {
+                "_nombre": "Silla brincadora",
+                "_precio": 145.53,
+                "_cant_stock": 72,
+                "_categoria": "Juego",
+                "_tags": [
+                    "bebe",
+                    "Transporte",
+                    "Alimento",
+                    "Juego"
+                ],
+                "_descripcion": "Silla brincadora para entretenimiento",
+                "_info_add": "",
+                "_valoracion": "",
+                "_sku": "le2ACgm2BB",
+                "_imagenes_asociadas": []
+            },
+            "index": 9
+        },
+        {
+            "type": "MProduct",
+            "json": {
+                "_nombre": "Hamaca",
+                "_precio": 85.77,
+                "_cant_stock": 10,
+                "_categoria": "Juego",
+                "_tags": [
+                    "bebe",
+                    "Transporte",
+                    "Alimento",
+                    "Juego"
+                ],
+                "_descripcion": "Silla brincadora para entretenimiento",
+                "_info_add": "",
+                "_valoracion": "",
+                "_sku": "Sb28cv7J4p",
+                "_imagenes_asociadas": []
+            },
+            "index": 10
+        }
+    ]
+}
