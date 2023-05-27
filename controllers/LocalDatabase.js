@@ -50,12 +50,14 @@ class LocalDatabase {
 
     }
 
-    generateDataExample(cantUsers, cantProducts) {
+     generateDataExample(cantUsers, cantProducts) {
 
-        var list_users = MUser.getAleatoryUsers(cantUsers)
+        MUser.getAleatoryUsers(cantUsers).then((value)=>{
+            this.addData('/users', value)
+        })
         var lista_productos = MProduct.getAleatoryProducts(cantProducts)
 
-        this.addData('/users', list_users)
+
         this.addData('/products', lista_productos)
 
     }
@@ -72,15 +74,15 @@ class LocalDatabase {
 
     // CRUD Usuario
 
-    listarUsuarios(paging, callback) {
-        this._MUser.listarUsuarios(paging).then(callback)
+     listarUsuarios(paging, callback) {
+        this._MUser.listAllUsers(paging).then(callback)
     }
 
-    buscarUsuario(username,callback){
-        this._MUser.buscarUsuario(username).then(callback)
+     buscarUsuario(username,callback){
+        this._MUser.searchUser(username).then(callback)
     }
 
-    adicionarUsuario(nombreCompleto, nombreUsuario, rol, password){
+     adicionarUsuario(nombreCompleto, nombreUsuario, rol, password){
         this._MUser.addUsuario(nombreCompleto, nombreUsuario, rol, password)
     }
 

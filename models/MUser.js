@@ -2,6 +2,8 @@ const shortid = require("shortid");
 var EUser = require('../entities/EUser')
 var IObject = require('../models/IObject')
 
+var CryptEngine = require('bcrypt')
+
 class MUser extends IObject {
 
     //Implementacion de crud de usuarios
@@ -20,7 +22,7 @@ class MUser extends IObject {
         this._DB = Database_Ctrl
     }
 
-    static getAleatoryUsers(cantUser) {
+    static async getAleatoryUsers(cantUser) {
 
         //Generating Users
        if(cantUser < 12) {
@@ -45,7 +47,8 @@ class MUser extends IObject {
 
                if (rol_cursor == 5) rol_cursor = 0
 
-               var newUser = new EUser(shortid.generate(), full_names[n_index], login_user[n_index], rols[rol_cursor++], "P@ssw0rd1**")
+               var pass = await CryptEngine.hash("P@ssw0rd1**",10);
+               var newUser = new EUser(shortid.generate(), full_names[n_index], login_user[n_index], rols[rol_cursor++], pass )
 
                if (!this.prototype.noRepeatDataUsers(list_users, login_user[n_index]))
                    list_users.push(newUser)
@@ -60,7 +63,7 @@ class MUser extends IObject {
 
 
     //Listar usuarios
-    async listarUsuarios(paging_count = 0) {
+    async listAllUsers(paging_count = 0) {
         var lista = await this._DB.getDataFromPath('/users');
         if (paging_count > 0)
             return this.prototype.paginate(lista, paging_count)
@@ -69,8 +72,8 @@ class MUser extends IObject {
     }
 
     //Buscar usuario
-    async buscarUsuario(nickname) {
-        var lista = await this.listarUsuarios()
+    async searchUser(nickname) {
+        var lista = await this.listAllUsers()
 
         var finded = lista.find((value) => {
             return value._nombre_usuario == nickname
@@ -83,7 +86,7 @@ class MUser extends IObject {
     }
 
     async buscarUsuarioPorID(idUsuario) {
-        var lista = await this.listarUsuarios()
+        var lista = await this.listAllUsers()
 
         var finded = lista.find((value) => {
             return value._id === idUsuario
@@ -114,7 +117,7 @@ class MUser extends IObject {
 
     //Actualizar Usuario
     async updateUsuario(idUsuario, nombre_completo, username, rol, password) {
-        var lista = await this.listarUsuarios();
+        var lista = await this.listAllUsers();
 
         var tmp_usuario = new EUser(idUsuario, nombre_completo, username, rol, password)
 
@@ -131,7 +134,7 @@ class MUser extends IObject {
 
     //Eliminar usuario
     async deleteUsuario(idUsuario) {
-        var lista = await this.listarUsuarios();
+        var lista = await this.listAllUsers();
 
         const index = lista.findIndex(object => {
             return object._id === idUsuario;

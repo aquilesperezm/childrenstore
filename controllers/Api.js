@@ -1,14 +1,78 @@
 //importamos json web tockens (jwt)
 const jwt = require("jsonwebtoken")
 const config = process.env
+var CryptEngine = require('bcrypt')
+
+const DB = require("./LocalDatabase");
+var db = new DB('./database/database.json')
 
 class Api {
 
-    //Db Instance
-    _Db
 
-    constructor(db) {
-      this._Db = db
+    constructor() {
+    }
+
+
+    async registerUser(req, res) {
+        // Our register logic starts here
+        try {
+            // Obtener todos los campos del json
+            const {nombre_completo, nombre_usuario, rol, password} = req.body;
+
+            // Validar la entrada de todos los nombres
+            if (!(nombre_completo && nombre_usuario && rol && password)) {
+                res.status(400).send("Error!! se requieren todos los campos");
+            }
+
+            //chequeamos si el usuario existe a nivel de base de datos
+            db.buscarUsuario(nombre_usuario, (v) => {
+                //en caso del que
+                if (v != false)
+                    return res.status(409).send("Error!!! El usuario ya existe. Autentiquese");
+                 //crear el usuario
+            })
+
+            var encryptedPassword = await CryptEngine.hash(password, 10);
+
+            /*
+                         // check if user already exist
+                         // Validate if user exist in our database
+                         const oldUser = await User.findOne({email});
+
+                         if (oldUser) {
+                             return res.status(409).send("Error!!! El usuario ya existe. Autentiquese");
+                         }
+
+                         //Encrypt user password
+                         var encryptedPassword = await bcrypt.hash(password, 10);
+
+                         // Create user in our database
+                         const user = await User.create({
+                             first_name,
+                             last_name,
+                             email: email.toLowerCase(), // sanitize: convert email to lowercase
+                             password: encryptedPassword,
+                         });
+
+                         // Create token
+                         const token = jwt.sign(
+                             {user_id: user._id, email},
+                             process.env.TOKEN_KEY,
+                             {
+                                 expiresIn: "30m",
+                             }
+                         );
+                         // save user token
+                         user.token = token;
+
+                         // return new user
+                         res.status(201).json(user);
+             */
+        } catch (err) {
+            console.log(err);
+        }
+        // Our register logic ends here
+
     }
 
     verifyToken(req, res, next) {
@@ -30,56 +94,6 @@ class Api {
 
     }
 
-    async registerUser(req, res) {
-        // Our register logic starts here
-        try {
-            // Get user input
-            const {first_name, last_name, email, password} = req.body;
-
-            // Validate user input
-           /* if (!(email && password && first_name && last_name)) {
-                res.status(400).send("Error!! se requieren todos los campos");
-            }
-
-            // check if user already exist
-            // Validate if user exist in our database
-            const oldUser = await User.findOne({email});
-
-            if (oldUser) {
-                return res.status(409).send("Error!!! El usuario ya existe. Autentiquese");
-            }
-
-            //Encrypt user password
-            var encryptedPassword = await bcrypt.hash(password, 10);
-
-            // Create user in our database
-            const user = await User.create({
-                first_name,
-                last_name,
-                email: email.toLowerCase(), // sanitize: convert email to lowercase
-                password: encryptedPassword,
-            });
-
-            // Create token
-            const token = jwt.sign(
-                {user_id: user._id, email},
-                process.env.TOKEN_KEY,
-                {
-                    expiresIn: "30m",
-                }
-            );
-            // save user token
-            user.token = token;
-
-            // return new user
-            res.status(201).json(user);
-*/
-        } catch (err) {
-            console.log(err);
-        }
-        // Our register logic ends here
-
-    }
 
     async loginUser(req, res) {
 
@@ -116,7 +130,6 @@ class Api {
             console.log(err);
         }
     }
-
 
 
 }

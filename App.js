@@ -1,17 +1,20 @@
 //importacion de librerias
-var express = require('express')
+
 var HTTPServer = require('./controllers/Server')
 var DB = require('./controllers/LocalDatabase')
 
 //declaracion de variables
 var db = new DB('./database/database.json')
-var app = express()
+var service_port = process.env.PORT
 /*
 *  Generate Products and Users
 * */
 require("dotenv").config();
-if(process.env.GENERATED_VALUE_ACTIVATED == 'TRUE')
-db.generateDataExample(Number(process.env.COUNT_USER_GENERATED), Number(process.env.COUNT_PRODUCT_GENERATED))
+if(process.env.GENERATED_VALUE_ACTIVATED == 'TRUE') {
+    db.generateDataExample(Number(process.env.COUNT_USER_GENERATED), Number(process.env.COUNT_PRODUCT_GENERATED))
+    console.log('Datos generados automaticamente')
+}
+
 
 /*db.listarUsuarios(0,function(r){
     console.log(r)
@@ -41,8 +44,8 @@ db.generateDataExample(Number(process.env.COUNT_USER_GENERATED), Number(process.
 //parsin all incomming request into json
 //app.use(express.json())
 
-//HTTPServer = new HTTPServer(app,process.env.PORT)
-//HTTPServer.startServer()
+HTTPServer = new HTTPServer(service_port)
+HTTPServer.startServer()
 
 
 
