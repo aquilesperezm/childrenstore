@@ -30,9 +30,14 @@ class Api {
                 if (v != false)
                     return res.status(409).send("Error!!! El usuario ya existe. Autentiquese");
                  //crear el usuario
+                else
+                    console.log("Usurio no encontrado")
             })
 
+
             var encryptedPassword = await CryptEngine.hash(password, 10);
+
+            db.adicionarUsuario()
 
             /*
                          // check if user already exist

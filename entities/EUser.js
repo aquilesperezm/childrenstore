@@ -5,6 +5,7 @@ class EUser {
     _nombre_usuario = ""
     _rol = ""
     _password = ""
+    _token = ""
 
     constructor(id,nombrecompleto,usuario,rol,password) {
         this._id = id
@@ -14,6 +15,13 @@ class EUser {
         this._password = password
     }
 
+    setToken(token){
+        this._token = token
+    }
+
+    getToken(){
+        return this._token
+    }
 
     get id() {
         return this._id;
