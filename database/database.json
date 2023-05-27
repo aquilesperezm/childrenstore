@@ -1,37 +1,37 @@
 {
     "users": [
         {
-            "_id": "FlOafoAjL",
-            "_nombre_completo": "Parker Sherman",
-            "_nombre_usuario": "parker",
+            "_id": "RECXw4Y5N",
+            "_nombre_completo": "Allan Wilkinson",
+            "_nombre_usuario": "allan",
             "_rol": "Administrator",
             "_password": "P@ssw0rd1**"
         },
         {
-            "_id": "fyb_XgCQe8",
-            "_nombre_completo": "Skyler Sullivan",
-            "_nombre_usuario": "skyler",
+            "_id": "9QfZ3295-_",
+            "_nombre_completo": "Dominique Paul",
+            "_nombre_usuario": "dominique",
             "_rol": "Editor",
             "_password": "P@ssw0rd1**"
         },
         {
-            "_id": "meMizRsDJW",
-            "_nombre_completo": "Amanda Mcgrath",
-            "_nombre_usuario": "amanda",
-            "_rol": "Owner",
-            "_password": "P@ssw0rd1**"
-        },
-        {
-            "_id": "bqEskOGhC2",
-            "_nombre_completo": "Zachary Horn",
-            "_nombre_usuario": "zachary",
+            "_id": "tNCU5cvWNB",
+            "_nombre_completo": "Max Buckley",
+            "_nombre_usuario": "max",
             "_rol": "Operator",
             "_password": "P@ssw0rd1**"
         },
         {
-            "_id": "O4sFeWPzYc",
-            "_nombre_completo": "Allan Wilkinson",
-            "_nombre_usuario": "allan",
+            "_id": "AWerDE4tb-",
+            "_nombre_completo": "Arianna Conrad",
+            "_nombre_usuario": "arianna",
+            "_rol": "User",
+            "_password": "P@ssw0rd1**"
+        },
+        {
+            "_id": "q-tjnLYFxZ",
+            "_nombre_completo": "Dillan Montoya",
+            "_nombre_usuario": "dillan",
             "_rol": "User",
             "_password": "P@ssw0rd1**"
         }
@@ -51,7 +51,7 @@
                 "_descripcion": "Cuna para bebes",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "7v72JS3thR",
+                "_sku": "Ef5quv2O0K",
                 "_imagenes_asociadas": []
             },
             "index": 1
@@ -72,7 +72,7 @@
                 "_descripcion": "Monitor para bebes",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "lF55p8_4fo",
+                "_sku": "cWxNuybX8N",
                 "_imagenes_asociadas": []
             },
             "index": 2
@@ -93,7 +93,7 @@
                 "_descripcion": "Asiento de seguridad para autos",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "lR1b43jWq8",
+                "_sku": "dDMO4FqtX8",
                 "_imagenes_asociadas": []
             },
             "index": 3
@@ -113,7 +113,7 @@
                 "_descripcion": "Cambiador o mudador para bebes",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "4yTaHZloWo",
+                "_sku": "PwuYz5GOps",
                 "_imagenes_asociadas": []
             },
             "index": 4
@@ -134,7 +134,7 @@
                 "_descripcion": "Bolso cambiador para bebes",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "IF0OspQ_7w",
+                "_sku": "6X4TU3S557",
                 "_imagenes_asociadas": []
             },
             "index": 5
@@ -155,7 +155,7 @@
                 "_descripcion": "Portabebes para el transporte",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "krt1i-DWEj",
+                "_sku": "3jQ685-jT5",
                 "_imagenes_asociadas": []
             },
             "index": 6
@@ -175,52 +175,10 @@
                 "_descripcion": "Coche para bebes",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "SZI1EP9C2g",
+                "_sku": "RKx4qIXAGlr",
                 "_imagenes_asociadas": []
             },
             "index": 7
-        },
-        {
-            "type": "MProduct",
-            "json": {
-                "_nombre": "Biberon",
-                "_precio": 5.31,
-                "_cant_stock": 184,
-                "_categoria": "Alimento",
-                "_tags": [
-                    "dormir",
-                    "bebe",
-                    "Transporte",
-                    "Alimento"
-                ],
-                "_descripcion": "Biberon para bebes",
-                "_info_add": "",
-                "_valoracion": "",
-                "_sku": "rWKFef6wlD",
-                "_imagenes_asociadas": []
-            },
-            "index": 8
-        },
-        {
-            "type": "MProduct",
-            "json": {
-                "_nombre": "Silla brincadora",
-                "_precio": 145.53,
-                "_cant_stock": 72,
-                "_categoria": "Juego",
-                "_tags": [
-                    "bebe",
-                    "Transporte",
-                    "Alimento",
-                    "Juego"
-                ],
-                "_descripcion": "Silla brincadora para entretenimiento",
-                "_info_add": "",
-                "_valoracion": "",
-                "_sku": "NPBYzVMqUH",
-                "_imagenes_asociadas": []
-            },
-            "index": 9
         },
         {
             "type": "MProduct",
@@ -238,10 +196,25 @@
                 "_descripcion": "Silla brincadora para entretenimiento",
                 "_info_add": "",
                 "_valoracion": "",
-                "_sku": "ys4-8E3HdT",
+                "_sku": "YrpOWVV3WSv",
                 "_imagenes_asociadas": []
             },
             "index": 10
+        },
+        {
+            "_nombre": "Silla voladora",
+            "_precio": 12.78,
+            "_cant_stock": 53,
+            "_categoria": "voladora",
+            "_tags": [
+                "silla",
+                "jueguete"
+            ],
+            "_descripcion": "Silla voladora",
+            "_info_add": "la mejor",
+            "_valoracion": "super",
+            "_sku": "PdRwYDpWf-N",
+            "_imagenes_asociadas": []
         }
     ]
 }

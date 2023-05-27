@@ -46,7 +46,7 @@ class LocalDatabase {
         this.db = new JsonDB(new Config(databaseFilePath, true, true, '/'))
 
         this._MUser = new MUser(this)
-       // this._MProduct = new MProduct(this)
+        this._MProduct = new MProduct(this)
 
     }
 
@@ -92,9 +92,31 @@ class LocalDatabase {
         this._MUser.deleteUsuario(idUsuario)
     }
 
-
-
     //CRUD Producto
+
+    listarProductos(paging, callback) {
+        this._MProduct.listProducts(paging).then(callback)
+    }
+
+    buscarProducto(productName,callback){
+        return this._MProduct.searchProduct(productName).then(callback)
+    }
+
+    buscarProductoPorID(idSKU,callback){
+        return this._MProduct.searchProductByID(idSKU).then(callback)
+    }
+
+    adicionarProducto(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc){
+        this._MProduct.addProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc)
+    }
+
+    actualizarProducto(idsku,nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc){
+        this._MProduct.updateProduct(idsku,nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc)
+    }
+
+    eliminarProducto(idsku){
+        this._MProduct.deleteProduct(idsku)
+    }
 
 }
 

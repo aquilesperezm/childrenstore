@@ -92,8 +92,8 @@ class MProduct extends IObject {
     }
 
     //Listar Productos con paginacion
-    async listarProductos(paging_count = 0) {
-        var lista = await this.getDataFromPath('/products');
+    async listProducts(paging_count = 0) {
+        var lista = await this._DB.getDataFromPath('/products');
         if (paging_count > 0)
             return this._paginate(lista, paging_count)
         else
@@ -101,11 +101,11 @@ class MProduct extends IObject {
     }
 
     //Buscar Producto por su nombre
-    async buscarProducto(productname) {
-        var lista = await this.listarProductos()
+    async searchProduct(productname) {
+        var lista = await this.listProducts()
 
         var finded = lista.find((value) => {
-            return value.nombre == productname
+            return value.json._nombre == productname
         })
 
         if (finded)
@@ -115,11 +115,11 @@ class MProduct extends IObject {
     }
 
     //Buscar Productos por Sku (ID)
-    async buscarUsuarioPorID(idSku) {
-        var lista = await this.listarProdutos()
+    async searchProductByID(idSku) {
+        var lista = await this.listProducts()
 
         var finded = lista.find((value) => {
-            return value._sku === idSku
+            return value.json._sku === idSku
         })
 
         if (finded)
@@ -129,11 +129,11 @@ class MProduct extends IObject {
     }
 
     //Adicionar Producto
-    async adicionarProducto(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc) {
+    async addProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc) {
 
-        var product = new Product(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, shortid.generate(), lista_imagenes_asoc)
+        var product = new EProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, shortid.generate(), lista_imagenes_asoc)
 
-        var lista = await this.getDataFromPath('/products');
+        var lista = await this._DB.getDataFromPath('/products');
 
         const index = lista.findIndex(object => {
             return object._nombre === nombre;
@@ -141,39 +141,40 @@ class MProduct extends IObject {
 
         if (index == -1) {
             lista.push(product)
-            this.addData('/products', lista, true)
+            this._DB.addData('/products', lista, true)
 
         } else throw "El producto ya existe"
     }
 
     //Actualizar Producto
-    async actualizarProducto(sku, nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc) {
-        var lista = await this.listarProductos()
+    async updateProduct(sku, nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc) {
+        //var lista = await this.listProducts()
+        var lista = await this.listProducts();
 
-        var producto = new Product(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, sku, lista_imagenes_asoc)
+        var producto = new EProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, sku, lista_imagenes_asoc)
 
         const index = lista.findIndex(object => {
-            return object._sku === sku;
+            return object.json._sku == sku;
         });
 
         lista.splice(index, 1)
         lista.push(producto)
 
-        this.addData('/products', lista)
+        this._DB.addData('/products', lista)
 
     }
 
     //Eliminar producto
-    async eliminarProducto(sku) {
-        var lista = await this.listarProductos();
+    async deleteProduct(sku) {
+        var lista = await this.listProducts();
 
         const index = lista.findIndex(object => {
-            return object._sku === sku;
+            return object.json._sku === sku;
         });
 
         lista.splice(index, 1)
 
-        this.addData('/products', lista)
+        this._DB.addData('/products', lista)
 
     }
 
