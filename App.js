@@ -12,18 +12,19 @@ var app = express()
 require("dotenv").config();
 //db.generateDataExample(Number(process.env.COUNT_USER_GENERATED), Number(process.env.COUNT_PRODUCT_GENERATED))
 
-/*db.listarUsuarios(2).then((r)=>{
+/*db.listarUsuarios(0,function(r){
     console.log(r)
 })*/
 
-/*db.buscarUsuario('max').then((v)=>{
-    console.log(v)
+/*db.buscarUsuario('amanda',function(r){
+    console.log(r)
 })*/
 
 //db.adicionarUsuario("Aquiles Perez Miranda","akiles","Administrator","P@ssw0rd1**")
 
-//db.actualizarUsuario('Ukr4dtLhl','Yenisleidys Rodriguez Martinez','yeni','User','root')
-//db.eliminarUsuario('Ukr4dtLhl')
+//db.actualizarUsuario('D-VdrHrfc','Yenisleidys Rodriguez Martinez','yeni','User','root')
+
+db.eliminarUsuario('D-VdrHrfc')
 
 
 //parsin all incomming request into json
