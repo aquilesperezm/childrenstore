@@ -1,17 +1,27 @@
 class MUser {
 
+    _id=""
     _nombre_completo = ""
     _nombre_usuario = ""
     _rol = ""
     _password = ""
 
-    constructor(nombrecompleto,usuario,rol,password) {
+    constructor(id,nombrecompleto,usuario,rol,password) {
+        this._id = id
         this._nombre_completo = nombrecompleto
         this._nombre_usuario = usuario
         this._rol = rol
         this._password = password
     }
 
+
+    get id() {
+        return this._id;
+    }
+
+    set id(value) {
+        this._id = value;
+    }
 
     get password() {
         return this._password;

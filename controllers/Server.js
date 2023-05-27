@@ -13,7 +13,11 @@ class Server {
 
     startServer() {
 
-        this._app.listen(this._port, console.log("Server don start for port: " + this._port))
+        //convertir todas las peticiones a formato json
+        this._app.use(this._app.jsonp())
+
+        //comenzamos el servidor por el puerto seleccionado en la variable .env
+        this._app.listen(this._port, console.log("Server starting in port: " + this._port))
 
         this._app.post('/register',function(req,res){
             console.log('Escuchando a POST')
