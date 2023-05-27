@@ -28,13 +28,14 @@ require("dotenv").config();
 
 
 //db.listarProductos(0,function(r){ console.log(r) })
+
 //db.buscarProducto('Monitor para bebes',function(r){ console.log(r) })
-//db.buscarProductoPorID('lR1b43jWq8',function(r){ console.log(r) })
+//db.buscarProductoPorID('iBGqE2R_3T',function(r){ console.log(r) })
 /*db.adicionarProducto("Caja de Musica",45.77,23,"musica",['juguete','bebe']
                     ,"Jueguete","juguete de musica","la mejor",[])
 */
-//db.actualizarProducto('PdRwYDpWf-N','Silla voladora',12.78,53,"voladora",['silla','jueguete'],"Silla voladora","la mejor","super",[])
-//db.eliminarProducto('37-dmUFfzAs')
+//db.actualizarProducto('Jzc-pMeyUn','Tio Vivo',12.78,53,"juguete",['juguete','mesa','color'],"jugute giratorio para niños","A la venta en todas las tiendas","bueno",[])
+//db.eliminarProducto('JoI5yfKk2x')
 
 //parsin all incomming request into json
 //app.use(express.json())

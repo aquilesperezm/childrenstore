@@ -1,35 +1,35 @@
 {
     "users": [
         {
-            "_id": "RECXw4Y5N",
-            "_nombre_completo": "Allan Wilkinson",
-            "_nombre_usuario": "allan",
+            "_id": "N4zlkUA-F",
+            "_nombre_completo": "Arianna Conrad",
+            "_nombre_usuario": "arianna",
             "_rol": "Administrator",
             "_password": "P@ssw0rd1**"
         },
         {
-            "_id": "9QfZ3295-_",
-            "_nombre_completo": "Dominique Paul",
-            "_nombre_usuario": "dominique",
+            "_id": "C-t53UQ6pl",
+            "_nombre_completo": "Allan Wilkinson",
+            "_nombre_usuario": "allan",
             "_rol": "Editor",
             "_password": "P@ssw0rd1**"
         },
         {
-            "_id": "tNCU5cvWNB",
-            "_nombre_completo": "Max Buckley",
-            "_nombre_usuario": "max",
+            "_id": "2kgWIpOqP0",
+            "_nombre_completo": "Paris Soto",
+            "_nombre_usuario": "paris",
+            "_rol": "Owner",
+            "_password": "P@ssw0rd1**"
+        },
+        {
+            "_id": "LxBkZEDGOO",
+            "_nombre_completo": "Frida Coleman",
+            "_nombre_usuario": "frida",
             "_rol": "Operator",
             "_password": "P@ssw0rd1**"
         },
         {
-            "_id": "AWerDE4tb-",
-            "_nombre_completo": "Arianna Conrad",
-            "_nombre_usuario": "arianna",
-            "_rol": "User",
-            "_password": "P@ssw0rd1**"
-        },
-        {
-            "_id": "q-tjnLYFxZ",
+            "_id": "kmFuvwmMgz",
             "_nombre_completo": "Dillan Montoya",
             "_nombre_usuario": "dillan",
             "_rol": "User",
@@ -38,182 +38,134 @@
     ],
     "products": [
         {
-            "type": "MProduct",
-            "json": {
-                "_nombre": "Cuna",
-                "_precio": 45.65,
-                "_cant_stock": 23,
-                "_categoria": "Cuna",
-                "_tags": [
-                    "dormir",
-                    "bebe"
-                ],
-                "_descripcion": "Cuna para bebes",
-                "_info_add": "",
-                "_valoracion": "",
-                "_sku": "Ef5quv2O0K",
-                "_imagenes_asociadas": []
-            },
-            "index": 1
+            "_nombre": "Cuna",
+            "_precio": 45.65,
+            "_cant_stock": 23,
+            "_categoria": "Cuna",
+            "_tags": [
+                "dormir",
+                "bebe"
+            ],
+            "_descripcion": "Cuna para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "ae7EUE6cbs",
+            "_imagenes_asociadas": []
         },
         {
-            "type": "MProduct",
-            "json": {
-                "_nombre": "Monitor para bebes",
-                "_precio": 121.15,
-                "_cant_stock": 17,
-                "_categoria": "Monitor",
-                "_tags": [
-                    "dormir",
-                    "bebe",
-                    "vigilante",
-                    "alarma"
-                ],
-                "_descripcion": "Monitor para bebes",
-                "_info_add": "",
-                "_valoracion": "",
-                "_sku": "cWxNuybX8N",
-                "_imagenes_asociadas": []
-            },
-            "index": 2
+            "_nombre": "Monitor para bebes",
+            "_precio": 121.15,
+            "_cant_stock": 17,
+            "_categoria": "Monitor",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "vigilante",
+                "alarma"
+            ],
+            "_descripcion": "Monitor para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "g56Qv1qrir",
+            "_imagenes_asociadas": []
         },
         {
-            "type": "MProduct",
-            "json": {
-                "_nombre": "Asiento de seguridad",
-                "_precio": 53.78,
-                "_cant_stock": 31,
-                "_categoria": "Asiento",
-                "_tags": [
-                    "dormir",
-                    "bebe",
-                    "vigilante",
-                    "alarma"
-                ],
-                "_descripcion": "Asiento de seguridad para autos",
-                "_info_add": "",
-                "_valoracion": "",
-                "_sku": "dDMO4FqtX8",
-                "_imagenes_asociadas": []
-            },
-            "index": 3
+            "_nombre": "Asiento de seguridad",
+            "_precio": 53.78,
+            "_cant_stock": 31,
+            "_categoria": "Asiento",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "vigilante",
+                "alarma"
+            ],
+            "_descripcion": "Asiento de seguridad para autos",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "0cFmT8E9gm",
+            "_imagenes_asociadas": []
         },
         {
-            "type": "MProduct",
-            "json": {
-                "_nombre": "Cambiador",
-                "_precio": 67.91,
-                "_cant_stock": 13,
-                "_categoria": "Asiento",
-                "_tags": [
-                    "dormir",
-                    "bebe",
-                    "higiene"
-                ],
-                "_descripcion": "Cambiador o mudador para bebes",
-                "_info_add": "",
-                "_valoracion": "",
-                "_sku": "PwuYz5GOps",
-                "_imagenes_asociadas": []
-            },
-            "index": 4
+            "_nombre": "Cambiador",
+            "_precio": 67.91,
+            "_cant_stock": 13,
+            "_categoria": "Asiento",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Cambiador o mudador para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "vAsVreXbGC",
+            "_imagenes_asociadas": []
         },
         {
-            "type": "MProduct",
-            "json": {
-                "_nombre": "Bolso",
-                "_precio": 22.62,
-                "_cant_stock": 98,
-                "_categoria": "Bolso",
-                "_tags": [
-                    "dormir",
-                    "bebe",
-                    "higiene",
-                    "almacen"
-                ],
-                "_descripcion": "Bolso cambiador para bebes",
-                "_info_add": "",
-                "_valoracion": "",
-                "_sku": "6X4TU3S557",
-                "_imagenes_asociadas": []
-            },
-            "index": 5
+            "_nombre": "Bolso",
+            "_precio": 22.62,
+            "_cant_stock": 98,
+            "_categoria": "Bolso",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene",
+                "almacen"
+            ],
+            "_descripcion": "Bolso cambiador para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "SMYLmw4XHH",
+            "_imagenes_asociadas": []
         },
         {
-            "type": "MProduct",
-            "json": {
-                "_nombre": "Portabebes",
-                "_precio": 78.62,
-                "_cant_stock": 44,
-                "_categoria": "Bolso",
-                "_tags": [
-                    "dormir",
-                    "bebe",
-                    "higiene",
-                    "almacen"
-                ],
-                "_descripcion": "Portabebes para el transporte",
-                "_info_add": "",
-                "_valoracion": "",
-                "_sku": "3jQ685-jT5",
-                "_imagenes_asociadas": []
-            },
-            "index": 6
+            "_nombre": "Portabebes",
+            "_precio": 78.62,
+            "_cant_stock": 44,
+            "_categoria": "Bolso",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene",
+                "almacen"
+            ],
+            "_descripcion": "Portabebes para el transporte",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "iBGqE2R_3T",
+            "_imagenes_asociadas": []
         },
         {
-            "type": "MProduct",
-            "json": {
-                "_nombre": "Cochecito",
-                "_precio": 137.16,
-                "_cant_stock": 54,
-                "_categoria": "Vehiculo",
-                "_tags": [
-                    "dormir",
-                    "bebe",
-                    "Transporte"
-                ],
-                "_descripcion": "Coche para bebes",
-                "_info_add": "",
-                "_valoracion": "",
-                "_sku": "RKx4qIXAGlr",
-                "_imagenes_asociadas": []
-            },
-            "index": 7
+            "_nombre": "Cochecito",
+            "_precio": 137.16,
+            "_cant_stock": 54,
+            "_categoria": "Vehiculo",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "Transporte"
+            ],
+            "_descripcion": "Coche para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "cB9Nj-VjY3",
+            "_imagenes_asociadas": []
         },
         {
-            "type": "MProduct",
-            "json": {
-                "_nombre": "Hamaca",
-                "_precio": 85.77,
-                "_cant_stock": 10,
-                "_categoria": "Juego",
-                "_tags": [
-                    "bebe",
-                    "Transporte",
-                    "Alimento",
-                    "Juego"
-                ],
-                "_descripcion": "Silla brincadora para entretenimiento",
-                "_info_add": "",
-                "_valoracion": "",
-                "_sku": "YrpOWVV3WSv",
-                "_imagenes_asociadas": []
-            },
-            "index": 10
-        },
-        {
-            "_nombre": "Silla voladora",
+            "_nombre": "Tio Vivo",
             "_precio": 12.78,
             "_cant_stock": 53,
-            "_categoria": "voladora",
+            "_categoria": "juguete",
             "_tags": [
-                "silla",
-                "jueguete"
+                "juguete",
+                "mesa",
+                "color"
             ],
-            "_descripcion": "Silla voladora",
-            "_info_add": "la mejor",
-            "_valoracion": "super",
-            "_sku": "PdRwYDpWf-N",
+            "_descripcion": "jugute giratorio para niños",
+            "_info_add": "A la venta en todas las tiendas",
+            "_valoracion": "bueno",
+            "_sku": "Jzc-pMeyUn",
             "_imagenes_asociadas": []
         }
     ]

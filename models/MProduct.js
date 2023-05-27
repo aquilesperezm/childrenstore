@@ -25,66 +25,26 @@ class MProduct extends IObject {
         //Generating Products
 
         var lista_productos = [
-            {
-                type: 'MProduct',
-                json: new EProduct('Cuna', 45.65, 23, "Cuna", ['dormir', 'bebe'], "Cuna para bebes",
-                    "", "", shortid.generate(), []),
-                index: 1
-            },
-            {
-                type: 'MProduct',
-                json: new EProduct('Monitor para bebes', 121.15, 17, "Monitor", ['dormir', 'bebe', 'vigilante', 'alarma'], "Monitor para bebes",
-                    "", "", shortid.generate(), []),
-                index: 2
-            },
-            {
-                type: 'MProduct',
-                json: new EProduct('Asiento de seguridad', 53.78, 31, "Asiento", ['dormir', 'bebe', 'vigilante', 'alarma'], "Asiento de seguridad para autos",
-                    "", "", shortid.generate(), []),
-                index: 3
-            },
-            {
-                type: 'MProduct',
-                json: new EProduct('Cambiador', 67.91, 13, "Asiento", ['dormir', 'bebe', 'higiene'], "Cambiador o mudador para bebes",
-                    "", "", shortid.generate(), []),
-                index: 4
-            },
-            {
-                type: 'MProduct',
-                json: new EProduct('Bolso', 22.62, 98, "Bolso", ['dormir', 'bebe', 'higiene', 'almacen'], "Bolso cambiador para bebes",
-                    "", "", shortid.generate(), []),
-                index: 5
-            },
-            {
-                type: 'MProduct',
-                json: new EProduct('Portabebes', 78.62, 44, "Bolso", ['dormir', 'bebe', 'higiene', 'almacen'], "Portabebes para el transporte",
-                    "", "", shortid.generate(), []),
-                index: 6
-            },
-            {
-                type: 'MProduct',
-                json: new EProduct('Cochecito', 137.16, 54, "Vehiculo", ['dormir', 'bebe', 'Transporte'], "Coche para bebes",
-                    "", "", shortid.generate(), []),
-                index: 7
-            },
-            {
-                type: 'MProduct',
-                json: new EProduct('Biberon', 5.31, 184, "Alimento", ['dormir', 'bebe', 'Transporte', 'Alimento'], "Biberon para bebes",
-                    "", "", shortid.generate(), []),
-                index: 8
-            },
-            {
-                type: 'MProduct',
-                json: new EProduct('Silla brincadora', 145.53, 72, "Juego", ['bebe', 'Transporte', 'Alimento', 'Juego'], "Silla brincadora para entretenimiento",
-                    "", "", shortid.generate(), []),
-                index: 9
-            },
-            {
-                type: 'MProduct',
-                json: new EProduct('Hamaca', 85.77, 10, "Juego", ['bebe', 'Transporte', 'Alimento', 'Juego'], "Silla brincadora para entretenimiento",
-                    "", "", shortid.generate(), []),
-                index: 10
-            }
+            new EProduct('Cuna', 45.65, 23, "Cuna", ['dormir', 'bebe'], "Cuna para bebes",
+                "", "", shortid.generate(), []),
+            new EProduct('Monitor para bebes', 121.15, 17, "Monitor", ['dormir', 'bebe', 'vigilante', 'alarma'], "Monitor para bebes",
+                "", "", shortid.generate(), []),
+            new EProduct('Asiento de seguridad', 53.78, 31, "Asiento", ['dormir', 'bebe', 'vigilante', 'alarma'], "Asiento de seguridad para autos",
+                "", "", shortid.generate(), []),
+            new EProduct('Cambiador', 67.91, 13, "Asiento", ['dormir', 'bebe', 'higiene'], "Cambiador o mudador para bebes",
+                "", "", shortid.generate(), []),
+            new EProduct('Bolso', 22.62, 98, "Bolso", ['dormir', 'bebe', 'higiene', 'almacen'], "Bolso cambiador para bebes",
+                "", "", shortid.generate(), []),
+            new EProduct('Portabebes', 78.62, 44, "Bolso", ['dormir', 'bebe', 'higiene', 'almacen'], "Portabebes para el transporte",
+                "", "", shortid.generate(), []),
+            new EProduct('Cochecito', 137.16, 54, "Vehiculo", ['dormir', 'bebe', 'Transporte'], "Coche para bebes",
+                "", "", shortid.generate(), []),
+            new EProduct('Biberon', 5.31, 184, "Alimento", ['dormir', 'bebe', 'Transporte', 'Alimento'], "Biberon para bebes",
+                "", "", shortid.generate(), []),
+            new EProduct('Silla brincadora', 145.53, 72, "Juego", ['bebe', 'Transporte', 'Alimento', 'Juego'], "Silla brincadora para entretenimiento",
+                "", "", shortid.generate(), []),
+            new EProduct('Hamaca', 85.77, 10, "Juego", ['bebe', 'Transporte', 'Alimento', 'Juego'], "Silla brincadora para entretenimiento",
+                "", "", shortid.generate(), []),
         ]
 
         return lista_productos;
@@ -105,7 +65,7 @@ class MProduct extends IObject {
         var lista = await this.listProducts()
 
         var finded = lista.find((value) => {
-            return value.json._nombre == productname
+            return value._nombre == productname
         })
 
         if (finded)
@@ -119,7 +79,7 @@ class MProduct extends IObject {
         var lista = await this.listProducts()
 
         var finded = lista.find((value) => {
-            return value.json._sku === idSku
+            return value._sku === idSku
         })
 
         if (finded)
@@ -151,17 +111,19 @@ class MProduct extends IObject {
         //var lista = await this.listProducts()
         var lista = await this.listProducts();
 
-        var producto = new EProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, sku, lista_imagenes_asoc)
-
         const index = lista.findIndex(object => {
-            return object.json._sku == sku;
+            return object._sku == sku;
         });
 
-        lista.splice(index, 1)
-        lista.push(producto)
+        if (index > -1) {
 
-        this._DB.addData('/products', lista)
+            var producto = new EProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, sku, lista_imagenes_asoc)
 
+            lista.splice(index, 1)
+            lista.push(producto)
+            this._DB.addData('/products', lista)
+
+        } else throw "El objeto no existe"
     }
 
     //Eliminar producto
@@ -169,13 +131,13 @@ class MProduct extends IObject {
         var lista = await this.listProducts();
 
         const index = lista.findIndex(object => {
-            return object.json._sku === sku;
+            return object._sku === sku;
         });
 
-        lista.splice(index, 1)
-
-        this._DB.addData('/products', lista)
-
+        if (index > -1) {
+            lista.splice(index, 1)
+            this._DB.addData('/products', lista)
+        } else throw "El objeto no existe"
     }
 
 }
