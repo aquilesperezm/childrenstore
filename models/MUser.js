@@ -23,39 +23,38 @@ class MUser extends IObject {
     static getAleatoryUsers(cantUser) {
 
         //Generating Users
+       if(cantUser < 12) {
+           var full_names = ['Skyler Sullivan', 'Zachary Horn', 'Arianna Conrad', 'Amanda Mcgrath',
+               'Paris Soto', 'Allan Wilkinson', 'Dillan Montoya', 'Parker Sherman',
+               'Brent Shields', 'Dominique Paul', 'Max Buckley', 'Frida Coleman']
 
-        var full_names = ['Skyler Sullivan', 'Zachary Horn', 'Arianna Conrad', 'Amanda Mcgrath',
-            'Paris Soto', 'Allan Wilkinson', 'Dillan Montoya', 'Parker Sherman',
-            'Brent Shields', 'Dominique Paul', 'Max Buckley', 'Frida Coleman']
+           var login_user = ['skyler', 'zachary', 'arianna', 'amanda', 'paris',
+               'allan', 'dillan', 'parker', 'brent', 'dominique',
+               'max', 'frida']
 
-        var login_user = ['skyler', 'zachary', 'arianna', 'amanda', 'paris',
-            'allan', 'dillan', 'parker', 'brent', 'dominique',
-            'max', 'frida']
-
-        var rols = ['Administrator', 'Editor', 'Owner', 'Operator', 'User']
-
-
-        var rol_cursor = 0
-        var list_users = []
-        for (var i = 0; i < cantUser; i++) {
+           var rols = ['Administrator', 'Editor', 'Owner', 'Operator', 'User']
 
 
+           var rol_cursor = 0
+           var list_users = []
+           for (var i = 0; i < cantUser; i++) {
 
-            var n_index = this.prototype.getRandomInt(0, 12),
-                n_rols = this.prototype.getRandomInt(0, 4)
 
-            if (rol_cursor == 5) rol_cursor = 0
+               var n_index = this.prototype.getRandomInt(0, 12),
+                   n_rols = this.prototype.getRandomInt(0, 4)
 
-            var newUser = new EUser(shortid.generate(), full_names[n_index], login_user[n_index], rols[rol_cursor++], "P@ssw0rd1**")
+               if (rol_cursor == 5) rol_cursor = 0
 
-            if (!this.prototype.noRepeatDataUsers(list_users, login_user[n_index]))
-                list_users.push(newUser)
-            else i--
+               var newUser = new EUser(shortid.generate(), full_names[n_index], login_user[n_index], rols[rol_cursor++], "P@ssw0rd1**")
 
-        }
+               if (!this.prototype.noRepeatDataUsers(list_users, login_user[n_index]))
+                   list_users.push(newUser)
+               else i--
 
-        return list_users
+           }
 
+           return list_users
+       } else throw "La cantidad de usuarios a generar debe ser menor que 12"
 
     }
 

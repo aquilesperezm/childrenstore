@@ -10,7 +10,8 @@ var app = express()
 *  Generate Products and Users
 * */
 require("dotenv").config();
-//db.generateDataExample(Number(process.env.COUNT_USER_GENERATED), Number(process.env.COUNT_PRODUCT_GENERATED))
+if(process.env.GENERATED_VALUE_ACTIVATED == 'TRUE')
+db.generateDataExample(Number(process.env.COUNT_USER_GENERATED), Number(process.env.COUNT_PRODUCT_GENERATED))
 
 /*db.listarUsuarios(0,function(r){
     console.log(r)

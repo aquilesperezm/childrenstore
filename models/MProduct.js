@@ -21,34 +21,41 @@ class MProduct extends IObject {
      * 5- Eliminar producto
      * */
 
-    static getAleatoryProducts() {
+    static getAleatoryProducts(cantProducts) {
         //Generating Products
 
-        var lista_productos = [
-            new EProduct('Cuna', 45.65, 23, "Cuna", ['dormir', 'bebe'], "Cuna para bebes",
-                "", "", shortid.generate(), []),
-            new EProduct('Monitor para bebes', 121.15, 17, "Monitor", ['dormir', 'bebe', 'vigilante', 'alarma'], "Monitor para bebes",
-                "", "", shortid.generate(), []),
-            new EProduct('Asiento de seguridad', 53.78, 31, "Asiento", ['dormir', 'bebe', 'vigilante', 'alarma'], "Asiento de seguridad para autos",
-                "", "", shortid.generate(), []),
-            new EProduct('Cambiador', 67.91, 13, "Asiento", ['dormir', 'bebe', 'higiene'], "Cambiador o mudador para bebes",
-                "", "", shortid.generate(), []),
-            new EProduct('Bolso', 22.62, 98, "Bolso", ['dormir', 'bebe', 'higiene', 'almacen'], "Bolso cambiador para bebes",
-                "", "", shortid.generate(), []),
-            new EProduct('Portabebes', 78.62, 44, "Bolso", ['dormir', 'bebe', 'higiene', 'almacen'], "Portabebes para el transporte",
-                "", "", shortid.generate(), []),
-            new EProduct('Cochecito', 137.16, 54, "Vehiculo", ['dormir', 'bebe', 'Transporte'], "Coche para bebes",
-                "", "", shortid.generate(), []),
-            new EProduct('Biberon', 5.31, 184, "Alimento", ['dormir', 'bebe', 'Transporte', 'Alimento'], "Biberon para bebes",
-                "", "", shortid.generate(), []),
-            new EProduct('Silla brincadora', 145.53, 72, "Juego", ['bebe', 'Transporte', 'Alimento', 'Juego'], "Silla brincadora para entretenimiento",
-                "", "", shortid.generate(), []),
-            new EProduct('Hamaca', 85.77, 10, "Juego", ['bebe', 'Transporte', 'Alimento', 'Juego'], "Silla brincadora para entretenimiento",
-                "", "", shortid.generate(), []),
-        ]
+        if(cantProducts < 11) {
 
-        return lista_productos;
+            var lista_productos = [
+                new EProduct('Cuna', 45.65, 23, "Cuna", ['dormir', 'bebe'], "Cuna para bebes",
+                    "", "", shortid.generate(), []),
+                new EProduct('Monitor para bebes', 121.15, 17, "Monitor", ['dormir', 'bebe', 'vigilante', 'alarma'], "Monitor para bebes",
+                    "", "", shortid.generate(), []),
+                new EProduct('Asiento de seguridad', 53.78, 31, "Asiento", ['dormir', 'bebe', 'vigilante', 'alarma'], "Asiento de seguridad para autos",
+                    "", "", shortid.generate(), []),
+                new EProduct('Cambiador', 67.91, 13, "Asiento", ['dormir', 'bebe', 'higiene'], "Cambiador o mudador para bebes",
+                    "", "", shortid.generate(), []),
+                new EProduct('Bolso', 22.62, 98, "Bolso", ['dormir', 'bebe', 'higiene', 'almacen'], "Bolso cambiador para bebes",
+                    "", "", shortid.generate(), []),
+                new EProduct('Portabebes', 78.62, 44, "Bolso", ['dormir', 'bebe', 'higiene', 'almacen'], "Portabebes para el transporte",
+                    "", "", shortid.generate(), []),
+                new EProduct('Cochecito', 137.16, 54, "Vehiculo", ['dormir', 'bebe', 'Transporte'], "Coche para bebes",
+                    "", "", shortid.generate(), []),
+                new EProduct('Biberon', 5.31, 184, "Alimento", ['dormir', 'bebe', 'Transporte', 'Alimento'], "Biberon para bebes",
+                    "", "", shortid.generate(), []),
+                new EProduct('Silla brincadora', 145.53, 72, "Juego", ['bebe', 'Transporte', 'Alimento', 'Juego'], "Silla brincadora para entretenimiento",
+                    "", "", shortid.generate(), []),
+                new EProduct('Hamaca', 85.77, 10, "Juego", ['bebe', 'Transporte', 'Alimento', 'Juego'], "Hamaca para juegos",
+                    "", "", shortid.generate(), []),
+            ]
 
+            var r = []
+            for(var i = 0; i<cantProducts;i++)
+                r.push(lista_productos[i])
+
+            return r;
+
+        } else throw "La cantidad de Productos a generar debe ser menor que 10"
     }
 
     //Listar Productos con paginacion

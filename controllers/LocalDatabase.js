@@ -50,10 +50,10 @@ class LocalDatabase {
 
     }
 
-    generateDataExample() {
+    generateDataExample(cantUsers, cantProducts) {
 
-        var list_users = MUser.getAleatoryUsers(5)
-        var lista_productos = MProduct.getAleatoryProducts()
+        var list_users = MUser.getAleatoryUsers(cantUsers)
+        var lista_productos = MProduct.getAleatoryProducts(cantProducts)
 
         this.addData('/users', list_users)
         this.addData('/products', lista_productos)
