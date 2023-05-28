@@ -140,7 +140,7 @@ class LocalDatabase {
 
     }
 
-   async actualizarProducto(idsku, nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc) {
+    async actualizarProducto(idsku, nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc) {
         var d = LocalDatabase._DETECTED_ROL.find((v) => {
             return v == 'UPDATE'
         })
@@ -154,8 +154,16 @@ class LocalDatabase {
         this._MProduct.deleteProductType(idsku)
     }
 
-    eliminarProducto(ids) {
-        this._MProduct.deleteProductType(list_sku)
+    async eliminarProducto(idsku) {
+        var d = LocalDatabase._DETECTED_ROL.find((v) => {
+            return v == 'DELETE'
+        })
+
+        if (d == 'DELETE') {
+
+            return await this._MProduct.deleteProductType(idsku)
+
+        } else return {successfull: false, cause: "No tiene permisos"}
     }
 
     //Venta de Productos

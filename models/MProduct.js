@@ -245,7 +245,6 @@ class MProduct extends IObject {
 
             var producto = new EProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, sku, lista_imagenes_asoc)
 
-            console.log("Update!!!" + index)
             lista.splice(index, 1)
             lista.push(producto)
 
@@ -257,17 +256,20 @@ class MProduct extends IObject {
     }
 
     //Eliminar producto
-    async deleteProductType(sku) {
+    async deleteProductType(idsku) {
         var lista = await this.listProducts();
 
         const index = lista.findIndex(object => {
-            return object._sku === sku;
+            return object._sku === idsku;
         });
 
         if (index > -1) {
             lista.splice(index, 1)
             this._DB.addData('/products', lista)
-        } else throw "El objeto no existe"
+
+            return {successfull: true}
+
+        } else return {successfull: false, cause: "El producto no existe"}
     }
 
     async sellProducto(sku) {

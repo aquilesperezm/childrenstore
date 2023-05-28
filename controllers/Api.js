@@ -253,6 +253,40 @@ class Api {
 
     }
 
+    async deleteProduct(req,res){
+        const {
+            session_token,
+            idsku
+        } = req.body;
+
+        // Validar la entrada de todos los nombres
+        if (!(
+            session_token &&
+            idsku
+        )) {
+            return res.status(400).send("Error!! se requieren todos los campos");
+        }
+
+        //Buscamos el usuario al que pertenece el token y establecemos los permisos
+        var session_user = await db.buscarUsuarioPorToken(session_token)
+
+        if(session_user) {
+
+            var rule = 'RULES.' + session_user._rol + '.PRODUCT'
+            DBClass._DETECTED_ROL = eval(config_env[rule])
+
+            var r = await db.eliminarProducto(idsku)
+
+            if (!r.successfull)
+                return res.status(401).send(r)
+            else res.status(200).send(r)
+
+        } else {
+            return res.status(401).send({successfull:false,cause:'Token invalido'})
+        }
+        // DBClass._DETECTED_ROL = ''
+    }
+
     //API PRODUCTOS
 
     async buscarProducto(req, res) {

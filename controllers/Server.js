@@ -34,7 +34,7 @@ class Server {
         this._app.post('/create_product', this._API.createProduct)
         this._app.post('/read_products', this._API.listAllProducts)
         this._app.post('/update_product', this._API.updateProduct)
-       // this._app.post('/delete_product', this._API.eliminarProducto)
+        this._app.post('/delete_product', this._API.deleteProduct)
 
         //API REST - PRODUCTOS
         /*
