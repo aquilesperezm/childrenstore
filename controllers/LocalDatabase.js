@@ -82,8 +82,8 @@ class LocalDatabase {
         this._MUser.searchUser(username).then(callback)
     }
 
-     adicionarUsuario(nombreCompleto, nombreUsuario, rol, password){
-        this._MUser.addUsuario(nombreCompleto, nombreUsuario, rol, password)
+     adicionarUsuario(nombreCompleto, nombreUsuario, rol, password, token){
+        this._MUser.addUsuario(nombreCompleto, nombreUsuario, rol, password, token)
     }
 
     actualizarUsuario(idUsuario, nombre_completo, username, rol, password){

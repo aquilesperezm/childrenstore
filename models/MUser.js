@@ -99,9 +99,9 @@ class MUser extends IObject {
     }
 
     //Adicionar Usuario
-    async addUsuario(nombreCompleto, nombreUsuario, rol, password) {
+    async addUsuario(nombreCompleto, nombreUsuario, rol, password, token) {
 
-        var newUser = new EUser(shortid.generate(), nombreCompleto, nombreUsuario, rol, password)
+        var newUser = new EUser(shortid.generate(), nombreCompleto, nombreUsuario, rol, password, token)
 
         var lista = await this._DB.getDataFromPath('/users');
 

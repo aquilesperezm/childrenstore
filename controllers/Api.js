@@ -21,58 +21,34 @@ class Api {
 
             // Validar la entrada de todos los nombres
             if (!(nombre_completo && nombre_usuario && rol && password)) {
-                res.status(400).send("Error!! se requieren todos los campos");
+                return res.status(400).send("Error!! se requieren todos los campos");
             }
 
             //chequeamos si el usuario existe a nivel de base de datos
             db.buscarUsuario(nombre_usuario, (v) => {
-                //en caso del que
+                //en caso del que el usuario se encuentre lanzamos un error
                 if (v != false)
                     return res.status(409).send("Error!!! El usuario ya existe. Autentiquese");
-                 //crear el usuario
-                else
-                    console.log("Usurio no encontrado")
             })
 
+           //Creamos el usuario nuevo
 
             var encryptedPassword = await CryptEngine.hash(password, 10);
 
-            db.adicionarUsuario()
+            // Crear token
+            const token = jwt.sign(
+                {username: nombre_usuario, rol},
+                process.env.TOKEN_KEY,
+                {
+                    expiresIn: "30m",
+                }
+            );
 
-            /*
-                         // check if user already exist
-                         // Validate if user exist in our database
-                         const oldUser = await User.findOne({email});
+            console.log(token)
 
-                         if (oldUser) {
-                             return res.status(409).send("Error!!! El usuario ya existe. Autentiquese");
-                         }
+             db.adicionarUsuario(nombre_completo,nombre_usuario,rol,encryptedPassword,token)
 
-                         //Encrypt user password
-                         var encryptedPassword = await bcrypt.hash(password, 10);
 
-                         // Create user in our database
-                         const user = await User.create({
-                             first_name,
-                             last_name,
-                             email: email.toLowerCase(), // sanitize: convert email to lowercase
-                             password: encryptedPassword,
-                         });
-
-                         // Create token
-                         const token = jwt.sign(
-                             {user_id: user._id, email},
-                             process.env.TOKEN_KEY,
-                             {
-                                 expiresIn: "30m",
-                             }
-                         );
-                         // save user token
-                         user.token = token;
-
-                         // return new user
-                         res.status(201).json(user);
-             */
         } catch (err) {
             console.log(err);
         }

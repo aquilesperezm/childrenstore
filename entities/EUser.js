@@ -7,12 +7,13 @@ class EUser {
     _password = ""
     _token = ""
 
-    constructor(id,nombrecompleto,usuario,rol,password) {
+    constructor(id,nombrecompleto,usuario,rol,password,token='') {
         this._id = id
         this._nombre_completo = nombrecompleto
         this._nombre_usuario = usuario
         this._rol = rol
         this._password = password
+        this._token = token
     }
 
     setToken(token){
