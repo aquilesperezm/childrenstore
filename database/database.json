@@ -1,54 +1,4 @@
 {
-    "users": [
-        {
-            "_id": "0hipYyD08R",
-            "_nombre_completo": "Parker Sherman",
-            "_nombre_usuario": "parker",
-            "_rol": "Administrator",
-            "_password": "$2b$10$z7TVCwQU7FzwrZPcKzwB3u6.g45Qg6Hef4ydAb8Ufac2/Luc.qyXO",
-            "_token": ""
-        },
-        {
-            "_id": "FpETn1igJ-",
-            "_nombre_completo": "Skyler Sullivan",
-            "_nombre_usuario": "skyler",
-            "_rol": "Editor",
-            "_password": "$2b$10$Mi0RPGhMw/v5Gl/D17bDq.df/fzLvGpeWjMnYRsWUr3z/F/FY2Zp2",
-            "_token": ""
-        },
-        {
-            "_id": "3JojHTNU17",
-            "_nombre_completo": "Dominique Paul",
-            "_nombre_usuario": "dominique",
-            "_rol": "Owner",
-            "_password": "$2b$10$ojfYFK0yaXT3hMZiqgCLZudNetPnHec.rE2b88Wy.JwX9S4quedXS",
-            "_token": ""
-        },
-        {
-            "_id": "73xN8tXP4Q",
-            "_nombre_completo": "Dillan Montoya",
-            "_nombre_usuario": "dillan",
-            "_rol": "Operator",
-            "_password": "$2b$10$cM7BUygi48aSi3rcOT/MNeKIO1IyfeVlMSK4DAzIwyJCo33H9xyLm",
-            "_token": ""
-        },
-        {
-            "_id": "MxwYtDTHbD",
-            "_nombre_completo": "Arianna Conrad",
-            "_nombre_usuario": "arianna",
-            "_rol": "User",
-            "_password": "$2b$10$Cq/GhQ2ORcNR5RiugHe5s.F.otfYtuQferFA/ZslDpz96OQDbQaqG",
-            "_token": ""
-        },
-        {
-            "_id": "nul_yzgmt",
-            "_nombre_completo": "Aquiles Perez Miranda",
-            "_nombre_usuario": "akiles",
-            "_rol": "Administrador",
-            "_password": "$2b$10$aWuZfy0y1KQw4.KRM9T4DOtdADiVWKphKJ4DPhba7Vp9t4fV371Qe",
-            "_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFraWxlcyIsInJvbCI6IkFkbWluaXN0cmFkb3IiLCJpYXQiOjE2ODUyNDY0NjMsImV4cCI6MTY4NTI0ODI2M30.-1DvimZrr2tEJ6uAOS4JyL9kYO-VFP3jxbg5b8kQzBA"
-        }
-    ],
     "products": [
         {
             "_nombre": "Cuna",
@@ -62,7 +12,7 @@
             "_descripcion": "Cuna para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "X265BULZD",
+            "_sku": "5PUmkn8xW",
             "_imagenes_asociadas": []
         },
         {
@@ -79,7 +29,7 @@
             "_descripcion": "Monitor para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "7U6wxpsn1P",
+            "_sku": "bIrX1hFONF",
             "_imagenes_asociadas": []
         },
         {
@@ -96,7 +46,7 @@
             "_descripcion": "Asiento de seguridad para autos",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "4H7OEVQcPW",
+            "_sku": "X2D6d3Z83q",
             "_imagenes_asociadas": []
         },
         {
@@ -112,7 +62,7 @@
             "_descripcion": "Cambiador o mudador para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "0UXhyjnjdU",
+            "_sku": "0Dej9-rWz7",
             "_imagenes_asociadas": []
         },
         {
@@ -129,7 +79,7 @@
             "_descripcion": "Bolso cambiador para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "x3n350J625",
+            "_sku": "YhymEkJJvM",
             "_imagenes_asociadas": []
         },
         {
@@ -146,7 +96,7 @@
             "_descripcion": "Portabebes para el transporte",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "befxTUnMVQ",
+            "_sku": "r0x2fsoF9x",
             "_imagenes_asociadas": []
         },
         {
@@ -162,7 +112,7 @@
             "_descripcion": "Coche para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "bCYbIhbV2f",
+            "_sku": "7QkB_3Rywv",
             "_imagenes_asociadas": []
         },
         {
@@ -179,7 +129,7 @@
             "_descripcion": "Biberon para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "n-FtDhpC1k",
+            "_sku": "WvPoU3EpXX",
             "_imagenes_asociadas": []
         },
         {
@@ -196,7 +146,7 @@
             "_descripcion": "Silla brincadora para entretenimiento",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "s2mB5u34bl",
+            "_sku": "s8yDSQgllV",
             "_imagenes_asociadas": []
         },
         {
@@ -213,8 +163,73 @@
             "_descripcion": "Hamaca para juegos",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "NvNMEcUhLm",
+            "_sku": "VX1xFCvrii",
             "_imagenes_asociadas": []
+        },
+        {
+            "_nombre": "Spinner",
+            "_precio": "51.76",
+            "_cant_stock": "10",
+            "_categoria": "juguetes",
+            "_tags": [
+                "relax",
+                "fullcolor"
+            ],
+            "_descripcion": "Un juguete para relajarse",
+            "_info_add": "quedan pocos",
+            "_valoracion": "Muy util para relajarse",
+            "_sku": "1s4zivHaS",
+            "_imagenes_asociadas": []
+        }
+    ],
+    "users": [
+        {
+            "_id": "LAR_QTnFlL",
+            "_nombre_completo": "Max Buckley",
+            "_nombre_usuario": "max",
+            "_rol": "ADMINISTRATOR",
+            "_password": "$2b$10$nEcICrQDQo4mPaMSdyedtevvgaZP86CyaEdlH76O33jNLnvlr51gC",
+            "_token": ""
+        },
+        {
+            "_id": "AoMtTrLWu8",
+            "_nombre_completo": "Skyler Sullivan",
+            "_nombre_usuario": "skyler",
+            "_rol": "EDITOR",
+            "_password": "$2b$10$W0Y7ctcVrJLfFMwovz821uJ26A1o/gQtp/EfUDwjQEylLo0IXBRVu",
+            "_token": ""
+        },
+        {
+            "_id": "r64NRCJH-N",
+            "_nombre_completo": "Brent Shields",
+            "_nombre_usuario": "brent",
+            "_rol": "OWNER",
+            "_password": "$2b$10$11I2Wks1taFizC.DBvaO2O8VfXZqK.gQSei5qvn8e9MZ.G42RXZ4.",
+            "_token": ""
+        },
+        {
+            "_id": "u2PjlnoMHr",
+            "_nombre_completo": "Allan Wilkinson",
+            "_nombre_usuario": "allan",
+            "_rol": "USER",
+            "_password": "$2b$10$T.Ox4I1cSZSFsK5g4Syz8uKYjLvbjVjTc1cZnbOUruvfxXShTWlNm",
+            "_token": ""
+        },
+        {
+            "_id": "QuiBeCC2ij",
+            "_nombre_completo": "Dillan Montoya",
+            "_nombre_usuario": "dillan",
+            "_rol": "ADMINISTRATOR",
+            "_password": "$2b$10$N1DbxCAdE5SaG3HuqSFkx.W/tdgByuqd.fUkYewwp8wr8StmIJ0hO",
+            "_token": ""
+        },
+        {
+            "_id": "ULcy5bfTd",
+            "_nombre_completo": "Aquiles Perez Miranda",
+            "_nombre_usuario": "akiles",
+            "_rol": "ADMINISTRADOR",
+            "_password": "$2b$10$YvlpT4taDL1v52PZpeAvnu02u4nFstp8Vt99lsI6m.byJeiyZjnCa",
+            "_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFraWxlcyIsInJvbCI6IkFkbWluaXN0cmFkb3IiLCJpYXQiOjE2ODUyOTAwNzksImV4cCI6MTY4NTI5MTg3OX0.1tvQRLCYYqvAGGQiHJr9h92uAEHpbc2vxYah4s8L-BQ"
         }
     ]
 }

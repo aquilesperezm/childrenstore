@@ -95,7 +95,7 @@ class MProduct extends IObject {
             return false;
     }
 
-    async searchProductsByFilters(filters,per_page) {
+    async searchProductsByFilters(filters, per_page) {
 
         var result = []
 
@@ -201,8 +201,8 @@ class MProduct extends IObject {
 
             //console.log(Object.keys(filters[0]))
 
-            return this.paginatorToObject(result,1,10);
-        } else return this.paginatorToObject(lista,1,per_page);
+            return this.paginatorToObject(result, 1, 10);
+        } else return this.paginatorToObject(lista, 1, per_page);
     }
 
     //Adicionar Producto
@@ -217,10 +217,13 @@ class MProduct extends IObject {
         });
 
         if (index == -1) {
+
             lista.push(product)
             this._DB.addData('/products', lista, true)
 
-        } else throw "El producto ya existe"
+            return {successfull: true};
+
+        } else return {successfull: false, cause: "El producto ya existe"}
     }
 
     //Actualizar Producto
@@ -257,7 +260,7 @@ class MProduct extends IObject {
         } else throw "El objeto no existe"
     }
 
-    async sellProducto(sku){
+    async sellProducto(sku) {
         var lista = await this.listProducts();
 
         const index = lista.findIndex(object => {

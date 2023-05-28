@@ -40,6 +40,8 @@ class LocalDatabase {
     _MUser
     _MProduct
 
+    static _DETECTED_ROL
+
     constructor(databaseFilePath) {
 
         this.databaseFilePath = databaseFilePath
@@ -50,9 +52,9 @@ class LocalDatabase {
 
     }
 
-     generateDataExample(cantUsers, cantProducts) {
+    generateDataExample(cantUsers, cantProducts) {
 
-        MUser.getAleatoryUsers(cantUsers).then((value)=>{
+        MUser.getAleatoryUsers(cantUsers).then((value) => {
             this.addData('/users', value)
         })
         var lista_productos = MProduct.getAleatoryProducts(cantProducts)
@@ -74,54 +76,75 @@ class LocalDatabase {
 
     // CRUD Usuario
 
-     listarUsuarios(paging, callback) {
+    listarUsuarios(paging, callback) {
         this._MUser.listAllUsers(paging).then(callback)
     }
 
-     buscarUsuario(username,callback){
+    buscarUsuario(username, callback) {
+        // if(LocalDatabase._DETECTED_ROL)
         return this._MUser.searchUser(username).then(callback)
     }
 
-     adicionarUsuario(nombreCompleto, nombreUsuario, rol, password, token){
+    buscarUsuarioPorToken(token, callback) {
+        return this._MUser.searchUserByToken(token).then(callback)
+    }
+
+    adicionarUsuario(nombreCompleto, nombreUsuario, rol, password, token) {
         this._MUser.addUsuario(nombreCompleto, nombreUsuario, rol, password, token)
     }
 
-    actualizarUsuario(idUsuario, nombre_completo, username, rol, password){
-        this._MUser.updateUsuario(idUsuario,nombre_completo, username, rol, password)
+    actualizarUsuario(idUsuario, nombre_completo, username, rol, password) {
+        this._MUser.updateUsuario(idUsuario, nombre_completo, username, rol, password)
     }
 
-    eliminarUsuario(idUsuario){
+    eliminarUsuario(idUsuario) {
         this._MUser.deleteUsuario(idUsuario)
     }
 
-    //CRUD Producto
+    //CRUD Productos
 
     listarProductos(paging, callback) {
+
         this._MProduct.listProducts(paging).then(callback)
+
     }
 
-    buscarProducto(productName,callback){
+    buscarProducto(productName, callback) {
+
         return this._MProduct.searchProduct(productName).then(callback)
     }
 
-    buscarProductoPorID(idSKU,callback){
+    buscarProductoPorID(idSKU, callback) {
         return this._MProduct.searchProductByID(idSKU).then(callback)
     }
 
-    buscarProductoPorFiltros(filtros,per_page,callback){
-        return this._MProduct.searchProductsByFilters(filtros,per_page).then(callback)
+    buscarProductoPorFiltros(filtros, per_page, callback) {
+        return this._MProduct.searchProductsByFilters(filtros, per_page).then(callback)
     }
 
-    adicionarProducto(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc){
-        this._MProduct.addProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc)
+    async adicionarProducto(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc) {
+
+        var d = LocalDatabase._DETECTED_ROL.find((v) => {
+            return v == 'CREATE'
+        })
+
+        if (d == 'CREATE') {
+            return await this._MProduct.addProduct(nombre, precio, cant_stock, categoria, tags
+                , descripcion, info, valoracion, lista_imagenes_asoc)
+        } else return {successfull: false, cause: "No tiene permisos"}
+
     }
 
-    actualizarProducto(idsku,nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc){
-        this._MProduct.updateProduct(idsku,nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc)
+    actualizarProducto(idsku, nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc) {
+        this._MProduct.updateProduct(idsku, nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc)
     }
 
-    eliminarTipoProducto(idsku){
+    eliminarTipoProducto(idsku) {
         this._MProduct.deleteProductType(idsku)
+    }
+
+    eliminarProducto(ids) {
+        this._MProduct.deleteProductType(list_sku)
     }
 
     //Venta de Productos

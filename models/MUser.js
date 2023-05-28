@@ -34,7 +34,7 @@ class MUser extends IObject {
                'allan', 'dillan', 'parker', 'brent', 'dominique',
                'max', 'frida']
 
-           var rols = ['Administrator', 'Editor', 'Owner', 'Operator', 'User']
+           var rols = ['ADMINISTRATOR', 'EDITOR', 'OWNER', 'OPERATOR', 'USER']
 
 
            var rol_cursor = 0
@@ -90,6 +90,19 @@ class MUser extends IObject {
 
         var finded = lista.find((value) => {
             return value._id === idUsuario
+        })
+
+        if (finded)
+            return finded;
+        else
+            return false;
+    }
+
+    async searchUserByToken(token) {
+        var lista = await this.listAllUsers()
+
+        var finded = lista.find((value) => {
+            return value._token === token
         })
 
         if (finded)

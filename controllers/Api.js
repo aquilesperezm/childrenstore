@@ -1,10 +1,11 @@
 //importamos json web tockens (jwt)
 const jwt = require("jsonwebtoken")
-const config = process.env
+const config_env = process.env
+
 var CryptEngine = require('bcrypt')
 
-const DB = require("./LocalDatabase");
-var db = new DB('./database/database.json')
+const DBClass = require("./LocalDatabase");
+var db = new DBClass('./database/database.json')
 
 class Api {
 
@@ -25,13 +26,6 @@ class Api {
                 return res.status(400).send("Error!! se requieren todos los campos");
             }
 
-            //chequeamos si el usuario existe a nivel de base de datos
-            /* db.buscarUsuario(nombre_usuario, (v) => {
-                 //en caso del que el usuario se encuentre lanzamos un error
-                 if (v != false)
-                     return res.status(409).send("Error!!! El usuario ya existe. Autentiquese");
-             })*/
-
             const user = await db.buscarUsuario(nombre_usuario)
             if (user) return res.status(409).send("Error!!! El usuario ya existe. Autentiquese");
             else {
@@ -42,14 +36,14 @@ class Api {
 
                 // Crear token
                 const token = jwt.sign(
-                    {username: user._nombre_usuario, rol: user._rol},
-                    process.env.TOKEN_KEY,
+                    {username: nombre_usuario, rol: rol},
+                    config_env.TOKEN_KEY,
                     {
                         expiresIn: "30m",
                     }
                 );
 
-                db.adicionarUsuario(nombre_completo, nombre_usuario, rol, encryptedPassword, token)
+                db.adicionarUsuario(nombre_completo, nombre_usuario, rol.toUpperCase(), encryptedPassword, token)
 
                 db.buscarUsuario(nombre_usuario, (user) => {
                     res.status(201).json(user);
@@ -82,7 +76,7 @@ class Api {
 
                 const token = jwt.sign(
                     {username: user._nombre_usuario, rol: user._rol},
-                    process.env.TOKEN_KEY,
+                    config_env.TOKEN_KEY,
                     {
                         expiresIn: "30m",
                     }
@@ -115,13 +109,71 @@ class Api {
             return res.status(403).send("Un token es requerido para la autenticación")
         }
         try {
-            const decoded = jwt.verify(token, config.TOKEN_KEY)
+            const decoded = jwt.verify(token, config_env.TOKEN_KEY,)
             req.user = decoded
 
         } catch (err) {
             return res.status(401).send("Token invalido")
         }
         return next()
+
+    }
+
+    //CRUD PRODUCTOS
+
+    async createProduct(req, res) {
+
+        //nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc
+
+        const {
+            nombre,
+            precio,
+            cant_stock,
+            categoria,
+            tags,
+            descripcion,
+            info,
+            valoracion,
+            lista_imgs,
+
+            session_token
+        } = req.body;
+
+        // Validar la entrada de todos los nombres
+        if (!(nombre &&
+            precio &&
+            cant_stock &&
+            categoria &&
+            tags &&
+            descripcion &&
+            info &&
+            valoracion &&
+            lista_imgs,
+                session_token
+        )) {
+            return res.status(400).send("Error!! se requieren todos los campos");
+        }
+
+        //Buscamos el usuario al que pertenece el token y establecemos los permisos
+        var session_user = await db.buscarUsuarioPorToken(session_token)
+
+
+        if(session_user) {
+
+            var rule = 'RULES.' + session_user._rol + '.PRODUCT'
+            DBClass._DETECTED_ROL = eval(config_env[rule])
+
+            var r = await db.adicionarProducto(nombre, precio, cant_stock, categoria,
+                tags, descripcion, info, valoracion, lista_imgs)
+
+            if (!r.successfull)
+                return res.status(401).send(r)
+            else res.status(200).send(r)
+
+        } else {
+            return res.status(401).send({successfull:false,cause:'Token invalido'})
+        }
+        // DBClass._DETECTED_ROL = ''
 
     }
 
@@ -133,7 +185,7 @@ class Api {
 
             const {filters, per_page} = req.body;
 
-            const result = await db.buscarProductoPorFiltros(filters,per_page)
+            const result = await db.buscarProductoPorFiltros(filters, per_page)
 
             res.status(200).json(result);
 
@@ -149,9 +201,9 @@ class Api {
 
             const {filters, per_page} = req.body;
 
-            const result = await db.buscarProductoPorFiltros(filters,per_page)
+            const result = await db.buscarProductoPorFiltros(filters, per_page)
 
-            res.status(200).json({cantidad:result.total});
+            res.status(200).json({cantidad: result.total});
 
         } catch (err) {
             console.log(err)

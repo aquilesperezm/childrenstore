@@ -25,10 +25,16 @@ class Server {
         //comenzamos el servidor por el puerto seleccionado en la variable .env
         this._app.listen(this._port, console.log("Server starting in port: " + this._port))
 
-        //API REST - User
+        //API REST - USERS
         this._app.post('/register', this._API.registerUser)
         this._app.post('/login', this._API.loginUser)
         this._app.post('/welcome', this._API.verifyToken, this._API.welcomeUser)
+
+        //CRUD PRODUCTS
+        this._app.post('/create_product', this._API.createProduct)
+       // this._app.post('/read_products', this._API.listarProductos)
+       // this._app.post('/update_product', this._API.actualizarProducto)
+       // this._app.post('/delete_product', this._API.eliminarProducto)
 
         //API REST - PRODUCTOS
         /*
