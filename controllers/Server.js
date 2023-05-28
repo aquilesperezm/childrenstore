@@ -36,8 +36,8 @@ class Server {
         * una o varias (permitir paginacion en base de 10 resultados). Si no se envia ninguna caracteristica
         * el resultado debe ser la lista de articulos paginada
         * */
-        this._app.post('/searchproduct', this._API.buscarProducto)
-        this._app.post('/searchproductcount', this._API.buscarProductoCantidad)
+        this._app.post('/searchproduct', this._API.verifyToken, this._API.buscarProducto)
+        this._app.post('/searchproductcount',this._API.verifyToken , this._API.buscarProductoCantidad)
 
 
     }
