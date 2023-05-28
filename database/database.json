@@ -41,12 +41,12 @@
             "_token": ""
         },
         {
-            "_id": "bLpmk95Zu",
+            "_id": "-BNrQvLT6",
             "_nombre_completo": "Aquiles Perez Miranda",
             "_nombre_usuario": "akiles",
             "_rol": "Administrador",
-            "_password": "$2b$10$PIIHkCRqxz9Fv0caZfwwseIg2HN6umuhHoHPyoKWGSOpN5eHFdfIq",
-            "_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFraWxlcyIsInJvbCI6IkFkbWluaXN0cmFkb3IiLCJpYXQiOjE2ODUyNDQyMTYsImV4cCI6MTY4NTI0NjAxNn0.efthuiSNKDUSc4Gk4EWll0N8UmJRR1AX8gf3Od6Z1HE"
+            "_password": "$2b$10$j5okYMCAc6MHVoSdPGzp6OcHRE4kwuMKF2sytKs89.TtvICAfG19y",
+            "_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFraWxlcyIsInJvbCI6IkFkbWluaXN0cmFkb3IiLCJpYXQiOjE2ODUyNDQ1NjgsImV4cCI6MTY4NTI0NjM2OH0.X3TVI-N-6k7QzpMEKoBoeARBZj5ybnU04qSrOtEwdb0"
         }
     ],
     "products": [

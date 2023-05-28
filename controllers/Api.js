@@ -44,9 +44,13 @@ class Api {
                 }
             );
 
-            console.log(token)
+            db.adicionarUsuario(nombre_completo,nombre_usuario,rol,encryptedPassword,token)
 
-             db.adicionarUsuario(nombre_completo,nombre_usuario,rol,encryptedPassword,token)
+            db.buscarUsuario(nombre_usuario,(user)=>{
+                res.status(201).json(user);
+            })
+
+
 
 
         } catch (err) {
