@@ -25,8 +25,9 @@ class Server {
         //comenzamos el servidor por el puerto seleccionado en la variable .env
         this._app.listen(this._port, console.log("Server starting in port: " + this._port))
 
+        //API REST - User
         this._app.post('/register', this._API.registerUser)
-
+        this._app.post('/login', this._API.loginUser)
     }
 
 

@@ -79,7 +79,7 @@ class LocalDatabase {
     }
 
      buscarUsuario(username,callback){
-        this._MUser.searchUser(username).then(callback)
+        return this._MUser.searchUser(username).then(callback)
     }
 
      adicionarUsuario(nombreCompleto, nombreUsuario, rol, password, token){
