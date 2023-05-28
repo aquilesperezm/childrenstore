@@ -237,13 +237,23 @@ class MProduct extends IObject {
 
         if (index > -1) {
 
-            var producto = new EProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, sku, lista_imagenes_asoc)
+            /*var producto = new EProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, sku, lista_imagenes_asoc)
 
             lista.splice(index, 1)
             lista.push(producto)
+            this._DB.addData('/products', lista)*/
+
+            var producto = new EProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, sku, lista_imagenes_asoc)
+
+            console.log("Update!!!" + index)
+            lista.splice(index, 1)
+            lista.push(producto)
+
             this._DB.addData('/products', lista)
 
-        } else throw "El objeto no existe"
+            return {successfull: true}
+
+        } else return {successfull: false, cause: "El producto no existe"}
     }
 
     //Eliminar producto

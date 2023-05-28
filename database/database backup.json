@@ -116,6 +116,23 @@
             "_imagenes_asociadas": []
         },
         {
+            "_nombre": "Biberon",
+            "_precio": 5.31,
+            "_cant_stock": 184,
+            "_categoria": "Alimento",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "Transporte",
+                "Alimento"
+            ],
+            "_descripcion": "Biberon para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "AtAE9RMKZX",
+            "_imagenes_asociadas": []
+        },
+        {
             "_nombre": "Silla brincadora",
             "_precio": 145.53,
             "_cant_stock": 72,
@@ -147,21 +164,6 @@
             "_info_add": "",
             "_valoracion": "",
             "_sku": "xt2oU3Rhn0",
-            "_imagenes_asociadas": []
-        },
-        {
-            "_nombre": "Spinner",
-            "_precio": "51.76",
-            "_cant_stock": "10",
-            "_categoria": "juguetes",
-            "_tags": [
-                "relax",
-                "fullcolor"
-            ],
-            "_descripcion": "Un juguete para relajarse",
-            "_info_add": "quedan pocos",
-            "_valoracion": "Muy util para relajarse",
-            "_sku": "AtAE9RMKZX",
             "_imagenes_asociadas": []
         }
     ],

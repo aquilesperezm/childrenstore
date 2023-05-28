@@ -33,7 +33,7 @@ class Server {
         //CRUD PRODUCTS
         this._app.post('/create_product', this._API.createProduct)
         this._app.post('/read_products', this._API.listAllProducts)
-       // this._app.post('/update_product', this._API.actualizarProducto)
+        this._app.post('/update_product', this._API.updateProduct)
        // this._app.post('/delete_product', this._API.eliminarProducto)
 
         //API REST - PRODUCTOS

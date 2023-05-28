@@ -104,7 +104,14 @@ class LocalDatabase {
     //CRUD Productos
 
     async listarProductos(paging, callback) {
-        return await this._MProduct.listProducts(paging).then(callback)
+        var d = LocalDatabase._DETECTED_ROL.find((v) => {
+            return v == 'READ'
+        })
+
+        if (d == 'READ') {
+            return await this._MProduct.listProducts(paging).then(callback)
+        }
+        return {successfull: false, cause: "No tiene permisos"}
     }
 
     buscarProducto(productName, callback) {
@@ -133,8 +140,14 @@ class LocalDatabase {
 
     }
 
-    actualizarProducto(idsku, nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc) {
-        this._MProduct.updateProduct(idsku, nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc)
+   async actualizarProducto(idsku, nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc) {
+        var d = LocalDatabase._DETECTED_ROL.find((v) => {
+            return v == 'UPDATE'
+        })
+
+        if (d == 'UPDATE') {
+            return await this._MProduct.updateProduct(idsku, nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc)
+        } else return {successfull: false, cause: "No tiene permisos"}
     }
 
     eliminarTipoProducto(idsku) {

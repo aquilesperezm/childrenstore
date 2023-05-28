@@ -191,19 +191,67 @@ class Api {
 
             res.status(200).send({successfull:true,data:lista})
 
-           /* var r = await db.adicionarProducto(nombre, precio, cant_stock, categoria,
-                tags, descripcion, info, valoracion, lista_imgs)
-
-            if (!r.successfull)
-                return res.status(401).send(r)
-            else res.status(200).send(r)*/
 
         } else {
             return res.status(401).send({successfull:false,cause:'Token invalido'})
         }
 
     }
+    async updateProduct(req, res) {
 
+        const {
+            session_token,
+            idsku,
+            nombre,
+            precio,
+            cant_stock,
+            categoria,
+            tags,
+            descripcion,
+            info,
+            valoracion,
+            lista_imgs
+        } = req.body;
+
+        // Validar la entrada de todos los nombres
+        if (!(
+            session_token &&
+            idsku &&
+            nombre &&
+            precio &&
+            cant_stock &&
+            categoria &&
+            tags &&
+            descripcion &&
+            info &&
+            valoracion &&
+            lista_imgs
+        )) {
+            return res.status(400).send("Error!! se requieren todos los campos");
+        }
+
+        //Buscamos el usuario al que pertenece el token y establecemos los permisos
+        var session_user = await db.buscarUsuarioPorToken(session_token)
+
+
+        if(session_user) {
+
+            var rule = 'RULES.' + session_user._rol + '.PRODUCT'
+            DBClass._DETECTED_ROL = eval(config_env[rule])
+
+            var r = await db.actualizarProducto(idsku,nombre, precio, cant_stock, categoria,
+                tags, descripcion, info, valoracion, lista_imgs)
+
+            if (!r.successfull)
+                return res.status(401).send(r)
+            else res.status(200).send(r)
+
+        } else {
+            return res.status(401).send({successfull:false,cause:'Token invalido'})
+        }
+        // DBClass._DETECTED_ROL = ''
+
+    }
 
     //API PRODUCTOS
 
