@@ -37,7 +37,7 @@ class Server {
         * el resultado debe ser la lista de articulos paginada
         * */
         this._app.post('/searchproduct', this._API.buscarProducto)
-
+        this._app.post('/searchproductcount', this._API.buscarProductoCantidad)
 
 
     }

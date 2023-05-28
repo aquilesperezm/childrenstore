@@ -143,6 +143,22 @@ class Api {
 
     }
 
+    async buscarProductoCantidad(req, res) {
+
+        try {
+
+            const {filters, per_page} = req.body;
+
+            const result = await db.buscarProductoPorFiltros(filters,per_page)
+
+            res.status(200).json({cantidad:result.total});
+
+        } catch (err) {
+            console.log(err)
+        }
+
+    }
+
 
 }
 
