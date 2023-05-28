@@ -12,6 +12,7 @@ class Api {
     constructor() {
     }
 
+    //API USER AUTH
 
     async registerUser(req, res) {
         // Our register logic starts here
@@ -41,7 +42,7 @@ class Api {
 
                 // Crear token
                 const token = jwt.sign(
-                    {username: nombre_usuario, rol},
+                    {username: user._nombre_usuario, rol: user._rol},
                     process.env.TOKEN_KEY,
                     {
                         expiresIn: "30m",
@@ -78,6 +79,7 @@ class Api {
 
             if (user && (await CryptEngine.compare(password, user._password))) {
                 // Create token
+
                 const token = jwt.sign(
                     {username: user._nombre_usuario, rol: user._rol},
                     process.env.TOKEN_KEY,
@@ -100,6 +102,10 @@ class Api {
         }
     }
 
+    welcomeUser(req, res) {
+        res.status(200).send("Welcome 🙌 ");
+    }
+
     verifyToken(req, res, next) {
 
         const token =
@@ -118,6 +124,25 @@ class Api {
         return next()
 
     }
+
+    //API PRODUCTOS
+
+    async buscarProducto(req, res) {
+
+        try {
+
+            const {filters, per_page} = req.body;
+
+            const result = await db.buscarProductoPorFiltros(filters,per_page)
+
+            res.status(200).json(result);
+
+        } catch (err) {
+            console.log(err)
+        }
+
+    }
+
 
 }
 

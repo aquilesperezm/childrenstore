@@ -24,7 +24,7 @@ class MProduct extends IObject {
     static getAleatoryProducts(cantProducts) {
         //Generating Products
 
-        if(cantProducts < 11) {
+        if (cantProducts < 11) {
 
             var lista_productos = [
                 new EProduct('Cuna', 45.65, 23, "Cuna", ['dormir', 'bebe'], "Cuna para bebes",
@@ -50,7 +50,7 @@ class MProduct extends IObject {
             ]
 
             var r = []
-            for(var i = 0; i<cantProducts;i++)
+            for (var i = 0; i < cantProducts; i++)
                 r.push(lista_productos[i])
 
             return r;
@@ -93,6 +93,116 @@ class MProduct extends IObject {
             return finded;
         else
             return false;
+    }
+
+    async searchProductsByFilters(filters,per_page) {
+
+        var result = []
+
+        const lista = await this.listProducts()
+
+        if (filters.length > 0) {
+            filters.forEach((filter) => {
+
+                var fkey = Object.keys(filter)[0]
+                var key = "_" + fkey
+
+                /**
+                 * Atributos comparados
+                 *  1- nombre (String)
+                 *  2- categoria (String)
+                 *  3- descripcion (String)
+                 *  4- informacion adicional (String)
+                 *  5- valoracion (String)
+                 *  6- precio (Number) Se buscaran los menores que el valor solicitado
+                 *  7- cantidad en stock (Number) Se buscaran los menores que el valor solicitado
+                 * */
+
+                switch (key) {
+                    case '_nombre': {
+                        lista.forEach((e) => {
+                            var valor_lista = e[key]
+                            var valor_buscado = filter[fkey]
+                            if (valor_lista.includes(valor_buscado)) {
+                                result.push(e)
+                            }
+                        })
+                        break
+                    }
+                    case '_categoria': {
+                        lista.forEach((e) => {
+                            var valor_lista = e[key]
+                            var valor_buscado = filter[fkey]
+                            if (valor_lista.includes(valor_buscado)) {
+                                result.push(e)
+                            }
+                        })
+                        break
+                    }
+                    case '_descripcion': {
+                        lista.forEach((e) => {
+                            var valor_lista = e[key]
+                            var valor_buscado = filter[fkey]
+                            if (valor_lista.includes(valor_buscado)) {
+                                result.push(e)
+                            }
+                        })
+                        break
+                    }
+
+                    case '_info_add': {
+                        lista.forEach((e) => {
+                            var valor_lista = e[key]
+                            var valor_buscado = filter[fkey]
+                            if (valor_lista.includes(valor_buscado)) {
+                                result.push(e)
+                            }
+                        })
+                        break
+                    }
+
+                    case '_valoracion': {
+                        lista.forEach((e) => {
+                            var valor_lista = e[key]
+                            var valor_buscado = filter[fkey]
+                            if (valor_lista.includes(valor_buscado)) {
+                                result.push(e)
+                            }
+                        })
+                        break
+                    }
+
+                    case '_precio': {
+                        lista.forEach((e) => {
+                            var valor_lista = e[key]
+                            var valor_buscado = filter[fkey]
+                            //Puede ser mayor que o menor que dependiendo del valor deseado
+                            if (Number(valor_lista) <= Number(valor_buscado)) {
+                                result.push(e)
+                            }
+                        })
+                        break
+                    }
+                    case '_cant_stock': {
+                        lista.forEach((e) => {
+                            var valor_lista = e[key]
+                            var valor_buscado = filter[fkey]
+                            //Puede ser mayor que o menor que dependiendo del valor deseado
+                            if (Number(valor_lista) <= Number(valor_buscado)) {
+                                result.push(e)
+                            }
+                        })
+                        break
+                    }
+
+                }
+
+            })
+
+            //console.log(Object.keys(filters[0]))
+
+            return this.paginatorToObject(result,1,10);
+        } else return this.paginatorToObject(lista,1,per_page);
     }
 
     //Adicionar Producto

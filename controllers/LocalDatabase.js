@@ -108,6 +108,10 @@ class LocalDatabase {
         return this._MProduct.searchProductByID(idSKU).then(callback)
     }
 
+    buscarProductoPorFiltros(filtros,per_page,callback){
+        return this._MProduct.searchProductsByFilters(filtros,per_page).then(callback)
+    }
+
     adicionarProducto(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc){
         this._MProduct.addProduct(nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc)
     }

@@ -28,6 +28,18 @@ class Server {
         //API REST - User
         this._app.post('/register', this._API.registerUser)
         this._app.post('/login', this._API.loginUser)
+        this._app.post('/welcome', this._API.verifyToken, this._API.welcomeUser)
+
+        //API REST - PRODUCTOS
+        /*
+        * Entregar resultados de una busqueda enviando cualquiera de las caracteristicas del producto
+        * una o varias (permitir paginacion en base de 10 resultados). Si no se envia ninguna caracteristica
+        * el resultado debe ser la lista de articulos paginada
+        * */
+        this._app.post('/searchproduct', this._API.buscarProducto)
+
+
+
     }
 
 
