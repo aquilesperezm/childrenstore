@@ -123,8 +123,6 @@ class Api {
 
     async createProduct(req, res) {
 
-        //nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc
-
         const {
             nombre,
             precio,
@@ -176,6 +174,36 @@ class Api {
         // DBClass._DETECTED_ROL = ''
 
     }
+    async listAllProducts(req,res){
+        const {
+            session_token
+        } = req.body;
+
+        //Buscamos el usuario al que pertenece el token y establecemos los permisos
+        var session_user = await db.buscarUsuarioPorToken(session_token)
+
+        if(session_user) {
+
+            var rule = 'RULES.' + session_user._rol + '.PRODUCT'
+            DBClass._DETECTED_ROL = eval(config_env[rule])
+
+            var lista = await db.listarProductos()
+
+            res.status(200).send({successfull:true,data:lista})
+
+           /* var r = await db.adicionarProducto(nombre, precio, cant_stock, categoria,
+                tags, descripcion, info, valoracion, lista_imgs)
+
+            if (!r.successfull)
+                return res.status(401).send(r)
+            else res.status(200).send(r)*/
+
+        } else {
+            return res.status(401).send({successfull:false,cause:'Token invalido'})
+        }
+
+    }
+
 
     //API PRODUCTOS
 

@@ -103,10 +103,8 @@ class LocalDatabase {
 
     //CRUD Productos
 
-    listarProductos(paging, callback) {
-
-        this._MProduct.listProducts(paging).then(callback)
-
+    async listarProductos(paging, callback) {
+        return await this._MProduct.listProducts(paging).then(callback)
     }
 
     buscarProducto(productName, callback) {
