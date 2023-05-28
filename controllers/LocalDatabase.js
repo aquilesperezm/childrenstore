@@ -120,9 +120,11 @@ class LocalDatabase {
         this._MProduct.updateProduct(idsku,nombre, precio, cant_stock, categoria, tags, descripcion, info, valoracion, lista_imagenes_asoc)
     }
 
-    eliminarProducto(idsku){
-        this._MProduct.deleteProduct(idsku)
+    eliminarTipoProducto(idsku){
+        this._MProduct.deleteProductType(idsku)
     }
+
+    //Venta de Productos
 
 }
 

@@ -244,7 +244,7 @@ class MProduct extends IObject {
     }
 
     //Eliminar producto
-    async deleteProduct(sku) {
+    async deleteProductType(sku) {
         var lista = await this.listProducts();
 
         const index = lista.findIndex(object => {
@@ -255,6 +255,16 @@ class MProduct extends IObject {
             lista.splice(index, 1)
             this._DB.addData('/products', lista)
         } else throw "El objeto no existe"
+    }
+
+    async sellProducto(sku){
+        var lista = await this.listProducts();
+
+        const index = lista.findIndex(object => {
+            return object._sku === sku;
+        });
+
+
     }
 
 }
