@@ -68,6 +68,8 @@ class Server {
 
         /**   Mostrar los productos que tienen stock en 0 **/
 
+        this._app.post('/show_products_nostock',this._API.noStockProducts)
+
     }
 
 

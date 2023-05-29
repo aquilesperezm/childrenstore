@@ -220,13 +220,32 @@ class LocalDatabase {
 
     async buscarProductosVendidos() {
         var d = LocalDatabase._DETECTED_ROL.find((v) => {
-            return v == 'DELETE'
+            return v == 'READ'
         })
 
-        if (d == 'DELETE') {
+        if (d == 'READ') {
             return await this._MProduct.showSoldProducts()
         }
         return {successfull: false, cause: "No tiene permisos"}
+    }
+
+    async listarProductosNoStock() {
+        var d = LocalDatabase._DETECTED_ROL.find((v) => {
+            return v == 'READ'
+        })
+
+        if (d == 'READ') {
+            var result = []
+            const allproducts = await this._MProduct.listProducts()
+            allproducts.forEach((prod) => {
+                 if(prod._cant_stock == 0)
+                     result.push(prod)
+            })
+            return result
+
+        }
+        return {successfull: false, cause: "No tiene permisos"}
+
     }
 
 

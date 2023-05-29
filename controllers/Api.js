@@ -421,6 +421,35 @@ class Api {
 
     }
 
+    async noStockProducts(req,res){
+
+        const {
+            token
+        } = req.body;
+
+        // Validar la entrada de todos los nombres
+        if (!(
+            token
+        )) {
+            return res.status(400).send("Error!! se requieren todos los campos");
+        }
+
+        //Buscamos el usuario al que pertenece el token y establecemos los permisos
+        var session_user = await db.buscarUsuarioPorToken(token)
+
+        if (session_user) {
+
+            var rule = 'RULES.' + session_user._rol + '.PRODUCT'
+            DBClass._DETECTED_ROL = eval(config_env[rule])
+
+            var lista = await db.listarProductosNoStock()
+
+            return res.status(200).send({ prods_nostock:lista})
+
+        } else return res.status(401).send({successfull: false, cause: 'Token invalido'})
+
+    }
+
 }//end class
 
 module.exports = Api
