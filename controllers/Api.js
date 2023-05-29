@@ -358,6 +358,69 @@ class Api {
 
     }
 
+    async soldProducts(req, res) {
+        const {
+            token
+        } = req.body;
+
+        // Validar la entrada de todos los nombres
+        if (!(
+            token
+        )) {
+            return res.status(400).send("Error!! se requieren todos los campos");
+        }
+
+        //Buscamos el usuario al que pertenece el token y establecemos los permisos
+        var session_user = await db.buscarUsuarioPorToken(token)
+
+        if (session_user) {
+
+            var rule = 'RULES.' + session_user._rol + '.PRODUCT'
+            DBClass._DETECTED_ROL = eval(config_env[rule])
+
+            var result = await db.buscarProductosVendidos()
+            return res.status(200).send(result)
+
+        } else return res.status(401).send({successfull: false, cause: 'Token invalido'})
+
+
+    }
+
+
+    async totalGain(req, res) {
+        const {
+            token
+        } = req.body;
+
+        // Validar la entrada de todos los nombres
+        if (!(
+            token
+        )) {
+            return res.status(400).send("Error!! se requieren todos los campos");
+        }
+
+        //Buscamos el usuario al que pertenece el token y establecemos los permisos
+        var session_user = await db.buscarUsuarioPorToken(token)
+
+        if (session_user) {
+
+            var rule = 'RULES.' + session_user._rol + '.PRODUCT'
+            DBClass._DETECTED_ROL = eval(config_env[rule])
+
+            var result = await db.buscarProductosVendidos()
+
+            var ganancia = 0.00
+            result.forEach((sold)=>{
+                ganancia += sold._precio * sold._sales
+            })
+
+            return res.status(200).send({ganancia_total:ganancia.toFixed(2)})
+
+        } else return res.status(401).send({successfull: false, cause: 'Token invalido'})
+
+
+    }
+
 }//end class
 
 module.exports = Api

@@ -56,7 +56,17 @@ class Server {
          *
          * */
 
-         this._app.post('/sell_product_list',this._API.sellProductList)
+         this._app.post('/sell_product_list',this._API.verifyToken,this._API.sellProductList)
+
+         /**   Mostrar la lista de productos vendidos **/
+
+         this._app.post('/sold_products',this._API.soldProducts)
+
+        /**   Mostrar la ganacia total **/
+
+        this._app.post('/total_gain',this._API.totalGain)
+
+        /**   Mostrar los productos que tienen stock en 0 **/
 
     }
 

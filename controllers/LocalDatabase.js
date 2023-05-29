@@ -209,14 +209,27 @@ class LocalDatabase {
                     * */
 
 
-                        var msg = await this._MProduct.sellProduct(venta.sku, venta.cant)
-                        results.selling_msgs.push(msg)
+                    var msg = await this._MProduct.sellProduct(venta.sku, venta.cant)
+                    results.selling_msgs.push(msg)
 
-                  }
+                }
                 return results;
             } else return {sucessfull: false, cause: "Solo se permite vender una categoria de producto"}
         } else return {successfull: false, cause: "No tiene permisos"}
     }
+
+    async buscarProductosVendidos() {
+        var d = LocalDatabase._DETECTED_ROL.find((v) => {
+            return v == 'DELETE'
+        })
+
+        if (d == 'DELETE') {
+            return await this._MProduct.showSoldProducts()
+        }
+        return {successfull: false, cause: "No tiene permisos"}
+    }
+
+
 }
 
 module.exports = LocalDatabase

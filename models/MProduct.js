@@ -344,6 +344,11 @@ class MProduct extends IObject {
 
     }
 
+    async showSoldProducts(){
+        return await this._DB.getDataFromPath('/sales');
+
+    }
+
 }
 
 module.exports = MProduct
