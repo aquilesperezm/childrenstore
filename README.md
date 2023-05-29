@@ -27,9 +27,9 @@ se encuentra el fichero .env con la sintaxis para la configuracion: "KEY = VALUE
 ### Servicios
 
 Los servicios publicados por el protocolo HTTP, y a los cuales seran accedidos mediante el metodo POST, son los siguientes:
-|   #   | URL          | Descripcion                                          |  Entrada      |  Salida |
-|:-----:|:------------:|:-----------------------------------------------------|:--------------|:--------|
-| 1     | /register |  | Este servicio se encarga de registrar los usuarios   |               |         |
+|   #   | URL          | Descripcion                                          |  Entrada      |  Salida        |
+|:-----:|:------------:|:-----------------------------------------------------|:--------------|:---------------|
+| 1     | /register    | Este servicio se encarga de registrar los usuarios   |  nombre_completo, nombre_usuario, rol, password  |   user (object - json)        |
 | 2     | centered     |      |
 | 3     | are neat     |      |
 
