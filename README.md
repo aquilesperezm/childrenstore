@@ -24,7 +24,7 @@ se encuentra el fichero .env con la sintaxis para la configuracion: "KEY = VALUE
 5. <span style="font-weight:bold">TOKEN_KEY</span> : cadena usada para encriptar el token de los usuarios.
 6. <span style="font-weight:bold">RULES</span> : Reglas para los usuarios con la estructura RULES.<ROL>.<ELEMENTO>, estas poseen los permisos <span style="color:lightblue">['CREATE','READ','UPDATE','DELETE','SELL']</span>.
 ---
-### Servicios
+### Servicios Web
 
 Los servicios publicados por el protocolo HTTP, y a los cuales seran accedidos mediante el metodo POST, son los siguientes:
 |   #   | URL          | Descripcion                                          |  Entrada      |  Salida        |
@@ -32,4 +32,4 @@ Los servicios publicados por el protocolo HTTP, y a los cuales seran accedidos m
 | 1     | /register    | Este servicio se encarga de registrar los usuarios   | json: { nombre_completo, nombre_usuario, rol, password }  |   json: { user object }  |
 | 2     | /login       | Se encarga de autenticar al usuario y generar el token      | json: {nombre_usuario, password} | json: { user object } |
 | 3     | /welcome     | Se encarga de verficar si el usuario esta vigente    |  token | token |
-
+| Productos |
