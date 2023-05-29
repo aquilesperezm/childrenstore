@@ -24,28 +24,48 @@ class MProduct extends IObject {
     static getAleatoryProducts(cantProducts) {
         //Generating Products
 
-        if (cantProducts < 11) {
+        if (cantProducts < 12) {
+
+            //Categorias: para chicas, para chicos, para bebes, para hogar, para juegos
+            /*
+            1- Chupetes. (Chupete)
+            2- Alimentos. (Cereal)
+            3- Pañales de tela y desechables. (Pañal Desechable)
+            4- Ropa, incluyendo zapatos y calcetines. (Pillama)
+            5- Mantas, toallas y accesorios para el baño. (Toalla)
+            6- Productos para el cuidado íntimo del bebé. (Gel de Baño)
+            7- Cunas. (Cuna)
+            8- Cochecitos. (Coche)
+            9- Sillas para el auto. (Carseat)
+            10- Sacaleche. (Extractor de Leche Materna)
+            11- Baberos. (Babero)
+            12- Cangureras. (Cangurera)
+            * */
 
             var lista_productos = [
-                new EProduct('Cuna', 45.65, 23, "Cuna", ['dormir', 'bebe'], "Cuna para bebes",
+                new EProduct('Chupete', 45.65, 23, "para bebes", ['bebe', 'chupete'], "Chupete para bebes de diferentes color",
                     "", "", shortid.generate(), []),
-                new EProduct('Monitor para bebes', 121.15, 17, "Monitor", ['dormir', 'bebe', 'vigilante', 'alarma'], "Monitor para bebes",
+                new EProduct('Cereal', 121.15, 17, "para bebes", ['dormir', 'bebe', 'alimento'], "Alimento para bebes",
                     "", "", shortid.generate(), []),
-                new EProduct('Asiento de seguridad', 53.78, 31, "Asiento", ['dormir', 'bebe', 'vigilante', 'alarma'], "Asiento de seguridad para autos",
+                new EProduct('Pañal', 53.78, 31, "para bebes", ['dormir', 'bebe', 'higiene'], "Paquete de Pañales para bebes",
                     "", "", shortid.generate(), []),
-                new EProduct('Cambiador', 67.91, 13, "Asiento", ['dormir', 'bebe', 'higiene'], "Cambiador o mudador para bebes",
+                new EProduct('Muñeca', 67.91, 13, "para juegos", ['dormir', 'bebe', 'diversion'], "Pillama enterizo para bebes",
                     "", "", shortid.generate(), []),
-                new EProduct('Bolso', 22.62, 98, "Bolso", ['dormir', 'bebe', 'higiene', 'almacen'], "Bolso cambiador para bebes",
+                new EProduct('Tio vivo', 22.62, 98, "para juegos", [ 'bebe', 'diversion'], "Juguete para niños",
                     "", "", shortid.generate(), []),
-                new EProduct('Portabebes', 78.62, 44, "Bolso", ['dormir', 'bebe', 'higiene', 'almacen'], "Portabebes para el transporte",
+                new EProduct('Gel de baño', 78.62, 44, "para bebes", ['bebe', 'higiene'], "Gel de baño con diferentes aromas",
                     "", "", shortid.generate(), []),
-                new EProduct('Cochecito', 137.16, 54, "Vehiculo", ['dormir', 'bebe', 'Transporte'], "Coche para bebes",
+                new EProduct('Cuna', 137.16, 54, "para hogar", ['dormir', 'bebe', 'casa'], "Cuna para bebes",
                     "", "", shortid.generate(), []),
-                new EProduct('Biberon', 5.31, 184, "Alimento", ['dormir', 'bebe', 'Transporte', 'Alimento'], "Biberon para bebes",
+                new EProduct('Coche', 125.31, 184, "para chicos", ['chicos', 'transporte'], "Coche de color azul para chicos",
                     "", "", shortid.generate(), []),
-                new EProduct('Silla brincadora', 145.53, 72, "Juego", ['bebe', 'Transporte', 'Alimento', 'Juego'], "Silla brincadora para entretenimiento",
+                new EProduct('Carseat', 145.53, 72, "para chicas", ['chicos', 'transporte'], "Silla para el auto de color rosa",
                     "", "", shortid.generate(), []),
-                new EProduct('Hamaca', 85.77, 10, "Juego", ['bebe', 'Transporte', 'Alimento', 'Juego'], "Hamaca para juegos",
+                new EProduct('Sacaleche', 85.77, 10, "para bebes", ['bebe', 'alimento', 'facilidad'], "Extractor de leche materna para bebes",
+                    "", "", shortid.generate(), []),
+                new EProduct('Babero', 25.77, 50, "para bebes", ['bebe', 'alimento', 'facilidad'], "Babero para facilitar la higiene del bebe",
+                    "", "", shortid.generate(), []),
+                new EProduct('Cangurera', 61.19, 40, "para bebes", ['bebe', 'alimento', 'transporte'], "Cangurera para facilitar el transporte del bebe",
                     "", "", shortid.generate(), []),
             ]
 
@@ -272,12 +292,25 @@ class MProduct extends IObject {
         } else return {successfull: false, cause: "El producto no existe"}
     }
 
-    async sellProducto(sku) {
+    async sellProduct(sku,cant) {
         var lista = await this.listProducts();
+        var lista_vendidos = await this._DB.getDataFromPath('/sales');
 
         const index = lista.findIndex(object => {
             return object._sku === sku;
         });
+
+        var producto_vendido = lista[index];
+
+        producto_vendido._cant_stock -= cant;
+        producto_vendido._sales = cant;
+        if( producto_vendido._cant_stock < 0)
+            producto_vendido._cant_stock = 0
+
+        lista_vendidos.push(producto_vendido)
+
+        this._DB.addData('/sales',lista_vendidos)
+        this._DB.addData('/products',lista)
 
 
     }

@@ -156,7 +156,7 @@ class Api {
         var session_user = await db.buscarUsuarioPorToken(session_token)
 
 
-        if(session_user) {
+        if (session_user) {
 
             var rule = 'RULES.' + session_user._rol + '.PRODUCT'
             DBClass._DETECTED_ROL = eval(config_env[rule])
@@ -169,12 +169,13 @@ class Api {
             else res.status(200).send(r)
 
         } else {
-            return res.status(401).send({successfull:false,cause:'Token invalido'})
+            return res.status(401).send({successfull: false, cause: 'Token invalido'})
         }
         // DBClass._DETECTED_ROL = ''
 
     }
-    async listAllProducts(req,res){
+
+    async listAllProducts(req, res) {
         const {
             session_token
         } = req.body;
@@ -182,21 +183,22 @@ class Api {
         //Buscamos el usuario al que pertenece el token y establecemos los permisos
         var session_user = await db.buscarUsuarioPorToken(session_token)
 
-        if(session_user) {
+        if (session_user) {
 
             var rule = 'RULES.' + session_user._rol + '.PRODUCT'
             DBClass._DETECTED_ROL = eval(config_env[rule])
 
             var lista = await db.listarProductos()
 
-            res.status(200).send({successfull:true,data:lista})
+            res.status(200).send({successfull: true, data: lista})
 
 
         } else {
-            return res.status(401).send({successfull:false,cause:'Token invalido'})
+            return res.status(401).send({successfull: false, cause: 'Token invalido'})
         }
 
     }
+
     async updateProduct(req, res) {
 
         const {
@@ -234,12 +236,12 @@ class Api {
         var session_user = await db.buscarUsuarioPorToken(session_token)
 
 
-        if(session_user) {
+        if (session_user) {
 
             var rule = 'RULES.' + session_user._rol + '.PRODUCT'
             DBClass._DETECTED_ROL = eval(config_env[rule])
 
-            var r = await db.actualizarProducto(idsku,nombre, precio, cant_stock, categoria,
+            var r = await db.actualizarProducto(idsku, nombre, precio, cant_stock, categoria,
                 tags, descripcion, info, valoracion, lista_imgs)
 
             if (!r.successfull)
@@ -247,13 +249,13 @@ class Api {
             else res.status(200).send(r)
 
         } else {
-            return res.status(401).send({successfull:false,cause:'Token invalido'})
+            return res.status(401).send({successfull: false, cause: 'Token invalido'})
         }
         // DBClass._DETECTED_ROL = ''
 
     }
 
-    async deleteProduct(req,res){
+    async deleteProduct(req, res) {
         const {
             session_token,
             idsku
@@ -270,7 +272,7 @@ class Api {
         //Buscamos el usuario al que pertenece el token y establecemos los permisos
         var session_user = await db.buscarUsuarioPorToken(session_token)
 
-        if(session_user) {
+        if (session_user) {
 
             var rule = 'RULES.' + session_user._rol + '.PRODUCT'
             DBClass._DETECTED_ROL = eval(config_env[rule])
@@ -282,12 +284,12 @@ class Api {
             else res.status(200).send(r)
 
         } else {
-            return res.status(401).send({successfull:false,cause:'Token invalido'})
+            return res.status(401).send({successfull: false, cause: 'Token invalido'})
         }
         // DBClass._DETECTED_ROL = ''
     }
 
-    //API PRODUCTOS
+    //CUSTOM API REST - PRODUCTOS
 
     async buscarProducto(req, res) {
 
@@ -321,7 +323,41 @@ class Api {
 
     }
 
+    async sellProductList(req, res) {
+        const {
+            session_token,
+            list_products
+        } = req.body;
 
-}
+        // Validar la entrada de todos los nombres
+        if (!(
+            session_token &&
+            list_products
+        )) {
+            return res.status(400).send("Error!! se requieren todos los campos");
+        }
+
+        //Buscamos el usuario al que pertenece el token y establecemos los permisos
+        var session_user = await db.buscarUsuarioPorToken(session_token)
+
+        if (session_user) {
+
+            var rule = 'RULES.' + session_user._rol + '.PRODUCT'
+            DBClass._DETECTED_ROL = eval(config_env[rule])
+
+            /*
+            *  Lista de productos Ejemplo:
+            *     [{sku='id1',cant=2},{sku='id2',cant=5}]
+            *
+            * */
+
+            var respuesta = await db.venderListaProductos(list_products)
+            return res.status(200).send(respuesta)
+
+        } else return res.status(401).send({successfull: false, cause: 'Token invalido'})
+
+    }
+
+}//end class
 
 module.exports = Api

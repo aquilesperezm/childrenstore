@@ -58,7 +58,7 @@ class LocalDatabase {
             this.addData('/users', value)
         })
         var lista_productos = MProduct.getAleatoryProducts(cantProducts)
-
+        db.addData('/sales',[])
 
         this.addData('/products', lista_productos)
 
@@ -167,7 +167,27 @@ class LocalDatabase {
     }
 
     //Venta de Productos
+    async venderListaProductos(lista_prod) {
+        /*
+               *  Lista de productos Ejemplo:
+               *     [{sku='id1',cant=2},{sku='id2',cant=5}]
+               *
+               * */
 
+        var d = LocalDatabase._DETECTED_ROL.find((v) => {
+            return v == 'SELL'
+        })
+
+        if (d == 'SELL') {
+
+            for (const venta of lista_prod) {
+
+                await this._MProduct.sellProduct(venta.sku,venta.cant)
+            }
+            return {successfull: true}
+
+        } else return {successfull: false, cause: "No tiene permisos"}
+    }
 }
 
 module.exports = LocalDatabase

@@ -37,18 +37,26 @@ class Server {
         this._app.post('/delete_product', this._API.deleteProduct)
 
         //API REST - PRODUCTOS
-        /*
+        /**
         * Entregar resultados de una busqueda enviando cualquiera de las caracteristicas del producto
         * una o varias (permitir paginacion en base de 10 resultados). Si no se envia ninguna caracteristica
         * el resultado debe ser la lista de articulos paginada
         * */
-        this._app.post('/searchproduct', this._API.verifyToken, this._API.buscarProducto)
+        this._app.post('/search_product', this._API.verifyToken, this._API.buscarProducto)
         /**
          * Entregar solo la cantidad de resultados de una busqueda enviando cualquiera de las caracteristicas
          * del producto
          * */
-        this._app.post('/searchproductcount',this._API.verifyToken , this._API.buscarProductoCantidad)
+        this._app.post('/search_product_count',this._API.verifyToken , this._API.buscarProductoCantidad)
 
+        /**
+         * Vender un articulo. Elimina un articulo del stock
+         *    - No se puede vender mas de 1 tipo de articulo a la vez (categoria)
+         *    - No se puede vender mas de 1 articulo del mismo tipo (los mismo que lo anterior!!)
+         *
+         * */
+
+         this._app.post('/sell_product_list',this._API.sellProductList)
 
     }
 

@@ -1,203 +1,508 @@
 {
     "products": [
         {
-            "_nombre": "Cuna",
+            "_nombre": "Chupete",
             "_precio": 45.65,
-            "_cant_stock": 23,
-            "_categoria": "Cuna",
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
             "_tags": [
-                "dormir",
-                "bebe"
+                "bebe",
+                "chupete"
             ],
-            "_descripcion": "Cuna para bebes",
+            "_descripcion": "Chupete para bebes de diferentes color",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "h16Hq_sTJ",
-            "_imagenes_asociadas": []
+            "_sku": "jQ3EQWqpB",
+            "_imagenes_asociadas": [],
+            "_sales": 10
         },
         {
-            "_nombre": "Monitor para bebes",
+            "_nombre": "Cereal",
             "_precio": 121.15,
             "_cant_stock": 17,
-            "_categoria": "Monitor",
+            "_categoria": "para bebes",
             "_tags": [
                 "dormir",
                 "bebe",
-                "vigilante",
-                "alarma"
+                "alimento"
             ],
-            "_descripcion": "Monitor para bebes",
+            "_descripcion": "Alimento para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "dxD05PfGCL",
+            "_sku": "33-qRLH4yl",
             "_imagenes_asociadas": []
         },
         {
-            "_nombre": "Asiento de seguridad",
+            "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": 31,
-            "_categoria": "Asiento",
-            "_tags": [
-                "dormir",
-                "bebe",
-                "vigilante",
-                "alarma"
-            ],
-            "_descripcion": "Asiento de seguridad para autos",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "KkRK_ezhko",
-            "_imagenes_asociadas": []
-        },
-        {
-            "_nombre": "Cambiador",
-            "_precio": 67.91,
-            "_cant_stock": 13,
-            "_categoria": "Asiento",
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
             "_tags": [
                 "dormir",
                 "bebe",
                 "higiene"
             ],
-            "_descripcion": "Cambiador o mudador para bebes",
+            "_descripcion": "Paquete de Pañales para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "W_cxMmEmMM",
-            "_imagenes_asociadas": []
+            "_sku": "ZgKQEvnO8X",
+            "_imagenes_asociadas": [],
+            "_sales": 10
         },
         {
-            "_nombre": "Bolso",
-            "_precio": 22.62,
-            "_cant_stock": 98,
-            "_categoria": "Bolso",
+            "_nombre": "Muñeca",
+            "_precio": 67.91,
+            "_cant_stock": 13,
+            "_categoria": "para juegos",
             "_tags": [
                 "dormir",
                 "bebe",
-                "higiene",
-                "almacen"
+                "diversion"
             ],
-            "_descripcion": "Bolso cambiador para bebes",
+            "_descripcion": "Pillama enterizo para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "rr01Sk_RsO",
+            "_sku": "XwadJXsC7Z",
             "_imagenes_asociadas": []
         },
         {
-            "_nombre": "Portabebes",
+            "_nombre": "Tio vivo",
+            "_precio": 22.62,
+            "_cant_stock": -10,
+            "_categoria": "para juegos",
+            "_tags": [
+                "bebe",
+                "diversion"
+            ],
+            "_descripcion": "Juguete para niños",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "rLfc3hJpuk",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Gel de baño",
             "_precio": 78.62,
             "_cant_stock": 44,
-            "_categoria": "Bolso",
+            "_categoria": "para bebes",
             "_tags": [
-                "dormir",
                 "bebe",
-                "higiene",
-                "almacen"
+                "higiene"
             ],
-            "_descripcion": "Portabebes para el transporte",
+            "_descripcion": "Gel de baño con diferentes aromas",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "05aAaY8_X1",
+            "_sku": "tFNniIc4sz",
             "_imagenes_asociadas": []
         },
         {
-            "_nombre": "Cochecito",
+            "_nombre": "Cuna",
             "_precio": 137.16,
             "_cant_stock": 54,
-            "_categoria": "Vehiculo",
+            "_categoria": "para hogar",
             "_tags": [
                 "dormir",
                 "bebe",
-                "Transporte"
+                "casa"
             ],
-            "_descripcion": "Coche para bebes",
+            "_descripcion": "Cuna para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "Q8WSYqdaKe",
+            "_sku": "Ryg6hczQhJ",
             "_imagenes_asociadas": []
         },
         {
-            "_nombre": "Silla brincadora",
+            "_nombre": "Coche",
+            "_precio": 125.31,
+            "_cant_stock": 184,
+            "_categoria": "para chicos",
+            "_tags": [
+                "chicos",
+                "transporte"
+            ],
+            "_descripcion": "Coche de color azul para chicos",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "fmsmPMlsp2",
+            "_imagenes_asociadas": []
+        },
+        {
+            "_nombre": "Carseat",
             "_precio": 145.53,
             "_cant_stock": 72,
-            "_categoria": "Juego",
+            "_categoria": "para chicas",
             "_tags": [
-                "bebe",
-                "Transporte",
-                "Alimento",
-                "Juego"
+                "chicos",
+                "transporte"
             ],
-            "_descripcion": "Silla brincadora para entretenimiento",
+            "_descripcion": "Silla para el auto de color rosa",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "6U6x73ONTp",
+            "_sku": "_UX5yZUw83",
             "_imagenes_asociadas": []
         },
         {
-            "_nombre": "Hamaca",
+            "_nombre": "Sacaleche",
             "_precio": 85.77,
             "_cant_stock": 10,
-            "_categoria": "Juego",
+            "_categoria": "para bebes",
             "_tags": [
                 "bebe",
-                "Transporte",
-                "Alimento",
-                "Juego"
+                "alimento",
+                "facilidad"
             ],
-            "_descripcion": "Hamaca para juegos",
+            "_descripcion": "Extractor de leche materna para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "xt2oU3Rhn0",
+            "_sku": "7e2z095WjO",
             "_imagenes_asociadas": []
         }
     ],
     "users": [
         {
-            "_id": "oJafahJQ6h",
-            "_nombre_completo": "Dominique Paul",
-            "_nombre_usuario": "dominique",
-            "_rol": "ADMINISTRATOR",
-            "_password": "$2b$10$S1ipXirT.tGwjcVWYWnAZOyWT52UCpFysbFPR/f8G70KmVHP7nxx6",
-            "_token": ""
-        },
-        {
-            "_id": "zBvq4qg17d",
-            "_nombre_completo": "Parker Sherman",
-            "_nombre_usuario": "parker",
-            "_rol": "EDITOR",
-            "_password": "$2b$10$Ux3cX97IwjMLVVjNObCHDewgGar0LBOPOYO/Ut3l4Qy.mqZPQUaB6",
-            "_token": ""
-        },
-        {
-            "_id": "L7upeRKijG",
-            "_nombre_completo": "Max Buckley",
-            "_nombre_usuario": "max",
-            "_rol": "OWNER",
-            "_password": "$2b$10$d3Z1xLMlgFVnROhwEW9FdeXVd1MrK8L0EkykEX.2vbv3dgG3b/AEO",
-            "_token": ""
-        },
-        {
-            "_id": "fS9G53UTWk",
+            "_id": "jsUjl3vWeF",
             "_nombre_completo": "Amanda Mcgrath",
             "_nombre_usuario": "amanda",
-            "_rol": "OPERATOR",
-            "_password": "$2b$10$Upw3eojl5nKIHGOr5BCBnefHlvFbzuUXlg3n54zi6biGKGANJfDAi",
+            "_rol": "ADMINISTRATOR",
+            "_password": "$2b$10$3dmktEHHWLvA.eNMRb8Z9eix74OM9RYeXFvxZtD8f.jUNoWUyFdNi",
             "_token": ""
         },
         {
-            "_id": "KtQxKQPJVb",
+            "_id": "2CmR9nLh8x",
             "_nombre_completo": "Brent Shields",
             "_nombre_usuario": "brent",
-            "_rol": "USER",
-            "_password": "$2b$10$wwHjv3qo7doryNunMKnJ6er6GIOiFf5sWqVFzGEtQEl6Sn9erXpNO",
+            "_rol": "EDITOR",
+            "_password": "$2b$10$oLKkZR.9kYHuIQXC0yxliO8Uty3TglRXJ4.KhltaV.AdSfn3ZEJQO",
             "_token": ""
         },
         {
-            "_id": "XbG9Ob_Kg",
+            "_id": "z-UcY7oa95",
+            "_nombre_completo": "Paris Soto",
+            "_nombre_usuario": "paris",
+            "_rol": "OWNER",
+            "_password": "$2b$10$WHEjpUJM0Wl/.BA5quY7DOAUR0Q1Xu.NcZ9ZERkP3Gf94hoE65Vfq",
+            "_token": ""
+        },
+        {
+            "_id": "-765O8SPAh",
+            "_nombre_completo": "Skyler Sullivan",
+            "_nombre_usuario": "skyler",
+            "_rol": "OPERATOR",
+            "_password": "$2b$10$SW7U9PVL5S/0pIUNy1bn1.1OC3lqvMbBVi0gBOGHEtgKfH8qQEl9.",
+            "_token": ""
+        },
+        {
+            "_id": "rqGLWxurJHR",
+            "_nombre_completo": "Dillan Montoya",
+            "_nombre_usuario": "dillan",
+            "_rol": "USER",
+            "_password": "$2b$10$97OttWLnjshByE7qvirBs.sxq8G.2eZ.qq6KEFPJlg4n1jjrJQgaa",
+            "_token": ""
+        },
+        {
+            "_id": "JPYD4JIfZ",
             "_nombre_completo": "Aquiles Perez Miranda",
             "_nombre_usuario": "akiles",
-            "_rol": "ADMINISTRADOR",
-            "_password": "$2b$10$bU3zwu7L2USy6t1fnbMaPOFBFt9YGFD8389EfAU5VyWHb8DZ5/Q6e",
-            "_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFraWxlcyIsInJvbCI6IkFkbWluaXN0cmFkb3IiLCJpYXQiOjE2ODUyOTc0NTMsImV4cCI6MTY4NTI5OTI1M30.Xus59Cio_cj2A7KwF2YJ6YEH_lBOQ7x5EL4ebLiNDd8"
+            "_rol": "ADMINISTRATOR",
+            "_password": "$2b$10$cihUpxM.heqLBWLPF4e2VehOsTtJS0PfIAI1mbWcyxKoifmzqDwh.",
+            "_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFraWxlcyIsInJvbCI6IkFETUlOSVNUUkFUT1IiLCJpYXQiOjE2ODUzMDQwNDUsImV4cCI6MTY4NTMwNTg0NX0.5tntEbn6bYMTd76EYh_hiHeaoN7DyULe8nhcju-gXIA"
+        }
+    ],
+    "sales": [
+        {
+            "_nombre": "Chupete",
+            "_precio": 45.65,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "chupete"
+            ],
+            "_descripcion": "Chupete para bebes de diferentes color",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "jQ3EQWqpB",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Pañal",
+            "_precio": 53.78,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Paquete de Pañales para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "ZgKQEvnO8X",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Tio vivo",
+            "_precio": 22.62,
+            "_cant_stock": -10,
+            "_categoria": "para juegos",
+            "_tags": [
+                "bebe",
+                "diversion"
+            ],
+            "_descripcion": "Juguete para niños",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "rLfc3hJpuk",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Chupete",
+            "_precio": 45.65,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "chupete"
+            ],
+            "_descripcion": "Chupete para bebes de diferentes color",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "jQ3EQWqpB",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Pañal",
+            "_precio": 53.78,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Paquete de Pañales para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "ZgKQEvnO8X",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Tio vivo",
+            "_precio": 22.62,
+            "_cant_stock": -10,
+            "_categoria": "para juegos",
+            "_tags": [
+                "bebe",
+                "diversion"
+            ],
+            "_descripcion": "Juguete para niños",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "rLfc3hJpuk",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Chupete",
+            "_precio": 45.65,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "chupete"
+            ],
+            "_descripcion": "Chupete para bebes de diferentes color",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "jQ3EQWqpB",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Pañal",
+            "_precio": 53.78,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Paquete de Pañales para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "ZgKQEvnO8X",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Tio vivo",
+            "_precio": 22.62,
+            "_cant_stock": -10,
+            "_categoria": "para juegos",
+            "_tags": [
+                "bebe",
+                "diversion"
+            ],
+            "_descripcion": "Juguete para niños",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "rLfc3hJpuk",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Chupete",
+            "_precio": 45.65,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "chupete"
+            ],
+            "_descripcion": "Chupete para bebes de diferentes color",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "jQ3EQWqpB",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Pañal",
+            "_precio": 53.78,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Paquete de Pañales para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "ZgKQEvnO8X",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Tio vivo",
+            "_precio": 22.62,
+            "_cant_stock": -10,
+            "_categoria": "para juegos",
+            "_tags": [
+                "bebe",
+                "diversion"
+            ],
+            "_descripcion": "Juguete para niños",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "rLfc3hJpuk",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Chupete",
+            "_precio": 45.65,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "chupete"
+            ],
+            "_descripcion": "Chupete para bebes de diferentes color",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "jQ3EQWqpB",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Pañal",
+            "_precio": 53.78,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Paquete de Pañales para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "ZgKQEvnO8X",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Tio vivo",
+            "_precio": 22.62,
+            "_cant_stock": -10,
+            "_categoria": "para juegos",
+            "_tags": [
+                "bebe",
+                "diversion"
+            ],
+            "_descripcion": "Juguete para niños",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "rLfc3hJpuk",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Chupete",
+            "_precio": 45.65,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "chupete"
+            ],
+            "_descripcion": "Chupete para bebes de diferentes color",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "jQ3EQWqpB",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Pañal",
+            "_precio": 53.78,
+            "_cant_stock": -10,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Paquete de Pañales para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "ZgKQEvnO8X",
+            "_imagenes_asociadas": [],
+            "_sales": 10
+        },
+        {
+            "_nombre": "Tio vivo",
+            "_precio": 22.62,
+            "_cant_stock": -10,
+            "_categoria": "para juegos",
+            "_tags": [
+                "bebe",
+                "diversion"
+            ],
+            "_descripcion": "Juguete para niños",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "rLfc3hJpuk",
+            "_imagenes_asociadas": [],
+            "_sales": 10
         }
     ]
 }
