@@ -58,9 +58,10 @@ class LocalDatabase {
             this.addData('/users', value)
         })
         var lista_productos = MProduct.getAleatoryProducts(cantProducts)
-        db.addData('/sales', [])
 
         this.addData('/products', lista_productos)
+
+        this.addData('/sales', [])
 
     }
 
@@ -93,8 +94,8 @@ class LocalDatabase {
         this._MUser.addUsuario(nombreCompleto, nombreUsuario, rol, password, token)
     }
 
-    actualizarUsuario(idUsuario, nombre_completo, username, rol, password) {
-        this._MUser.updateUsuario(idUsuario, nombre_completo, username, rol, password)
+    actualizarUsuario(idUsuario, nombre_completo, username, rol, password, token='') {
+        this._MUser.updateUsuario(idUsuario, nombre_completo, username, rol, password, token)
     }
 
     eliminarUsuario(idUsuario) {

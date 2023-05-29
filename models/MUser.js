@@ -129,10 +129,10 @@ class MUser extends IObject {
     }
 
     //Actualizar Usuario
-    async updateUsuario(idUsuario, nombre_completo, username, rol, password) {
+    async updateUsuario(idUsuario, nombre_completo, username, rol, password, token='') {
         var lista = await this.listAllUsers();
 
-        var tmp_usuario = new EUser(idUsuario, nombre_completo, username, rol, password)
+        var tmp_usuario = new EUser(idUsuario, nombre_completo, username, rol, password,token)
 
         const index = lista.findIndex(object => {
             return object._id === idUsuario;

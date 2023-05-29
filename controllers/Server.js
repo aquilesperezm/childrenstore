@@ -31,10 +31,10 @@ class Server {
         this._app.post('/welcome', this._API.verifyToken, this._API.welcomeUser)
 
         //CRUD PRODUCTS
-        this._app.post('/create_product', this._API.createProduct)
-        this._app.post('/read_products', this._API.listAllProducts)
-        this._app.post('/update_product', this._API.updateProduct)
-        this._app.post('/delete_product', this._API.deleteProduct)
+        this._app.post('/create_product', this._API.verifyToken, this._API.createProduct)
+        this._app.post('/read_products', this._API.verifyToken, this._API.listAllProducts)
+        this._app.post('/update_product', this._API.verifyToken, this._API.updateProduct)
+        this._app.post('/delete_product', this._API.verifyToken, this._API.deleteProduct)
 
         //API REST - PRODUCTOS
         /**
@@ -60,15 +60,15 @@ class Server {
 
          /**   Mostrar la lista de productos vendidos **/
 
-         this._app.post('/sold_products',this._API.soldProducts)
+         this._app.post('/sold_products', this._API.verifyToken,this._API.soldProducts)
 
         /**   Mostrar la ganacia total **/
 
-        this._app.post('/total_gain',this._API.totalGain)
+        this._app.post('/total_gain', this._API.verifyToken,this._API.totalGain)
 
         /**   Mostrar los productos que tienen stock en 0 **/
 
-        this._app.post('/show_products_nostock',this._API.noStockProducts)
+        this._app.post('/show_products_nostock', this._API.verifyToken,this._API.noStockProducts)
 
     }
 

@@ -27,7 +27,7 @@ class Api {
             }
 
             const user = await db.buscarUsuario(nombre_usuario)
-            if (user) return res.status(409).send("Error!!! El usuario ya existe. Autentiquese");
+            if (user) return res.status(409).send("Error!!! El usuario ya existe. Autentiquese con su usuario y contraseña");
             else {
 
                 //Creamos el usuario nuevo
@@ -88,8 +88,12 @@ class Api {
                 // user
                 res.status(200).json(user);
 
+                //update user in database
+                await db.actualizarUsuario(user._id, user._nombre_completo, user._nombre_usuario,
+                    user._rol, user._password, token)
+
             } else
-                res.status(400).send("Credenciales invalidas");
+                res.status(400).send("El usuario no existe o credenciales invalidas");
 
         } catch (err) {
             console.log(err);
@@ -293,33 +297,61 @@ class Api {
 
     async buscarProducto(req, res) {
 
-        try {
+        const {
 
-            const {filters, per_page} = req.body;
+            token,filters, per_page
+        } = req.body;
+
+        // Validar la entrada de todos los nombres
+        if (!(
+            token && filters && per_page
+        )) {
+            return res.status(400).send("Error!! se requieren todos los campos");
+        }
+
+        //Buscamos el usuario al que pertenece el token y establecemos los permisos
+        var session_user = await db.buscarUsuarioPorToken(token)
+
+        if (session_user) {
+
+            var rule = 'RULES.' + session_user._rol + '.PRODUCT'
+            DBClass._DETECTED_ROL = eval(config_env[rule])
 
             const result = await db.buscarProductoPorFiltros(filters, per_page)
 
             res.status(200).json(result);
 
-        } catch (err) {
-            console.log(err)
-        }
+        } else return res.status(401).send({successfull: false, cause: 'Token invalido'})
 
     }
 
     async buscarProductoCantidad(req, res) {
 
-        try {
+        const {
 
-            const {filters, per_page} = req.body;
+            token,filters, per_page
+        } = req.body;
+
+        // Validar la entrada de todos los nombres
+        if (!(
+            token && filters && per_page
+        )) {
+            return res.status(400).send("Error!! se requieren todos los campos");
+        }
+
+        //Buscamos el usuario al que pertenece el token y establecemos los permisos
+        var session_user = await db.buscarUsuarioPorToken(token)
+
+        if (session_user) {
+
+            var rule = 'RULES.' + session_user._rol + '.PRODUCT'
+            DBClass._DETECTED_ROL = eval(config_env[rule])
 
             const result = await db.buscarProductoPorFiltros(filters, per_page)
 
             res.status(200).json({cantidad: result.total});
 
-        } catch (err) {
-            console.log(err)
-        }
+        } else return res.status(401).send({successfull: false, cause: 'Token invalido'})
 
     }
 
@@ -410,18 +442,18 @@ class Api {
             var result = await db.buscarProductosVendidos()
 
             var ganancia = 0.00
-            result.forEach((sold)=>{
+            result.forEach((sold) => {
                 ganancia += sold._precio * sold._sales
             })
 
-            return res.status(200).send({ganancia_total:ganancia.toFixed(2)})
+            return res.status(200).send({ganancia_total: ganancia.toFixed(2)})
 
         } else return res.status(401).send({successfull: false, cause: 'Token invalido'})
 
 
     }
 
-    async noStockProducts(req,res){
+    async noStockProducts(req, res) {
 
         const {
             token
@@ -444,7 +476,7 @@ class Api {
 
             var lista = await db.listarProductosNoStock()
 
-            return res.status(200).send({ prods_nostock:lista})
+            return res.status(200).send({prods_nostock: lista})
 
         } else return res.status(401).send({successfull: false, cause: 'Token invalido'})
 

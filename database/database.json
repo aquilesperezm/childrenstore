@@ -3,7 +3,7 @@
         {
             "_nombre": "Chupete",
             "_precio": 45.65,
-            "_cant_stock": 0,
+            "_cant_stock": 23,
             "_categoria": "para bebes",
             "_tags": [
                 "bebe",
@@ -12,9 +12,8 @@
             "_descripcion": "Chupete para bebes de diferentes color",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "jQ3EQWqpB",
-            "_imagenes_asociadas": [],
-            "_sales": 1
+            "_sku": "xvgpcJs8y",
+            "_imagenes_asociadas": []
         },
         {
             "_nombre": "Cereal",
@@ -29,14 +28,14 @@
             "_descripcion": "Alimento para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "33-qRLH4yl",
+            "_sku": "GhR1nh2cFH",
             "_imagenes_asociadas": [],
-            "_sales": 1
+            "_sales": 2
         },
         {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": 0,
+            "_cant_stock": 17,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -46,9 +45,9 @@
             "_descripcion": "Paquete de Pañales para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "ZgKQEvnO8X",
+            "_sku": "UrGjncPO5f",
             "_imagenes_asociadas": [],
-            "_sales": 1
+            "_sales": "2"
         },
         {
             "_nombre": "Muñeca",
@@ -63,13 +62,13 @@
             "_descripcion": "Pillama enterizo para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "XwadJXsC7Z",
+            "_sku": "8tGrVH48BR",
             "_imagenes_asociadas": []
         },
         {
             "_nombre": "Tio vivo",
             "_precio": 22.62,
-            "_cant_stock": 4,
+            "_cant_stock": 98,
             "_categoria": "para juegos",
             "_tags": [
                 "bebe",
@@ -78,14 +77,13 @@
             "_descripcion": "Juguete para niños",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "rLfc3hJpuk",
-            "_imagenes_asociadas": [],
-            "_sales": 5
+            "_sku": "t96Ydp3O2q",
+            "_imagenes_asociadas": []
         },
         {
             "_nombre": "Gel de baño",
             "_precio": 78.62,
-            "_cant_stock": 44,
+            "_cant_stock": 9,
             "_categoria": "para bebes",
             "_tags": [
                 "bebe",
@@ -94,8 +92,9 @@
             "_descripcion": "Gel de baño con diferentes aromas",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "tFNniIc4sz",
-            "_imagenes_asociadas": []
+            "_sku": "sJR8CMF78F",
+            "_imagenes_asociadas": [],
+            "_sales": "5"
         },
         {
             "_nombre": "Cuna",
@@ -110,7 +109,7 @@
             "_descripcion": "Cuna para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "Ryg6hczQhJ",
+            "_sku": "5NGmn3MPxR",
             "_imagenes_asociadas": []
         },
         {
@@ -125,7 +124,7 @@
             "_descripcion": "Coche de color azul para chicos",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "fmsmPMlsp2",
+            "_sku": "gnkil1Sxne",
             "_imagenes_asociadas": []
         },
         {
@@ -140,13 +139,13 @@
             "_descripcion": "Silla para el auto de color rosa",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "_UX5yZUw83",
+            "_sku": "tw_VuwgRKy",
             "_imagenes_asociadas": []
         },
         {
             "_nombre": "Sacaleche",
             "_precio": 85.77,
-            "_cant_stock": 60,
+            "_cant_stock": 10,
             "_categoria": "para bebes",
             "_tags": [
                 "bebe",
@@ -156,198 +155,81 @@
             "_descripcion": "Extractor de leche materna para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "7e2z095WjO",
+            "_sku": "qK37oUZIX3",
             "_imagenes_asociadas": []
         }
     ],
     "users": [
         {
-            "_id": "jsUjl3vWeF",
-            "_nombre_completo": "Amanda Mcgrath",
-            "_nombre_usuario": "amanda",
+            "_id": "4MBAN-PI8a",
+            "_nombre_completo": "Frida Coleman",
+            "_nombre_usuario": "frida",
             "_rol": "ADMINISTRATOR",
-            "_password": "$2b$10$3dmktEHHWLvA.eNMRb8Z9eix74OM9RYeXFvxZtD8f.jUNoWUyFdNi",
+            "_password": "$2b$10$LRUUFZaSWGZVKoa6Z8ew3OSSCd34Mv0G7g5Da.KbgRJxrOKBLZ0h6",
             "_token": ""
         },
         {
-            "_id": "2CmR9nLh8x",
+            "_id": "s0FFC29Img",
+            "_nombre_completo": "Max Buckley",
+            "_nombre_usuario": "max",
+            "_rol": "EDITOR",
+            "_password": "$2b$10$kv1yPH/T7dQ.6eqrACUgoO/Mo8HqngZWJyvwnaxl70yxBxKsL21uq",
+            "_token": ""
+        },
+        {
+            "_id": "0svhr5Fw_q",
+            "_nombre_completo": "Dominique Paul",
+            "_nombre_usuario": "dominique",
+            "_rol": "USER",
+            "_password": "$2b$10$jA5leMIC4ybeMB8emKAjYOZdhIfVJse5rOPO9DBBhmzcPzaltsfCG",
+            "_token": ""
+        },
+        {
+            "_id": "qRyZnVAT3g",
             "_nombre_completo": "Brent Shields",
             "_nombre_usuario": "brent",
-            "_rol": "EDITOR",
-            "_password": "$2b$10$oLKkZR.9kYHuIQXC0yxliO8Uty3TglRXJ4.KhltaV.AdSfn3ZEJQO",
+            "_rol": "ADMINISTRATOR",
+            "_password": "$2b$10$Hi/yMDcUE7sDk9ttTVAOee4CYHMhkl4WHBv/2wUMRh1vbY8D09juC",
             "_token": ""
         },
         {
-            "_id": "z-UcY7oa95",
-            "_nombre_completo": "Paris Soto",
-            "_nombre_usuario": "paris",
+            "_id": "0kSgd28gs7",
+            "_nombre_completo": "Zachary Horn",
+            "_nombre_usuario": "zachary",
             "_rol": "OWNER",
-            "_password": "$2b$10$WHEjpUJM0Wl/.BA5quY7DOAUR0Q1Xu.NcZ9ZERkP3Gf94hoE65Vfq",
+            "_password": "$2b$10$JJXZQ3qBM9a1jVnUX2ze/O.iCxbCxtjw4Cv4E/AYwdkSSSWGuyyzG",
             "_token": ""
         },
         {
-            "_id": "-765O8SPAh",
-            "_nombre_completo": "Skyler Sullivan",
-            "_nombre_usuario": "skyler",
-            "_rol": "OPERATOR",
-            "_password": "$2b$10$SW7U9PVL5S/0pIUNy1bn1.1OC3lqvMbBVi0gBOGHEtgKfH8qQEl9.",
-            "_token": ""
-        },
-        {
-            "_id": "rqGLWxurJHR",
-            "_nombre_completo": "Dillan Montoya",
-            "_nombre_usuario": "dillan",
-            "_rol": "USER",
-            "_password": "$2b$10$97OttWLnjshByE7qvirBs.sxq8G.2eZ.qq6KEFPJlg4n1jjrJQgaa",
-            "_token": ""
-        },
-        {
-            "_id": "JPYD4JIfZ",
-            "_nombre_completo": "Aquiles Perez Miranda",
+            "_id": "y1WHYktHA",
+            "_nombre_completo": "Aquiles",
             "_nombre_usuario": "akiles",
             "_rol": "ADMINISTRATOR",
-            "_password": "$2b$10$cihUpxM.heqLBWLPF4e2VehOsTtJS0PfIAI1mbWcyxKoifmzqDwh.",
-            "_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFraWxlcyIsInJvbCI6IkFETUlOSVNUUkFUT1IiLCJpYXQiOjE2ODUzMjczMzMsImV4cCI6MTY4NTMyOTEzM30.ygXrctL18bMZqpRpTFDKq6lR10inI6p7UxvMtUHg-GE"
+            "_password": "$2b$10$Go/gtT5UGTJTaGxjtpWhYuk4kT5Itmdf/Kr.lHcOdEOgkoSZNP/Vy",
+            "_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFraWxlcyIsInJvbCI6IkFETUlOSVNUUkFUT1IiLCJpYXQiOjE2ODUzNzcxMDAsImV4cCI6MTY4NTM3ODkwMH0.Jfsenybq8TkwsVy7zq17i3f0VFfJpDXpOTg-DA5myi4"
         }
     ],
     "sales": [
         {
-            "_nombre": "Chupete",
-            "_precio": 45.65,
-            "_cant_stock": 0,
-            "_categoria": "para bebes",
-            "_tags": [
-                "bebe",
-                "chupete"
-            ],
-            "_descripcion": "Chupete para bebes de diferentes color",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "jQ3EQWqpB",
-            "_imagenes_asociadas": [],
-            "_sales": 1
-        },
-        {
-            "_nombre": "Cereal",
-            "_precio": 121.15,
-            "_cant_stock": 13,
-            "_categoria": "para bebes",
-            "_tags": [
-                "dormir",
-                "bebe",
-                "alimento"
-            ],
-            "_descripcion": "Alimento para bebes",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "33-qRLH4yl",
-            "_imagenes_asociadas": [],
-            "_sales": 2
-        },
-        {
-            "_nombre": "Pañal",
-            "_precio": 53.78,
-            "_cant_stock": 1,
-            "_categoria": "para bebes",
-            "_tags": [
-                "dormir",
-                "bebe",
-                "higiene"
-            ],
-            "_descripcion": "Paquete de Pañales para bebes",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "ZgKQEvnO8X",
-            "_imagenes_asociadas": [],
-            "_sales": 1
-        },
-        {
-            "_nombre": "Chupete",
-            "_precio": 45.65,
-            "_cant_stock": 0,
-            "_categoria": "para bebes",
-            "_tags": [
-                "bebe",
-                "chupete"
-            ],
-            "_descripcion": "Chupete para bebes de diferentes color",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "jQ3EQWqpB",
-            "_imagenes_asociadas": [],
-            "_sales": 1
-        },
-        {
-            "_nombre": "Cereal",
-            "_precio": 121.15,
-            "_cant_stock": 13,
-            "_categoria": "para bebes",
-            "_tags": [
-                "dormir",
-                "bebe",
-                "alimento"
-            ],
-            "_descripcion": "Alimento para bebes",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "33-qRLH4yl",
-            "_imagenes_asociadas": [],
-            "_sales": 2
-        },
-        {
-            "_nombre": "Pañal",
-            "_precio": 53.78,
-            "_cant_stock": 1,
-            "_categoria": "para bebes",
-            "_tags": [
-                "dormir",
-                "bebe",
-                "higiene"
-            ],
-            "_descripcion": "Paquete de Pañales para bebes",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "ZgKQEvnO8X",
-            "_imagenes_asociadas": [],
-            "_sales": 1
-        },
-        {
-            "_nombre": "Chupete",
-            "_precio": 45.65,
-            "_cant_stock": 0,
-            "_categoria": "para bebes",
-            "_tags": [
-                "bebe",
-                "chupete"
-            ],
-            "_descripcion": "Chupete para bebes de diferentes color",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "jQ3EQWqpB",
-            "_imagenes_asociadas": [],
-            "_sales": 1
-        },
-        {
-            "_nombre": "Cereal",
-            "_precio": 121.15,
+            "_nombre": "Gel de baño",
+            "_precio": 78.62,
             "_cant_stock": 9,
             "_categoria": "para bebes",
             "_tags": [
-                "dormir",
                 "bebe",
-                "alimento"
+                "higiene"
             ],
-            "_descripcion": "Alimento para bebes",
+            "_descripcion": "Gel de baño con diferentes aromas",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "33-qRLH4yl",
+            "_sku": "sJR8CMF78F",
             "_imagenes_asociadas": [],
-            "_sales": 2
+            "_sales": "5"
         },
         {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": 1,
+            "_cant_stock": 17,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -357,32 +239,66 @@
             "_descripcion": "Paquete de Pañales para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "ZgKQEvnO8X",
+            "_sku": "UrGjncPO5f",
             "_imagenes_asociadas": [],
-            "_sales": 1
-        },
-        {
-            "_nombre": "Chupete",
-            "_precio": 45.65,
-            "_cant_stock": 0,
-            "_categoria": "para bebes",
-            "_tags": [
-                "bebe",
-                "chupete"
-            ],
-            "_descripcion": "Chupete para bebes de diferentes color",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "jQ3EQWqpB",
-            "_imagenes_asociadas": [],
-            "_sales": 1
+            "_sales": "2"
         },
         {
             "_nombre": "Cereal",
             "_precio": 121.15,
+            "_cant_stock": 0,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "alimento"
+            ],
+            "_descripcion": "Alimento para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "GhR1nh2cFH",
+            "_imagenes_asociadas": [],
+            "_sales": 2
+        },
+        {
+            "_nombre": "Gel de baño",
+            "_precio": 78.62,
             "_cant_stock": 9,
             "_categoria": "para bebes",
             "_tags": [
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Gel de baño con diferentes aromas",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "sJR8CMF78F",
+            "_imagenes_asociadas": [],
+            "_sales": "5"
+        },
+        {
+            "_nombre": "Pañal",
+            "_precio": 53.78,
+            "_cant_stock": 17,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Paquete de Pañales para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "UrGjncPO5f",
+            "_imagenes_asociadas": [],
+            "_sales": "2"
+        },
+        {
+            "_nombre": "Cereal",
+            "_precio": 121.15,
+            "_cant_stock": 0,
+            "_categoria": "para bebes",
+            "_tags": [
                 "dormir",
                 "bebe",
                 "alimento"
@@ -390,14 +306,30 @@
             "_descripcion": "Alimento para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "33-qRLH4yl",
+            "_sku": "GhR1nh2cFH",
             "_imagenes_asociadas": [],
             "_sales": 2
         },
         {
+            "_nombre": "Gel de baño",
+            "_precio": 78.62,
+            "_cant_stock": 9,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Gel de baño con diferentes aromas",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "sJR8CMF78F",
+            "_imagenes_asociadas": [],
+            "_sales": "5"
+        },
+        {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": 1,
+            "_cant_stock": 17,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -407,30 +339,14 @@
             "_descripcion": "Paquete de Pañales para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "ZgKQEvnO8X",
+            "_sku": "UrGjncPO5f",
             "_imagenes_asociadas": [],
-            "_sales": 1
-        },
-        {
-            "_nombre": "Chupete",
-            "_precio": 45.65,
-            "_cant_stock": 0,
-            "_categoria": "para bebes",
-            "_tags": [
-                "bebe",
-                "chupete"
-            ],
-            "_descripcion": "Chupete para bebes de diferentes color",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "jQ3EQWqpB",
-            "_imagenes_asociadas": [],
-            "_sales": 1
+            "_sales": "2"
         },
         {
             "_nombre": "Cereal",
             "_precio": 121.15,
-            "_cant_stock": 5,
+            "_cant_stock": 0,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -440,14 +356,30 @@
             "_descripcion": "Alimento para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "33-qRLH4yl",
+            "_sku": "GhR1nh2cFH",
             "_imagenes_asociadas": [],
             "_sales": 2
         },
         {
+            "_nombre": "Gel de baño",
+            "_precio": 78.62,
+            "_cant_stock": 9,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Gel de baño con diferentes aromas",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "sJR8CMF78F",
+            "_imagenes_asociadas": [],
+            "_sales": "5"
+        },
+        {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": 1,
+            "_cant_stock": 17,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -457,30 +389,14 @@
             "_descripcion": "Paquete de Pañales para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "ZgKQEvnO8X",
+            "_sku": "UrGjncPO5f",
             "_imagenes_asociadas": [],
-            "_sales": 1
-        },
-        {
-            "_nombre": "Chupete",
-            "_precio": 45.65,
-            "_cant_stock": 0,
-            "_categoria": "para bebes",
-            "_tags": [
-                "bebe",
-                "chupete"
-            ],
-            "_descripcion": "Chupete para bebes de diferentes color",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "jQ3EQWqpB",
-            "_imagenes_asociadas": [],
-            "_sales": 1
+            "_sales": "2"
         },
         {
             "_nombre": "Cereal",
             "_precio": 121.15,
-            "_cant_stock": 5,
+            "_cant_stock": 0,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -490,14 +406,30 @@
             "_descripcion": "Alimento para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "33-qRLH4yl",
+            "_sku": "GhR1nh2cFH",
             "_imagenes_asociadas": [],
             "_sales": 2
         },
         {
+            "_nombre": "Gel de baño",
+            "_precio": 78.62,
+            "_cant_stock": 9,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Gel de baño con diferentes aromas",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "sJR8CMF78F",
+            "_imagenes_asociadas": [],
+            "_sales": "5"
+        },
+        {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": 1,
+            "_cant_stock": 17,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -507,25 +439,9 @@
             "_descripcion": "Paquete de Pañales para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "ZgKQEvnO8X",
+            "_sku": "UrGjncPO5f",
             "_imagenes_asociadas": [],
-            "_sales": 1
-        },
-        {
-            "_nombre": "Chupete",
-            "_precio": 45.65,
-            "_cant_stock": 0,
-            "_categoria": "para bebes",
-            "_tags": [
-                "bebe",
-                "chupete"
-            ],
-            "_descripcion": "Chupete para bebes de diferentes color",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "jQ3EQWqpB",
-            "_imagenes_asociadas": [],
-            "_sales": 1
+            "_sales": "2"
         },
         {
             "_nombre": "Cereal",
@@ -540,14 +456,30 @@
             "_descripcion": "Alimento para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "33-qRLH4yl",
+            "_sku": "GhR1nh2cFH",
             "_imagenes_asociadas": [],
-            "_sales": 1
+            "_sales": 2
+        },
+        {
+            "_nombre": "Gel de baño",
+            "_precio": 78.62,
+            "_cant_stock": 9,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Gel de baño con diferentes aromas",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "sJR8CMF78F",
+            "_imagenes_asociadas": [],
+            "_sales": "5"
         },
         {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": 0,
+            "_cant_stock": 17,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -557,25 +489,9 @@
             "_descripcion": "Paquete de Pañales para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "ZgKQEvnO8X",
+            "_sku": "UrGjncPO5f",
             "_imagenes_asociadas": [],
-            "_sales": 1
-        },
-        {
-            "_nombre": "Chupete",
-            "_precio": 45.65,
-            "_cant_stock": 0,
-            "_categoria": "para bebes",
-            "_tags": [
-                "bebe",
-                "chupete"
-            ],
-            "_descripcion": "Chupete para bebes de diferentes color",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "jQ3EQWqpB",
-            "_imagenes_asociadas": [],
-            "_sales": 1
+            "_sales": "2"
         },
         {
             "_nombre": "Cereal",
@@ -590,14 +506,30 @@
             "_descripcion": "Alimento para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "33-qRLH4yl",
+            "_sku": "GhR1nh2cFH",
             "_imagenes_asociadas": [],
-            "_sales": 1
+            "_sales": 2
+        },
+        {
+            "_nombre": "Gel de baño",
+            "_precio": 78.62,
+            "_cant_stock": 9,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Gel de baño con diferentes aromas",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "sJR8CMF78F",
+            "_imagenes_asociadas": [],
+            "_sales": "5"
         },
         {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": 0,
+            "_cant_stock": 17,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -607,26 +539,9 @@
             "_descripcion": "Paquete de Pañales para bebes",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "ZgKQEvnO8X",
+            "_sku": "UrGjncPO5f",
             "_imagenes_asociadas": [],
-            "_sales": 1
-        },
-        {
-            "_nombre": "Pañal",
-            "_precio": 53.78,
-            "_cant_stock": 0,
-            "_categoria": "para bebes",
-            "_tags": [
-                "dormir",
-                "bebe",
-                "higiene"
-            ],
-            "_descripcion": "Paquete de Pañales para bebes",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "ZgKQEvnO8X",
-            "_imagenes_asociadas": [],
-            "_sales": 1
+            "_sales": "2"
         }
     ]
 }

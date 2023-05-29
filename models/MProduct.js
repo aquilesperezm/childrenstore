@@ -115,6 +115,10 @@ class MProduct extends IObject {
             return false;
     }
 
+    /**
+     * @param filters = array
+     * @example JSON: 'filters' = [{'nombre':'test'}],'per_page'='5'
+     * */
     async searchProductsByFilters(filters, per_page) {
 
         var result = []
@@ -122,6 +126,26 @@ class MProduct extends IObject {
         const lista = await this.listProducts()
 
         if (filters.length > 0) {
+
+            for (var i = 0; i < filters.length; i++) {
+
+                var filter = filters[i]
+                var fkey = Object.keys(filter)[0]
+                var key = "_" + fkey
+
+                if (key == "_nombre") {
+
+                    lista.forEach((e) => {
+                        var valor_lista = e[key]
+                        var valor_buscado = filter[fkey]
+                        if (valor_lista.toLowerCase().includes(valor_buscado.toLowerCase())) {
+                            result.push(e)
+                        }
+                    })
+                }
+
+            }
+
             filters.forEach((filter) => {
 
                 var fkey = Object.keys(filter)[0]
@@ -138,83 +162,27 @@ class MProduct extends IObject {
                  *  7- cantidad en stock (Number) Se buscaran los menores que el valor solicitado
                  * */
 
-                switch (key) {
-                    case '_nombre': {
-                        lista.forEach((e) => {
-                            var valor_lista = e[key]
-                            var valor_buscado = filter[fkey]
-                            if (valor_lista.includes(valor_buscado)) {
-                                result.push(e)
-                            }
-                        })
-                        break
-                    }
-                    case '_categoria': {
-                        lista.forEach((e) => {
-                            var valor_lista = e[key]
-                            var valor_buscado = filter[fkey]
-                            if (valor_lista.includes(valor_buscado)) {
-                                result.push(e)
-                            }
-                        })
-                        break
-                    }
-                    case '_descripcion': {
-                        lista.forEach((e) => {
-                            var valor_lista = e[key]
-                            var valor_buscado = filter[fkey]
-                            if (valor_lista.includes(valor_buscado)) {
-                                result.push(e)
-                            }
-                        })
-                        break
-                    }
+                if (key == "_nombre" || key == "_categoria" ||
+                    key == "_info_add" || key == "_descripcion" ||
+                    key == '_valoracion'
+                ) {
+                    lista.forEach((e) => {
+                        var valor_lista = e[key]
+                        var valor_buscado = filter[fkey]
+                        if (valor_lista.includes(valor_buscado)) {
+                            result.push(e)
+                        }
+                    })
 
-                    case '_info_add': {
-                        lista.forEach((e) => {
-                            var valor_lista = e[key]
-                            var valor_buscado = filter[fkey]
-                            if (valor_lista.includes(valor_buscado)) {
-                                result.push(e)
-                            }
-                        })
-                        break
-                    }
-
-                    case '_valoracion': {
-                        lista.forEach((e) => {
-                            var valor_lista = e[key]
-                            var valor_buscado = filter[fkey]
-                            if (valor_lista.includes(valor_buscado)) {
-                                result.push(e)
-                            }
-                        })
-                        break
-                    }
-
-                    case '_precio': {
-                        lista.forEach((e) => {
-                            var valor_lista = e[key]
-                            var valor_buscado = filter[fkey]
-                            //Puede ser mayor que o menor que dependiendo del valor deseado
-                            if (Number(valor_lista) <= Number(valor_buscado)) {
-                                result.push(e)
-                            }
-                        })
-                        break
-                    }
-                    case '_cant_stock': {
-                        lista.forEach((e) => {
-                            var valor_lista = e[key]
-                            var valor_buscado = filter[fkey]
-                            //Puede ser mayor que o menor que dependiendo del valor deseado
-                            if (Number(valor_lista) <= Number(valor_buscado)) {
-                                result.push(e)
-                            }
-                        })
-                        break
-                    }
-
+                } else if (key == "_precio" || key == "_cant_stock") {
+                    lista.forEach((e) => {
+                        var valor_lista = e[key]
+                        var valor_buscado = filter[fkey]
+                        //Puede ser mayor que o menor que dependiendo del valor deseado
+                        if (Number(valor_lista) <= Number(valor_buscado)) {
+                            result.push(e)
+                        }
+                    })
                 }
 
             })
@@ -331,7 +299,7 @@ class MProduct extends IObject {
             return {
                 sucessfull: true,
                 sku: sku,
-                cantidad_vendida:(cant - producto_vendido._sales),
+                cantidad_vendida: (cant - producto_vendido._sales),
                 cause: 'Se vendieron ' + producto_vendido._sales + ' ,pero faltaron : ' + (cant - producto_vendido._sales) + ' Producto(s)'
             }
 
@@ -344,7 +312,7 @@ class MProduct extends IObject {
 
     }
 
-    async showSoldProducts(){
+    async showSoldProducts() {
         return await this._DB.getDataFromPath('/sales');
 
     }
