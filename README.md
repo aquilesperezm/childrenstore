@@ -1,5 +1,5 @@
 # Children Store
-   Este repositorio contiene servicios web que siguen la arquitectura de Web Service RESTful, con la itencion de simular una
+   Este repositorio contiene el código para la puesta en marcha de servicios web que siguen la arquitectura de Web Service RESTful, con la itencion de simular una
 tienda para niñ@s. Esta aplicación posee una seguridad basada en [JWT](https://jwt.io/), donde cada usuario
 posee un token y este es intercambiado entre el usuario y el sistema. Las tecnologias usadas son:
 * Express (https://expressjs.com/)
@@ -29,7 +29,7 @@ se encuentra el fichero .env con la sintaxis para la configuracion: "KEY = VALUE
 Los servicios publicados por el protocolo HTTP, y a los cuales seran accedidos mediante el metodo POST, son los siguientes:
 |   #   | URL          | Descripcion                                          |  Entrada      |  Salida        |
 |:-----:|:------------:|:-----------------------------------------------------|:--------------|:---------------|
-| 1     | /register    | Este servicio se encarga de registrar los usuarios   |  nombre_completo, nombre_usuario, rol, password  |   user (object - json)        |
-| 2     | centered     |      |
-| 3     | are neat     |      |
+| 1     | /register    | Este servicio se encarga de registrar los usuarios   | json: { nombre_completo, nombre_usuario, rol, password }  |   json: { user object }  |
+| 2     | /login       | Se encarga de autenticar al usuario y generar el token      | json: {nombre_usuario, password} | json: { user object } |
+| 3     | /welcome     | Se encarga de verficar si el usuario esta vigente    |  token | token |
 
