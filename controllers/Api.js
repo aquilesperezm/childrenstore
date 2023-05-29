@@ -109,7 +109,7 @@ class Api {
             return res.status(403).send("Un token es requerido para la autenticación")
         }
         try {
-            const decoded = jwt.verify(token, config_env.TOKEN_KEY,)
+            const decoded = jwt.verify(token, config_env.TOKEN_KEY)
             req.user = decoded
 
         } catch (err) {
@@ -134,7 +134,7 @@ class Api {
             valoracion,
             lista_imgs,
 
-            session_token
+            token
         } = req.body;
 
         // Validar la entrada de todos los nombres
@@ -147,13 +147,13 @@ class Api {
             info &&
             valoracion &&
             lista_imgs,
-                session_token
+                token
         )) {
             return res.status(400).send("Error!! se requieren todos los campos");
         }
 
         //Buscamos el usuario al que pertenece el token y establecemos los permisos
-        var session_user = await db.buscarUsuarioPorToken(session_token)
+        var session_user = await db.buscarUsuarioPorToken(token)
 
 
         if (session_user) {
@@ -177,11 +177,11 @@ class Api {
 
     async listAllProducts(req, res) {
         const {
-            session_token
+            token
         } = req.body;
 
         //Buscamos el usuario al que pertenece el token y establecemos los permisos
-        var session_user = await db.buscarUsuarioPorToken(session_token)
+        var session_user = await db.buscarUsuarioPorToken(token)
 
         if (session_user) {
 
@@ -202,7 +202,7 @@ class Api {
     async updateProduct(req, res) {
 
         const {
-            session_token,
+            token,
             idsku,
             nombre,
             precio,
@@ -217,7 +217,7 @@ class Api {
 
         // Validar la entrada de todos los nombres
         if (!(
-            session_token &&
+            token &&
             idsku &&
             nombre &&
             precio &&
@@ -233,7 +233,7 @@ class Api {
         }
 
         //Buscamos el usuario al que pertenece el token y establecemos los permisos
-        var session_user = await db.buscarUsuarioPorToken(session_token)
+        var session_user = await db.buscarUsuarioPorToken(token)
 
 
         if (session_user) {
@@ -257,20 +257,20 @@ class Api {
 
     async deleteProduct(req, res) {
         const {
-            session_token,
+            token,
             idsku
         } = req.body;
 
         // Validar la entrada de todos los nombres
         if (!(
-            session_token &&
+            token &&
             idsku
         )) {
             return res.status(400).send("Error!! se requieren todos los campos");
         }
 
         //Buscamos el usuario al que pertenece el token y establecemos los permisos
-        var session_user = await db.buscarUsuarioPorToken(session_token)
+        var session_user = await db.buscarUsuarioPorToken(token)
 
         if (session_user) {
 
@@ -325,20 +325,20 @@ class Api {
 
     async sellProductList(req, res) {
         const {
-            session_token,
+            token,
             list_products
         } = req.body;
 
         // Validar la entrada de todos los nombres
         if (!(
-            session_token &&
+            token &&
             list_products
         )) {
             return res.status(400).send("Error!! se requieren todos los campos");
         }
 
         //Buscamos el usuario al que pertenece el token y establecemos los permisos
-        var session_user = await db.buscarUsuarioPorToken(session_token)
+        var session_user = await db.buscarUsuarioPorToken(token)
 
         if (session_user) {
 

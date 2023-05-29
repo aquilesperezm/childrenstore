@@ -51,7 +51,7 @@ class MProduct extends IObject {
                     "", "", shortid.generate(), []),
                 new EProduct('Muñeca', 67.91, 13, "para juegos", ['dormir', 'bebe', 'diversion'], "Pillama enterizo para bebes",
                     "", "", shortid.generate(), []),
-                new EProduct('Tio vivo', 22.62, 98, "para juegos", [ 'bebe', 'diversion'], "Juguete para niños",
+                new EProduct('Tio vivo', 22.62, 98, "para juegos", ['bebe', 'diversion'], "Juguete para niños",
                     "", "", shortid.generate(), []),
                 new EProduct('Gel de baño', 78.62, 44, "para bebes", ['bebe', 'higiene'], "Gel de baño con diferentes aromas",
                     "", "", shortid.generate(), []),
@@ -292,7 +292,7 @@ class MProduct extends IObject {
         } else return {successfull: false, cause: "El producto no existe"}
     }
 
-    async sellProduct(sku,cant) {
+    async sellProduct(sku, cant) {
         var lista = await this.listProducts();
         var lista_vendidos = await this._DB.getDataFromPath('/sales');
 
@@ -302,15 +302,44 @@ class MProduct extends IObject {
 
         var producto_vendido = lista[index];
 
-        producto_vendido._cant_stock -= cant;
-        producto_vendido._sales = cant;
-        if( producto_vendido._cant_stock < 0)
+        if (producto_vendido._cant_stock >= cant && producto_vendido._cant_stock != 0) {
+
+            producto_vendido._cant_stock -= cant;
+            producto_vendido._sales = cant;
+
+            lista_vendidos.push(producto_vendido)
+
+            this._DB.addData('/sales', lista_vendidos)
+            this._DB.addData('/products', lista)
+
+            return {
+                sucessfull: true,
+                sku: sku,
+                cantidad: cant,
+                cause: 'Producto vendido'
+            }
+
+        } else if (producto_vendido._cant_stock < cant && producto_vendido._cant_stock != 0) {
+
+            producto_vendido._sales = producto_vendido._cant_stock
             producto_vendido._cant_stock = 0
+            lista_vendidos.push(producto_vendido)
 
-        lista_vendidos.push(producto_vendido)
+            this._DB.addData('/sales', lista_vendidos)
+            this._DB.addData('/products', lista)
 
-        this._DB.addData('/sales',lista_vendidos)
-        this._DB.addData('/products',lista)
+            return {
+                sucessfull: true,
+                sku: sku,
+                cantidad_vendida:(cant - producto_vendido._sales),
+                cause: 'Se vendieron ' + producto_vendido._sales + ' ,pero faltaron : ' + (cant - producto_vendido._sales) + ' Producto(s)'
+            }
+
+        } else return {
+            sucessfull: false,
+            sku: sku,
+            cause: 'El producto requerido no fue vendido, por que no hay existencia'
+        }
 
 
     }

@@ -3,7 +3,7 @@
         {
             "_nombre": "Chupete",
             "_precio": 45.65,
-            "_cant_stock": -10,
+            "_cant_stock": 0,
             "_categoria": "para bebes",
             "_tags": [
                 "bebe",
@@ -14,12 +14,12 @@
             "_valoracion": "",
             "_sku": "jQ3EQWqpB",
             "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
         },
         {
             "_nombre": "Cereal",
             "_precio": 121.15,
-            "_cant_stock": 17,
+            "_cant_stock": 0,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -30,12 +30,13 @@
             "_info_add": "",
             "_valoracion": "",
             "_sku": "33-qRLH4yl",
-            "_imagenes_asociadas": []
+            "_imagenes_asociadas": [],
+            "_sales": 1
         },
         {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": -10,
+            "_cant_stock": 0,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -47,7 +48,7 @@
             "_valoracion": "",
             "_sku": "ZgKQEvnO8X",
             "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
         },
         {
             "_nombre": "Muñeca",
@@ -68,7 +69,7 @@
         {
             "_nombre": "Tio vivo",
             "_precio": 22.62,
-            "_cant_stock": -10,
+            "_cant_stock": 4,
             "_categoria": "para juegos",
             "_tags": [
                 "bebe",
@@ -79,7 +80,7 @@
             "_valoracion": "",
             "_sku": "rLfc3hJpuk",
             "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 5
         },
         {
             "_nombre": "Gel de baño",
@@ -145,7 +146,7 @@
         {
             "_nombre": "Sacaleche",
             "_precio": 85.77,
-            "_cant_stock": 10,
+            "_cant_stock": 60,
             "_categoria": "para bebes",
             "_tags": [
                 "bebe",
@@ -206,14 +207,14 @@
             "_nombre_usuario": "akiles",
             "_rol": "ADMINISTRATOR",
             "_password": "$2b$10$cihUpxM.heqLBWLPF4e2VehOsTtJS0PfIAI1mbWcyxKoifmzqDwh.",
-            "_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFraWxlcyIsInJvbCI6IkFETUlOSVNUUkFUT1IiLCJpYXQiOjE2ODUzMDQwNDUsImV4cCI6MTY4NTMwNTg0NX0.5tntEbn6bYMTd76EYh_hiHeaoN7DyULe8nhcju-gXIA"
+            "_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFraWxlcyIsInJvbCI6IkFETUlOSVNUUkFUT1IiLCJpYXQiOjE2ODUzMjczMzMsImV4cCI6MTY4NTMyOTEzM30.ygXrctL18bMZqpRpTFDKq6lR10inI6p7UxvMtUHg-GE"
         }
     ],
     "sales": [
         {
             "_nombre": "Chupete",
             "_precio": 45.65,
-            "_cant_stock": -10,
+            "_cant_stock": 0,
             "_categoria": "para bebes",
             "_tags": [
                 "bebe",
@@ -224,12 +225,29 @@
             "_valoracion": "",
             "_sku": "jQ3EQWqpB",
             "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
+        },
+        {
+            "_nombre": "Cereal",
+            "_precio": 121.15,
+            "_cant_stock": 13,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "alimento"
+            ],
+            "_descripcion": "Alimento para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "33-qRLH4yl",
+            "_imagenes_asociadas": [],
+            "_sales": 2
         },
         {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": -10,
+            "_cant_stock": 1,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -241,28 +259,12 @@
             "_valoracion": "",
             "_sku": "ZgKQEvnO8X",
             "_imagenes_asociadas": [],
-            "_sales": 10
-        },
-        {
-            "_nombre": "Tio vivo",
-            "_precio": 22.62,
-            "_cant_stock": -10,
-            "_categoria": "para juegos",
-            "_tags": [
-                "bebe",
-                "diversion"
-            ],
-            "_descripcion": "Juguete para niños",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "rLfc3hJpuk",
-            "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
         },
         {
             "_nombre": "Chupete",
             "_precio": 45.65,
-            "_cant_stock": -10,
+            "_cant_stock": 0,
             "_categoria": "para bebes",
             "_tags": [
                 "bebe",
@@ -273,12 +275,29 @@
             "_valoracion": "",
             "_sku": "jQ3EQWqpB",
             "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
+        },
+        {
+            "_nombre": "Cereal",
+            "_precio": 121.15,
+            "_cant_stock": 13,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "alimento"
+            ],
+            "_descripcion": "Alimento para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "33-qRLH4yl",
+            "_imagenes_asociadas": [],
+            "_sales": 2
         },
         {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": -10,
+            "_cant_stock": 1,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -290,28 +309,12 @@
             "_valoracion": "",
             "_sku": "ZgKQEvnO8X",
             "_imagenes_asociadas": [],
-            "_sales": 10
-        },
-        {
-            "_nombre": "Tio vivo",
-            "_precio": 22.62,
-            "_cant_stock": -10,
-            "_categoria": "para juegos",
-            "_tags": [
-                "bebe",
-                "diversion"
-            ],
-            "_descripcion": "Juguete para niños",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "rLfc3hJpuk",
-            "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
         },
         {
             "_nombre": "Chupete",
             "_precio": 45.65,
-            "_cant_stock": -10,
+            "_cant_stock": 0,
             "_categoria": "para bebes",
             "_tags": [
                 "bebe",
@@ -322,12 +325,29 @@
             "_valoracion": "",
             "_sku": "jQ3EQWqpB",
             "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
+        },
+        {
+            "_nombre": "Cereal",
+            "_precio": 121.15,
+            "_cant_stock": 9,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "alimento"
+            ],
+            "_descripcion": "Alimento para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "33-qRLH4yl",
+            "_imagenes_asociadas": [],
+            "_sales": 2
         },
         {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": -10,
+            "_cant_stock": 1,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -339,28 +359,12 @@
             "_valoracion": "",
             "_sku": "ZgKQEvnO8X",
             "_imagenes_asociadas": [],
-            "_sales": 10
-        },
-        {
-            "_nombre": "Tio vivo",
-            "_precio": 22.62,
-            "_cant_stock": -10,
-            "_categoria": "para juegos",
-            "_tags": [
-                "bebe",
-                "diversion"
-            ],
-            "_descripcion": "Juguete para niños",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "rLfc3hJpuk",
-            "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
         },
         {
             "_nombre": "Chupete",
             "_precio": 45.65,
-            "_cant_stock": -10,
+            "_cant_stock": 0,
             "_categoria": "para bebes",
             "_tags": [
                 "bebe",
@@ -371,12 +375,29 @@
             "_valoracion": "",
             "_sku": "jQ3EQWqpB",
             "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
+        },
+        {
+            "_nombre": "Cereal",
+            "_precio": 121.15,
+            "_cant_stock": 9,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "alimento"
+            ],
+            "_descripcion": "Alimento para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "33-qRLH4yl",
+            "_imagenes_asociadas": [],
+            "_sales": 2
         },
         {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": -10,
+            "_cant_stock": 1,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -388,28 +409,12 @@
             "_valoracion": "",
             "_sku": "ZgKQEvnO8X",
             "_imagenes_asociadas": [],
-            "_sales": 10
-        },
-        {
-            "_nombre": "Tio vivo",
-            "_precio": 22.62,
-            "_cant_stock": -10,
-            "_categoria": "para juegos",
-            "_tags": [
-                "bebe",
-                "diversion"
-            ],
-            "_descripcion": "Juguete para niños",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "rLfc3hJpuk",
-            "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
         },
         {
             "_nombre": "Chupete",
             "_precio": 45.65,
-            "_cant_stock": -10,
+            "_cant_stock": 0,
             "_categoria": "para bebes",
             "_tags": [
                 "bebe",
@@ -420,12 +425,29 @@
             "_valoracion": "",
             "_sku": "jQ3EQWqpB",
             "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
+        },
+        {
+            "_nombre": "Cereal",
+            "_precio": 121.15,
+            "_cant_stock": 5,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "alimento"
+            ],
+            "_descripcion": "Alimento para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "33-qRLH4yl",
+            "_imagenes_asociadas": [],
+            "_sales": 2
         },
         {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": -10,
+            "_cant_stock": 1,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -437,28 +459,12 @@
             "_valoracion": "",
             "_sku": "ZgKQEvnO8X",
             "_imagenes_asociadas": [],
-            "_sales": 10
-        },
-        {
-            "_nombre": "Tio vivo",
-            "_precio": 22.62,
-            "_cant_stock": -10,
-            "_categoria": "para juegos",
-            "_tags": [
-                "bebe",
-                "diversion"
-            ],
-            "_descripcion": "Juguete para niños",
-            "_info_add": "",
-            "_valoracion": "",
-            "_sku": "rLfc3hJpuk",
-            "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
         },
         {
             "_nombre": "Chupete",
             "_precio": 45.65,
-            "_cant_stock": -10,
+            "_cant_stock": 0,
             "_categoria": "para bebes",
             "_tags": [
                 "bebe",
@@ -469,12 +475,29 @@
             "_valoracion": "",
             "_sku": "jQ3EQWqpB",
             "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
+        },
+        {
+            "_nombre": "Cereal",
+            "_precio": 121.15,
+            "_cant_stock": 5,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "alimento"
+            ],
+            "_descripcion": "Alimento para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "33-qRLH4yl",
+            "_imagenes_asociadas": [],
+            "_sales": 2
         },
         {
             "_nombre": "Pañal",
             "_precio": 53.78,
-            "_cant_stock": -10,
+            "_cant_stock": 1,
             "_categoria": "para bebes",
             "_tags": [
                 "dormir",
@@ -486,23 +509,124 @@
             "_valoracion": "",
             "_sku": "ZgKQEvnO8X",
             "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
         },
         {
-            "_nombre": "Tio vivo",
-            "_precio": 22.62,
-            "_cant_stock": -10,
-            "_categoria": "para juegos",
+            "_nombre": "Chupete",
+            "_precio": 45.65,
+            "_cant_stock": 0,
+            "_categoria": "para bebes",
             "_tags": [
                 "bebe",
-                "diversion"
+                "chupete"
             ],
-            "_descripcion": "Juguete para niños",
+            "_descripcion": "Chupete para bebes de diferentes color",
             "_info_add": "",
             "_valoracion": "",
-            "_sku": "rLfc3hJpuk",
+            "_sku": "jQ3EQWqpB",
             "_imagenes_asociadas": [],
-            "_sales": 10
+            "_sales": 1
+        },
+        {
+            "_nombre": "Cereal",
+            "_precio": 121.15,
+            "_cant_stock": 0,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "alimento"
+            ],
+            "_descripcion": "Alimento para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "33-qRLH4yl",
+            "_imagenes_asociadas": [],
+            "_sales": 1
+        },
+        {
+            "_nombre": "Pañal",
+            "_precio": 53.78,
+            "_cant_stock": 0,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Paquete de Pañales para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "ZgKQEvnO8X",
+            "_imagenes_asociadas": [],
+            "_sales": 1
+        },
+        {
+            "_nombre": "Chupete",
+            "_precio": 45.65,
+            "_cant_stock": 0,
+            "_categoria": "para bebes",
+            "_tags": [
+                "bebe",
+                "chupete"
+            ],
+            "_descripcion": "Chupete para bebes de diferentes color",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "jQ3EQWqpB",
+            "_imagenes_asociadas": [],
+            "_sales": 1
+        },
+        {
+            "_nombre": "Cereal",
+            "_precio": 121.15,
+            "_cant_stock": 0,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "alimento"
+            ],
+            "_descripcion": "Alimento para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "33-qRLH4yl",
+            "_imagenes_asociadas": [],
+            "_sales": 1
+        },
+        {
+            "_nombre": "Pañal",
+            "_precio": 53.78,
+            "_cant_stock": 0,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Paquete de Pañales para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "ZgKQEvnO8X",
+            "_imagenes_asociadas": [],
+            "_sales": 1
+        },
+        {
+            "_nombre": "Pañal",
+            "_precio": 53.78,
+            "_cant_stock": 0,
+            "_categoria": "para bebes",
+            "_tags": [
+                "dormir",
+                "bebe",
+                "higiene"
+            ],
+            "_descripcion": "Paquete de Pañales para bebes",
+            "_info_add": "",
+            "_valoracion": "",
+            "_sku": "ZgKQEvnO8X",
+            "_imagenes_asociadas": [],
+            "_sales": 1
         }
     ]
 }

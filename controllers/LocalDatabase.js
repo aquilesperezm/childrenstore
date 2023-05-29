@@ -58,7 +58,7 @@ class LocalDatabase {
             this.addData('/users', value)
         })
         var lista_productos = MProduct.getAleatoryProducts(cantProducts)
-        db.addData('/sales',[])
+        db.addData('/sales', [])
 
         this.addData('/products', lista_productos)
 
@@ -180,12 +180,41 @@ class LocalDatabase {
 
         if (d == 'SELL') {
 
-            for (const venta of lista_prod) {
-
-                await this._MProduct.sellProduct(venta.sku,venta.cant)
+            var results = {
+                sucessfull: true,
+                selling_msgs: []
             }
-            return {successfull: true}
 
+            //se verifica que en la lista entrada, todos los articulos sean de la misma categoria
+            var proceed_sales_category = true;
+            var categoria_temp = (await this.buscarProductoPorID(lista_prod[0].sku))._categoria
+
+            for (const v of lista_prod) {
+                var p = await this.buscarProductoPorID(v.sku)
+
+                if (p._categoria != categoria_temp) {
+                    proceed_sales_category = false
+                    break
+                }
+            }
+
+            if (proceed_sales_category) {
+                for (const venta of lista_prod) {
+
+                    /*
+                    * No se puede vender mas 1 articulo del mismo tipo (una sola categoria), en la lista
+                    * de ventas  las categorias deben ser diferentes, y no se puede vender mas de 1 articulo
+                    * la cantidad debe ser 1
+                    *
+                    * */
+
+
+                        var msg = await this._MProduct.sellProduct(venta.sku, venta.cant)
+                        results.selling_msgs.push(msg)
+
+                  }
+                return results;
+            } else return {sucessfull: false, cause: "Solo se permite vender una categoria de producto"}
         } else return {successfull: false, cause: "No tiene permisos"}
     }
 }
