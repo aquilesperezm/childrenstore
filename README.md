@@ -29,10 +29,9 @@ se encuentra el fichero .env con la sintaxis para la configuracion: "KEY = VALUE
 Los servicios publicados por el protocolo HTTP, y a los cuales seran accedidos mediante el metodo POST, son los siguientes:
 |   #   | URL               | Descripcion                                          |  Entrada      |  Salida        |
 |:-----:|:-----------------:|:-----------------------------------------------------|:--------------|:---------------|
-| 1     | /register         | Registra los usuarios   | json: { nombre_completo, nombre_usuario, rol, password }  |   json: { user object }  |
-| 2     | /login            | Autentica al usuario y generar el token      | json: {nombre_usuario, password} | json: { user object } |
-| 3     | /welcome          | Verfica si el usuario esta vigente    |  token | token |
-| 4     | /create_product   | Se encarga de crear un producto    |  json: { token, nombre, precio, cant_stock,categoria, tags, descripcion, info, valoracion, lista_imgs} | json: {user object} 
-
-            token} | token |
+| 1     | <server>:<port>/register         | Registra los usuarios   | json: { nombre_completo, nombre_usuario, rol, password }  |   json: { user object }  |
+| 2     | <server>:<port>/login            | Autentica al usuario y generar el token      | json: {nombre_usuario, password} | json: { user object } |
+| 3     | <server>:<port>/welcome          | Verfica si el usuario esta vigente    |  token | token |
+| 4     | <server>:<port>/create_product   | Se encarga de crear un producto    |  json: { token, nombre, precio, cant_stock,categoria, tags, descripcion, info, valoracion, lista_imgs} | json: {user object} 
+       
 
