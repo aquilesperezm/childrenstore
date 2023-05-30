@@ -41,7 +41,7 @@ Los servicios publicados por el protocolo HTTP, y a los cuales seran accedidos m
 | 10    | <b>server:port</b>/sell_product_list   | Vende una lista de productos, que no pueden esta en la misma categoria    |  json: { token, list_products:[{sku:id, cant:n}...] } | json: {sucessfull}
 | 11    | <b>server:port</b>/sold_products   | Muestra una lista de los productos vendidos   |  json: { token } | json: {lista:[Product1, Product2,....]}
 | 12    | <b>server:port</b>/total_gain   | Calcula y Muestra las ganancias de los productos vendidos   |  json: { token } | json: {ganancia_total:n}
-| 13    | <b>server:port</b>/show_products_nostock   | Muestra los productos que no tienen existen en el almacen   |  json: { token } | json: {lista:[Producto1, Producto2,...]}
+| 13    | <b>server:port</b>/show_products_nostock   | Muestra los productos que no tienen existencia en el almacén   |  json: { token } | json: {lista:[Producto1, Producto2,...]}
    
    
    
