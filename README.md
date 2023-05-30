@@ -37,6 +37,14 @@ Los servicios publicados por el protocolo HTTP, y a los cuales seran accedidos m
 | 6    | <b>server:port</b>/update_product   | Actualiza un producto    |  json: { token, sku, nombre, precio, cant_stock,categoria, tags, descripcion, info, valoracion, lista_imgs} | json: {producto object}
 | 7     | <b>server:port</b>/delete_product   |  Borra un producto segun su sku (id)    |  json: { token, sku } | json {successfull}
 | 8    | <b>server:port</b>/search_product   |  Busca un producto segun una o mas caracteristicas, en caso de no especificarlas, devolvera la lista completa    |  json: { token } | json: [Product1, Product2, ...]
+| 9    | <b>server:port</b>/search_product_count   | Devuelve la cantida de productos, segun una busqueda por caracteristicas    |  json: { token } | json: {cantidad}
+| 10    | <b>server:port</b>/sell_product_list   | Vende una lista de productos, que no pueden esta en la misma categoria    |  json: { token, list_products:[{sku:id, cant:n}...] } | json: {sucessfull}
+| 11    | <b>server:port</b>/sold_products   | Muestra una lista de los productos vendidos   |  json: { token } | json: {lista:[Product1, Product2,....]}
+| 12    | <b>server:port</b>/total_gain   | Calcula y Muestra las ganancias de los productos vendidos   |  json: { token } | json: {ganancia_total:n}
+| 13    | <b>server:port</b>/show_products_nostock   | Muestra los productos que no tienen existen en el almacen   |  json: { token } | json: {lista:[Producto1, Producto2,...]}
    
+   
+   
+     
    
 
