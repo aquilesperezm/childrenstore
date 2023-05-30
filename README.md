@@ -12,6 +12,10 @@ la escritura, pues la base de datos es basada en JSON. Usando la instruccion:
 
     C:\<folder>\node App.js 
 ---
+### Base de Datos
+La base de datos de la aplicación es local, los datos se guardan en la carpeta "./database" y su gestión se realiza mediante el modulo <b>Node-Json-db</b>
+
+---
 ### Variables de Entorno
 
 La aplicacion posee un sistema de configuración mediante variables de entorno, en la raiz de la aplicación
