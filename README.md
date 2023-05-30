@@ -31,8 +31,12 @@ Los servicios publicados por el protocolo HTTP, y a los cuales seran accedidos m
 |:-----:|:-----------------:|:-----------------------------------------------------|:--------------|:---------------|
 | 1     | <b>server:port</b>/register         | Registra los usuarios   | json: { nombre_completo, nombre_usuario, rol, password }  |   json: { user object }  |
 | 2     | <b>server:port</b>/login            | Autentica al usuario y generar el token      | json: {nombre_usuario, password} | json: { user object } |
-| 3     | server:port/welcome          | Verfica si el usuario esta vigente    |  token | token |
-| 4     | server:port/create_product   | Se encarga de crear un producto    |  json: { token, nombre, precio, cant_stock,categoria, tags, descripcion, info, valoracion, lista_imgs} | json: {producto object}
-| 5     | server:port/read_products   |  Lista todos los productos    |  json: { token } | json: [{producto object}, ...] 
-       
+   | 3     | <b>server:port</b>/welcome          | Verfica si el usuario esta vigente    |  token | token |
+   | 4     | <b>server:port</b>/create_product   | Crea un producto    |  json: { token, nombre, precio, cant_stock,categoria, tags, descripcion, info, valoracion, lista_imgs} | json: {producto object}
+   | 5     | <b>server:port</b>/read_products   |  Lista todos los productos    |  json: { token } | json: [{producto object}, ...] 
+| 6    | <b>server:port</b>/update_product   | Actualiza un producto    |  json: { token, sku, nombre, precio, cant_stock,categoria, tags, descripcion, info, valoracion, lista_imgs} | json: {producto object}
+| 7     | <b>server:port</b>/delete_product   |  Borra un producto segun su sku (id)    |  json: { token, sku } | json {successfull}
+| 8    | <b>server:port</b>/search_product   |  Busca un producto segun una o mas caracteristicas, en caso de no especificarlas, devolvera la lista completa    |  json: { token } | json: [Product1, Product2, ...]
+   
+   
 
