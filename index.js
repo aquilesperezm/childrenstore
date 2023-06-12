@@ -6,8 +6,15 @@ const express = require('express'),
     app = express(),
     app_port = process.env.APP_PORT
 
-const ChildStore = require('./classes/ChildStore')
 
+const User = require('./classes/User'),
+      Product = require('./classes/Product')
+
+const ChildStore = require('./classes/ChildStore'),
+    core = new ChildStore();
+
+core.addUser(new User("aquiles","admin de red","Administrator"));
+core.addUser(new User("juan","admin de red","Administrator"));
 
 /*
 *  response.send(request.body);

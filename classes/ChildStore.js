@@ -14,10 +14,18 @@ class ChildStore {
 
     constructor() {
 
-        this.Database = new JsonDB(new ConfigDB("database/storage.db", true, false, '/'));
+        this.Database = new JsonDB(new ConfigDB('storage.db', true, false, '/'));
 
         this.UserList = new Array()
         this.ProductList = new Array()
+
+        this.Database.push('/users',[])
+    }
+
+    async addUser(newUser){
+        var userlist = await this.Database.getData("/users");
+        userlist.push(newUser)
+        await this.Database.push('/users',userlist)
     }
 
 
