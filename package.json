@@ -1,15 +1,17 @@
 {
   "dependencies": {
+    "dotenv": "^16.1.4",
     "express": "^4.18.2",
+    "generate-safe-id": "^1.0.3",
     "jsonwebtoken": "^9.0.0",
     "node-json-db": "^2.2.0"
   },
   "name": "childrenstore",
   "version": "1.0.0",
   "description": "Tienda para chic@s",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": " index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
