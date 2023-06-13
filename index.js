@@ -11,10 +11,10 @@ const User = require('./classes/User'),
       Product = require('./classes/Product')
 
 const ChildStore = require('./classes/ChildStore'),
-    core = new ChildStore();
+    Core = new ChildStore();
 
-core.addUser(new User("aquiles","admin de red","Administrator"));
-core.addUser(new User("juan","admin de red","Administrator"));
+Core.generateStorageData(5)
+
 
 /*
 *  response.send(request.body);
