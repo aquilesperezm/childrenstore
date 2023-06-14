@@ -1,5 +1,5 @@
 'use strict'
-const safeid = require('generate-safe-id')
+const safeid = require('shortid')
 
 class Product {
 
@@ -15,7 +15,7 @@ class Product {
     images
 
     constructor(name, price, stock_count, category, tags, description, info, assessment, images) {
-        this.sku = safeid()
+        this.sku = safeid.generate()
         this.name = name;
         this.price = price;
         this.stock_count = stock_count;

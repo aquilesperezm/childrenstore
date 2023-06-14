@@ -6,14 +6,9 @@ const express = require('express'),
     app = express(),
     app_port = process.env.APP_PORT
 
-
-const User = require('./classes/User'),
-      Product = require('./classes/Product')
-
 const ChildStore = require('./classes/ChildStore'),
     Core = new ChildStore();
 
-Core.generateStorageData(5)
 
 
 /*

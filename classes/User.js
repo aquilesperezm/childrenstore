@@ -1,5 +1,5 @@
 'use strict'
-const safeid = require('generate-safe-id')
+const safeid = require('shortid')
 class User {
 
     iduser
@@ -9,7 +9,7 @@ class User {
 
     constructor(name, description, roll) {
 
-        this.iduser = safeid().substring(0,10)
+        this.iduser = safeid.generate()
         this.name = name
         this.description = description
         this.roll = roll

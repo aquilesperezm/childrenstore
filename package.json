@@ -2,9 +2,9 @@
   "dependencies": {
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
-    "generate-safe-id": "^1.0.3",
     "jsonwebtoken": "^9.0.0",
-    "node-json-db": "^2.2.0"
+    "node-json-db": "^2.2.0",
+    "shortid": "^2.2.16"
   },
   "name": "childrenstore",
   "version": "1.0.0",
