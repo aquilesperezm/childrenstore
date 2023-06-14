@@ -1,1 +1,174 @@
-{"users":[{"iduser":"UytQupAQ-","name":"Ghosh","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit","roll":"administrator"},{"iduser":"rPW2KTWt0n","name":"Usman","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit","roll":"editor"},{"iduser":"NFoff4dDEe","name":"Frank","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit","roll":"auditor"},{"iduser":"TXsMT5e_0L","name":"Mason","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit","roll":"administrator"},{"iduser":"Wv88P3ePg_","name":"Davis","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit","roll":"auditor"}],"products":[{"sku":"0qw2qvGhlu","name":"Chupete","price":45.65,"stock_count":23,"category":"para bebes","tags":[],"description":"Chupete para bebes de diferentes color","info":"","assessment":"","images":[]},{"sku":"V26hD4pk_e","name":"Cereal","price":121.15,"stock_count":17,"category":"para bebes","tags":[],"description":"Alimento para bebes","info":"","assessment":"","images":[]},{"sku":"zRM3_8jNO3","name":"Pañal","price":53.78,"stock_count":31,"category":"para bebes","tags":[],"description":"Paquete de Pañales para bebes","info":"","assessment":"","images":[]},{"sku":"TwZMHA9gNs","name":"Muñeca","price":67.91,"stock_count":13,"category":"para juegos","tags":[],"description":"Pillama enterizo para bebes","info":"","assessment":"","images":[]},{"sku":"yK68q02l7t","name":"Tio vivo","price":22.62,"stock_count":98,"category":"para juegos","tags":[],"description":"Juguete para niños","info":"","assessment":"","images":[]},{"sku":"Ib7fwvqY6S","name":"Gel de baño","price":78.62,"stock_count":44,"category":"para bebes","tags":[],"description":"Gel de baño con diferentes aromas","info":"","assessment":"","images":[]},{"sku":"EcepCXAtMR","name":"Cuna","price":137.16,"stock_count":54,"category":"para hogar","tags":[],"description":"Cuna para bebes","info":"","assessment":"","images":[]},{"sku":"q6Fdednmmi","name":"Coche","price":125.31,"stock_count":184,"category":"para chicos","tags":[],"description":"Coche de color azul para chicos","info":"","assessment":"","images":[]},{"sku":"tz_vE8g3OX","name":"Carseat","price":145.53,"stock_count":72,"category":"para chicas","tags":[],"description":"Silla para el auto de color rosa","info":"","assessment":"","images":[]},{"sku":"reuRl9jUgG","name":"Sacaleche","price":85.77,"stock_count":10,"category":"para bebes","tags":[],"description":"Extractor de leche materna para bebes","info":"","assessment":"","images":[]},{"sku":"WoFDESSbze","name":"Babero","price":25.77,"stock_count":50,"category":"para bebes","tags":[],"description":"Babero para facilitar la higiene del bebe","info":"","assessment":"","images":[]},{"sku":"CjJiw6I_9pm","name":"Cangurera","price":61.19,"stock_count":40,"category":"para bebes","tags":[],"description":"Cangurera para facilitar el transporte del bebe","info":"","assessment":"","images":[]}]}
+{
+    "users": [
+        {
+            "iduser": "f-7Y_tN0M",
+            "name": "Patel",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "roll": "auditor"
+        },
+        {
+            "iduser": "xrd9sCI5Ju",
+            "name": "Mason",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "roll": "editor"
+        },
+        {
+            "iduser": "yB7zD_ggnd",
+            "name": "Xiang",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "roll": "auditor"
+        },
+        {
+            "iduser": "M-F2LeQEZi",
+            "name": "Xiang",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "roll": "auditor"
+        }
+    ],
+    "products": [
+        {
+            "sku": "avyvjT0gvN",
+            "name": "Chupete",
+            "price": 45.65,
+            "stock_count": 23,
+            "category": "para bebes",
+            "tags": [],
+            "description": "Chupete para bebes de diferentes color",
+            "info": "",
+            "assessment": "",
+            "images": []
+        },
+        {
+            "sku": "_fRh-qzeD4",
+            "name": "Cereal",
+            "price": 121.15,
+            "stock_count": 17,
+            "category": "para bebes",
+            "tags": [],
+            "description": "Alimento para bebes",
+            "info": "",
+            "assessment": "",
+            "images": []
+        },
+        {
+            "sku": "5zh5dtFw45",
+            "name": "Pañal",
+            "price": 53.78,
+            "stock_count": 31,
+            "category": "para bebes",
+            "tags": [],
+            "description": "Paquete de Pañales para bebes",
+            "info": "",
+            "assessment": "",
+            "images": []
+        },
+        {
+            "sku": "jiTDga3S1h",
+            "name": "Muñeca",
+            "price": 67.91,
+            "stock_count": 13,
+            "category": "para juegos",
+            "tags": [],
+            "description": "Pillama enterizo para bebes",
+            "info": "",
+            "assessment": "",
+            "images": []
+        },
+        {
+            "sku": "XzIBUMRWPT",
+            "name": "Tio vivo",
+            "price": 22.62,
+            "stock_count": 98,
+            "category": "para juegos",
+            "tags": [],
+            "description": "Juguete para niños",
+            "info": "",
+            "assessment": "",
+            "images": []
+        },
+        {
+            "sku": "8ilJcAd9VA",
+            "name": "Gel de baño",
+            "price": 78.62,
+            "stock_count": 44,
+            "category": "para bebes",
+            "tags": [],
+            "description": "Gel de baño con diferentes aromas",
+            "info": "",
+            "assessment": "",
+            "images": []
+        },
+        {
+            "sku": "jwPOM5tz8i",
+            "name": "Cuna",
+            "price": 137.16,
+            "stock_count": 54,
+            "category": "para hogar",
+            "tags": [],
+            "description": "Cuna para bebes",
+            "info": "",
+            "assessment": "",
+            "images": []
+        },
+        {
+            "sku": "65YFWmxg6C",
+            "name": "Coche",
+            "price": 125.31,
+            "stock_count": 184,
+            "category": "para chicos",
+            "tags": [],
+            "description": "Coche de color azul para chicos",
+            "info": "",
+            "assessment": "",
+            "images": []
+        },
+        {
+            "sku": "PzEdlR1EnI",
+            "name": "Carseat",
+            "price": 145.53,
+            "stock_count": 72,
+            "category": "para chicas",
+            "tags": [],
+            "description": "Silla para el auto de color rosa",
+            "info": "",
+            "assessment": "",
+            "images": []
+        },
+        {
+            "sku": "OZFrio2ovR",
+            "name": "Sacaleche",
+            "price": 85.77,
+            "stock_count": 10,
+            "category": "para bebes",
+            "tags": [],
+            "description": "Extractor de leche materna para bebes",
+            "info": "",
+            "assessment": "",
+            "images": []
+        },
+        {
+            "sku": "LwXCSEYDea",
+            "name": "Babero",
+            "price": 25.77,
+            "stock_count": 50,
+            "category": "para bebes",
+            "tags": [],
+            "description": "Babero para facilitar la higiene del bebe",
+            "info": "",
+            "assessment": "",
+            "images": []
+        },
+        {
+            "sku": "JolZCHLgv3d",
+            "name": "Cangurera",
+            "price": 61.19,
+            "stock_count": 40,
+            "category": "para bebes",
+            "tags": [],
+            "description": "Cangurera para facilitar el transporte del bebe",
+            "info": "",
+            "assessment": "",
+            "images": []
+        }
+    ]
+}

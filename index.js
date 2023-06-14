@@ -4,11 +4,17 @@ const express = require('express'),
     jwt = require('jsonwebtoken'),
     env = require('dotenv').config(),
     app = express(),
-    app_port = process.env.APP_PORT
+    app_port = process.env.APP_PORT,
+
+    User = require('./classes/User')
+
+
 
 const ChildStore = require('./classes/ChildStore'),
     Core = new ChildStore();
 
+Core.Database.updateUser('dFaOZYFv9J',new User("Aquiles","Actualizacion","administrator"))
+Core.Database.deleteUser('dFaOZYFv9J')
 
 
 /*

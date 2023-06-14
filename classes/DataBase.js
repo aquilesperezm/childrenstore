@@ -10,17 +10,14 @@ class DataBase {
     database
 
     constructor() {
-        this.database = new JsonDB(new ConfigDB('database/storage.db', true, false, '/'));
-        this.database.push('/users', [])
-        this.database.push('/products', [])
-    }
-
-    getdatabase() {
-        return this.database
+        this.database = new JsonDB(new ConfigDB('database/storage.db', true, true, '/'));
     }
 
 
     generateStorageData(cantUsers, cantProducts) {
+
+        this.database.push('/users', [])
+        this.database.push('/products', [])
 
         //generate the users
 
@@ -105,8 +102,40 @@ class DataBase {
      * */
     async updateUser(idUser, newUser) {
         let userlist = await this.database.getData("/users");
-        userlist.push(newUser)
+        userlist.forEach((v,i,a)=>{
 
+
+            let indexOldUser = -1;
+            if(v.iduser == idUser)
+            {
+                newUser.iduser = idUser
+                userlist[i] = newUser
+                this.database.push('/users',userlist)
+
+            }
+
+        })
+
+    }
+
+    /**
+     * @description Delete User by idUser
+     * @param idUser a string representing of id
+     * */
+    async deleteUser(idUser){
+        let userlist = await this.database.getData("/users");
+
+        userlist.forEach((v,i,a)=>{
+
+            let indexOldUser = -1;
+            if(v.iduser == idUser)
+            {
+                userlist.splice(i,1)
+                this.database.push('/users',userlist)
+
+            }
+
+        })
     }
 
     /**------------------------------------- END CRUD USERS -------------------------------------------------------- **/
