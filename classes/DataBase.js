@@ -1,9 +1,9 @@
 'use strict'
 
 const User = require("./User"),
-      Product = require("./Product"),
-      ConfigDB = require('node-json-db').Config,
-      JsonDB = require('node-json-db').JsonDB
+    Product = require("./Product"),
+    ConfigDB = require('node-json-db').Config,
+    JsonDB = require('node-json-db').JsonDB
 
 class DataBase {
 
@@ -102,15 +102,14 @@ class DataBase {
      * */
     async updateUser(idUser, newUser) {
         let userlist = await this.database.getData("/users");
-        userlist.forEach((v,i,a)=>{
+        userlist.forEach((v, i, a) => {
 
 
             let indexOldUser = -1;
-            if(v.iduser == idUser)
-            {
+            if (v.iduser == idUser) {
                 newUser.iduser = idUser
                 userlist[i] = newUser
-                this.database.push('/users',userlist)
+                this.database.push('/users', userlist)
 
             }
 
@@ -122,16 +121,15 @@ class DataBase {
      * @description Delete User by idUser
      * @param idUser a string representing of id
      * */
-    async deleteUser(idUser){
+    async deleteUser(idUser) {
         let userlist = await this.database.getData("/users");
 
-        userlist.forEach((v,i,a)=>{
+        userlist.forEach((v, i, a) => {
 
             let indexOldUser = -1;
-            if(v.iduser == idUser)
-            {
-                userlist.splice(i,1)
-                this.database.push('/users',userlist)
+            if (v.iduser == idUser) {
+                userlist.splice(i, 1)
+                this.database.push('/users', userlist)
 
             }
 
@@ -147,6 +145,56 @@ class DataBase {
         await this.database.push('/products', productList)
 
     }
+
+    /**
+     * @return a List of all Products
+     * */
+    async getProducts() {
+        return await this.database.getData('/products')
+    }
+
+
+    /**
+     * @description (Update - CRUD) Update a Product  by sku (id)
+     * @param sku (number)
+     * @param newProduct (User Object)
+     *
+     * */
+    async updateProduct(sku, newProduct) {
+        let productList = await this.database.getData("/products");
+        productList.forEach((v, i, a) => {
+
+            let indexOldUser = -1;
+            if (v.sku == sku) {
+                newProduct.sku = sku
+                productList[i] = newProduct
+                this.database.push('/products', productList)
+
+            }
+
+        })
+
+    }
+
+    /**
+     * @description Delete User by idUser
+     * @param sku a string representing of id
+     * */
+    async deleteProduct(sku) {
+        let productList = await this.database.getData("/products");
+
+        productList.forEach((v, i, a) => {
+
+            let indexOldUser = -1;
+            if (v.sku == sku) {
+                productList.splice(i, 1)
+                this.database.push('/products', productList)
+
+            }
+
+        })
+    }
+
 
     /**------------------------------------------ END CRUD PRODUCTS ------------------------------------------------**/
 

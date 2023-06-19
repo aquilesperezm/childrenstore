@@ -6,16 +6,22 @@ const express = require('express'),
     app = express(),
     app_port = process.env.APP_PORT,
 
-    User = require('./classes/User')
+    User = require('./classes/User'),
+    Product = require('./classes/Product')
 
 
 
 const ChildStore = require('./classes/ChildStore'),
     Core = new ChildStore();
 
-Core.Database.updateUser('dFaOZYFv9J',new User("Aquiles","Actualizacion","administrator"))
-Core.Database.deleteUser('dFaOZYFv9J')
+//Core.Database.updateUser('dFaOZYFv9J',new User("Aquiles","Actualizacion","administrator"))
+//Core.Database.deleteUser('dFaOZYFv9J')
 
+/*Core.Database.updateProduct('5zh5dtFw45',new Product('test',121.11,31,'Test categoria',['test,test2'],'test desc'
+                         ,'test info','test value',['url1','url2']))
+*/
+
+Core.Database.deleteProduct('5zh5dtFw45')
 
 /*
 *  response.send(request.body);
