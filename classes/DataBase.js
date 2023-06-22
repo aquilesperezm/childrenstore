@@ -198,6 +198,178 @@ class DataBase {
 
     /**------------------------------------------ END CRUD PRODUCTS ------------------------------------------------**/
 
+    /**
+     * @param features Array of objects representing features to search
+     * @param inclusive Inclusive array results
+     * @return Array of Products
+     * @example features = [ { name: "nameToSearch" },{ price: numberToSearch, indicator: "more | less | more-equal | less-equal "},
+     *                       { stock_count: numberToSearch, indicator: "more | less | more-equal | less-equal "},
+     *                       { category: "categoryToSearch" },
+     *                       { tag: "tagsToSearchInArrayTags" },
+     *                       { description: "aWordToSearchInDescription"},
+     *                       { info: "aWordToSearchInInfo"},
+     *                       { assessment: "aWordToSearchInAssessment"}
+     *                     ]
+     * */
+    async searchProductByFeatures(features, inclusive = false) {
+
+        let ProductList = await this.getProducts();
+        let results = []
+
+        function AnalyzeKey(key, feature_value, ProductList) {
+            for (let product_index in ProductList) {
+
+                let value = ProductList[product_index][key]
+
+                if (value.includes(feature_value[key]))
+                    results.push(ProductList[product_index])
+
+            }
+
+        }
+
+        function InsertResultWithIndicator(feature_value, indicator, db_value, search_value, result) {
+
+            switch (feature_value[indicator]) {
+                case 'more': {
+
+                    if (db_value > search_value)
+                        results.push(result)
+
+                    break
+                }
+
+                case 'less': {
+
+                    if (db_value < search_value)
+                        // results.push(ProductList[prod_index])
+                        results.push(result)
+
+                    break
+                }
+
+                case 'less-equal': {
+
+                    if (db_value <= search_value)
+                        results.push(result)
+
+                    break
+                }
+
+                case 'more-equal': {
+
+                    if (db_value >= search_value)
+                        results.push(result)
+
+                    break
+                }
+
+
+            }
+
+        }
+
+        for (let f_index in features) {
+
+            let feature_value = features[f_index]
+            let keys = Object.keys(feature_value)
+            let key = keys[0]
+
+
+            switch (key) {
+
+                case 'name' : {
+
+                    AnalyzeKey(key, feature_value, ProductList)
+
+                    break
+                }
+
+                case 'category' : {
+
+                    AnalyzeKey(key, feature_value, ProductList)
+
+                    break
+                }
+
+                case 'description' : {
+
+                    AnalyzeKey(key, feature_value, ProductList)
+
+                    break
+                }
+
+                case 'info' : {
+
+                    AnalyzeKey(key, feature_value, ProductList)
+
+                    break
+                }
+
+                case 'assessment' : {
+
+                    AnalyzeKey(key, feature_value, ProductList)
+
+                    break
+                }
+
+
+                case 'stock_count': {
+
+                    let indicator = keys[1]
+                    let search_value = Number.parseInt(feature_value[key])
+
+
+                    for (let prod_index in ProductList) {
+
+                        let db_value = Number.parseInt(ProductList[prod_index][key])
+
+                        InsertResultWithIndicator(feature_value, indicator, db_value, search_value, ProductList[prod_index])
+
+                    }
+
+                    break
+                }
+
+                case 'price': {
+
+                    let indicator = keys[1]
+                    let search_value = Number.parseFloat(feature_value[key])
+
+                    for (let prod_index in ProductList) {
+
+                        let db_value = Number.parseFloat(ProductList[prod_index][key])
+
+                        InsertResultWithIndicator(feature_value, indicator, db_value, search_value, ProductList[prod_index])
+
+                    }
+
+                    break
+                }
+
+                case 'tags' : {
+
+                    for (let product_index in ProductList) {
+
+                        let value = ProductList[product_index][key]
+
+                        if (value.includes(feature_value[key]['criteria']))
+                            results.push(ProductList[product_index])
+                    }
+
+                    break
+                }
+
+
+
+            }
+
+        }
+
+        return results
+
+    }
+
 
 }
 

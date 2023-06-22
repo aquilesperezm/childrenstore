@@ -10,7 +10,6 @@ const express = require('express'),
     Product = require('./classes/Product')
 
 
-
 const ChildStore = require('./classes/ChildStore'),
     Core = new ChildStore();
 
@@ -21,7 +20,20 @@ const ChildStore = require('./classes/ChildStore'),
                          ,'test info','test value',['url1','url2']))
 */
 
-Core.Database.deleteProduct('5zh5dtFw45')
+//Core.Database.deleteProduct('5zh5dtFw45')
+
+ Core.Database.searchProductByFeatures([
+     /*{name: 'Cere'},
+     {stock_count: '20', indicator: 'more'},
+     {price: '30,76', indicator: 'less'},
+     {category: 'bebe'},*/
+     {tags: { criteria: 'higiene' } }
+
+]).then((v)=>{
+    console.log(v)
+})
+
+
 
 /*
 *  response.send(request.body);
@@ -39,7 +51,7 @@ console.log(user1.getIdUser())
 *  DELETE - DELETE
 * */
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
     res.send('<h1>Hola mundo</h1>')
 
 })
@@ -57,12 +69,12 @@ app.route('/book')
     .put((req, res) => {
         res.send('Update the book')
     })
-    .delete((req,res)=>{
+    .delete((req, res) => {
         res.send('Delete the book')
     })
 
 console.log('Comenzado la aplicacion Children Store')
-app.listen(app_port, ()=>{
+app.listen(app_port, () => {
     console.log('Servidor iniciado por el puerto ' + app_port)
 })
 
